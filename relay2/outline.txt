@@ -1,0 +1,13 @@
+before client request:
+server constantly waiting for change on hosting platform
+client requests url
+request sent to hosting platform
+server receives request
+
+after client request:
+client constantly waiting for change on hosting platform
+server verifies credentials
+server performs request
+server retrieves response
+response sent to hosting platform
+client receives response

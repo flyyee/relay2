@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>relay2 - loading</title>
+    <script>
+        var refresh = true
+        var mytimeout
+        const refreshtime = 500
+        function timedRefresh(timeoutPeriod) {
+            mytimeout = setTimeout("location.reload(true);", timeoutPeriod);
+        }
+
+        if (refresh) {
+            window.onload = timedRefresh(refreshtime);
+        }
+        function stoprefresh() {
+            //TODO: prevent spammability
+            if (refresh) {
+                clearTimeout(mytimeout);
+                refresh = false
+                document.getElementById("changerefresh").textContent = "continue refreshing"
+            } else {
+                refresh = true
+                document.getElementById("changerefresh").textContent = "stop refreshing"
+                mytimeout = setTimeout("location.reload(true);", refreshtime);
+            }
+        }
+    </script>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            text-align: center;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgba(39, 95, 185, 0.699);
+            background: linear-gradient(0deg, rgba(34, 162, 163, 1) 0%, rgba(157, 255, 98, 1) 100%);
+        }
+
+        body h3 {
+            color: rgba(42, 184, 117, 0.795);
+        }
+
+        body button {
+            font-size: 40px;
+        }
+        body button {
+            font-size: 40px;
+        }
+
+        body button {
+            margin-left: 5px;
+            text-decoration: none;
+            border: none;
+            background-color: rgba(58, 133, 255, 0.541);
+            color: rgba(0, 0, 0, 0.411);
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 4px;
+        }
+
+        body button:hover {
+            border: 2px solid rgba(58, 133, 255, 0.541);
+            background-color: rgba(0, 0, 0, 0.089);
+            padding: 0px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        body button:active {
+            outline: 0;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: none;
+        }
+        body a {
+            text-decoration: none;
+            color: rgba(39, 95, 185, 0.699);
+            margin: 30px;
+        }
+
+        #animatedrefresh::before {
+            animation: changer 3s infinite alternate;
+            content: "Loading";
+        }
+        @keyframes changer {
+            from {
+                font-size: 40px;
+                opacity: 0.3;
+                transform: translate(0, 20);
+                color: blue;
+                content: "Loading.";
+            }
+            35% {
+                content: "Loading..";
+            }
+            85% {
+                content: "Loading...";
+            }
+            to {
+                font-size: 80px;
+                opacity: 1.0;
+                transform: translate(0, 0);
+                color: hotpink;
+                content: "Loading...";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>relay2</h3><br>
+    <button type="button" onclick="stoprefresh()" id="changerefresh">stop refreshing</button><br>
+    <a href="/">&#8678;</a><span></span>
+    <a href="/loading">&#8635;</a>
+    <br><span id="animatedrefresh"></span>
+</body>
+
+</html>

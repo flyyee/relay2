@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
+    <title>relay2 - load</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            text-align: center;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgba(39, 95, 185, 0.699);
+            background: linear-gradient(0deg, rgba(34, 162, 163, 1) 0%, rgba(157, 255, 98, 1) 100%);
+        }
+
+        body h3 {
+            color: rgba(42, 184, 117, 0.795);
+        }
+
+        body form {
+            margin-bottom: 10px;
+        }
+
+        body input {
+            width: 70%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            padding-left: 7px;
+            border: none;
+            border-bottom: 2px solid rgba(58, 133, 255, 0.541);
+            background-color: transparent;
+            color: olive;
+            border-bottom-left-radius: 20px;
+            font-size: 30px;
+            margin-bottom: 3px;
+        }
+
+        body input:focus {
+            background-color: rgba(0, 73, 190, 0.253);
+            background-color: rgba(255, 255, 255, 0.089);
+            color: olive;
+            outline: 0;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        body button {
+            font-size: 40px;
+        }
+
+        body button {
+            margin-left: 5px;
+            text-decoration: none;
+            border: none;
+            background-color: rgba(58, 133, 255, 0.541);
+            color: rgba(0, 0, 0, 0.411);
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 4px;
+        }
+
+        body button:hover {
+            border: 2px solid rgba(58, 133, 255, 0.541);
+            background-color: rgba(0, 0, 0, 0.089);
+            padding: 0px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        body button:active {
+            outline: 0;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>relay2</h3>
+    <form method="post" action="/" autocomplete="off">
+        url: <input type="text" name="url" required id="url"><br>
+        <button type="button" onclick=startencrypt()>encrypt</button>
+        <button type="submit">submit</button>
+    </form>
+
+    key: <input type="password" id="keyencrypt">
+    <button type="button" onclick=savekey() id="savekeybutton">save</button><br>
+
+    password: <input type="password" id="passwordencrypt">
+    <button type="button" onclick=savepassword() id="savepasswordbutton">save</button>
+</body>
+
+<script>
+    var mkey = "fake"
+    var mpassword = "fake"
+    function savekey() {
+        mkey = document.getElementById("keyencrypt").value
+        if (mkey !== "") {
+            document.getElementById("savekeybutton").textContent = "reset"
+        }
+        document.getElementById("keyencrypt").value = ""
+    }
+
+    function savepassword() {
+        mpassword = document.getElementById("passwordencrypt").value
+        if (mpassword !== "") {
+            document.getElementById("savepasswordbutton").textContent = "reset"
+        }
+        document.getElementById("passwordencrypt").value = ""
+
+    }
+
+    startencrypt = () => {
+        if (mkey !== "fake" && mkey !== "") {
+            encryptkey()
+            if (mpassword !== "fake" && mkey !== "") {
+                encryptpassword()
+            }
+        } else {
+            savekey()
+            if (mkey !== "fake" && mkey !== "") {
+                encryptkey()
+                if (mpassword !== "fake" && mkey !== "") {
+                    encryptpassword()
+                } else {
+                    savepassword()
+                    if (mpassword !== "fake" && mkey !== "") {
+                        encryptpassword()
+                    }
+                }
+            } else {
+                alert("bad settings")
+            }
+        }
+    }
+
+    encryptkey = () => {
+        let text = document.getElementById("url").value
+        let key = mkey.split(' ').map(Number);
+
+        if (!key.some(Number.isNaN) && key.length === 4) {
+            key = key.concat(key)
+            key = key.concat(key)
+            key = key.concat(key)
+
+            // Convert text to bytes
+            let textBytes = aesjs.utils.utf8.toBytes(text);
+
+            // The counter is optional, and if omitted will begin at 1
+            let aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+            let encryptedBytes = aesCtr.encrypt(textBytes);
+
+            // To print or store the binary data, you may convert it to hex
+            let encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+
+            document.getElementById("url").value = "~!~" + encryptedHex
+            // document.getElementById("urlc").value = encryptedHex
+            // document.getElementById("submitencrypted").disabled = false
+        } else {
+            alert("bad key")
+        }
+
+    }
+
+    encryptpassword = () => {
+        let text = mpassword + document.getElementById("url").value
+        let key = []
+        for (let x of mpassword) {
+            console.log(x)
+            key.push(x.charCodeAt(0))
+        }
+        console.log(key)
+        if (!key.some(Number.isNaN) && key.length === 8) {
+            // key = key.concat(key)
+            // key = key.concat(key)
+            key = key.concat(key)
+
+            // Convert text to bytes
+            let textBytes = aesjs.utils.utf8.toBytes(text);
+
+            // The counter is optional, and if omitted will begin at 1
+            let aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+            let encryptedBytes = aesCtr.encrypt(textBytes);
+
+            // To print or store the binary data, you may convert it to hex
+            let encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+
+            document.getElementById("url").value = "~@~" + encryptedHex
+            // document.getElementById("urlc").value = encryptedHex
+            // document.getElementById("submitencrypted").disabled = false
+        } else {
+            alert("bad password")
+        }
+
+    }
+
+</script>
+
+</html>

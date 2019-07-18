@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-size: 40px;
+            text-align: center;
+            opacity: 0.3;
+            background-color: aquamarine;
+            color: blue;
+        }
+        #animatedrefresh::before {
+            animation: changer 3s infinite alternate;
+            content: "Loading";
+        }
+        @keyframes changer {
+            from {
+                font-size: 40px;
+                opacity: 0.3;
+                transform: translate(0, 20);
+                color: blue;
+                content: "Loading -";
+            }
+            /* 50% {
+                content: "Loading..";
+            }
+            85% {
+                content: "Loading...";
+            } */
+            25% {
+                content: "Loading \\"
+            }
+            50% {
+                content: "Loading |"
+            }
+            75% {
+                content: "Loading /"
+            }
+            to {
+                font-size: 80px;
+                opacity: 1.0;
+                transform: translate(0, 0);
+                color: hotpink;
+                content: "Loading -";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span id="animatedrefresh"></span>
+</body>
+
+</html>

@@ -1,0 +1,1510 @@
+<html><head>
+    
+    
+<!-- have a nice day <3 -->
+<title>Pricing, Trading and Statistics for Team Fortress 2 - backpack.tf</title>
+
+<meta name="title" content="aPricing, Trading and Statistics for Team Fortress 2">
+<meta name="description" content="a    backpack.tf: statistics, prices, and a whole lot more for Team Fortress 2,
+    Counter-Strike: Global Offensive and other Steam games.
+">
+<meta name="viewport" content="awidth=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="atext/html; charset=utf-8">
+
+<link rel="mask-icon" href="a/favicon_440.ico" color="#54748b">
+
+<meta name="msapplication-TileColor" content="a#54748b">
+
+<meta name="theme-color" content="a#54748b">
+
+<meta name="twitter:card" content="asummary">
+<meta name="twitter:site" content="a@backpacktf">
+<meta name="twitter:title" content="aPricing, Trading and Statistics for Team Fortress 2">
+<meta name="twitter:description" content="a    backpack.tf: statistics, prices, and a whole lot more for Team Fortress 2,
+    Counter-Strike: Global Offensive and other Steam games.
+">
+<meta name="twitter:image" content="a">
+
+
+<meta property="og:title" content="aPricing, Trading and Statistics for Team Fortress 2">
+<meta property="og:description" content="a    backpack.tf: statistics, prices, and a whole lot more for Team Fortress 2,
+    Counter-Strike: Global Offensive and other Steam games.
+">
+<meta property="og:site_name" content="abackpack.tf">
+<meta property="og:image" content="a">
+<meta property="og:type" content="awebsite">
+<meta property="og:locale" content="aen_US">
+
+<link rel="shortcut icon" href="a/favicon_440.ico?v=1">
+<link rel="apple-touch-icon" href="a/favicon_440.ico?v=1">
+<link rel="apple-touch-icon-precomposed" href="a/favicon_440.ico?v=1">
+
+<link rel="stylesheet" href="ahttps://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="a/css/steam-icons.css?version=55">
+<link rel="stylesheet" href="a/css/bundle.css?version=55">
+
+<link href="ahttps://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+                    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(), event: "gtm.js"
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l !== "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src =
+                    "ahttps://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-KGS4MWF");</script>
+                <script>
+        window.cmpConfig = {
+            customLogo: "ahttps://backpack.tf/images/tf-icon.png",
+            customLogoLink: "ahttps://backpack.tf",
+            customLogoTitle: "backpack.tf"
+        };
+        !function(t,n){if(!t.__cmp){t.__cmp=function(){(t.attachEvent||t.addEventListener)("message",function(e){t.__cmp.receiveMessage(e)},!1),function e(){
+            if(!t.frames.__cmpLocator)if(n.body){var a=n.createElement("iframe");a.style.display="none",a.name="__cmpLocator",n.body.appendChild(a)}else setTimeout(e,5)}();
+            var c=[],e=function(e,a,n){"ping"===e?n&&n({gdprAppliesGlobally:!!(t.__cmp&&t.__cmp.config&&t.__cmp.config.storeConsentGlobally),cmpLoaded:!1}):c.push({command:e,parameter:a,callback:n})};
+            return e.commandQueue=c,e.receiveMessage=function(e){var a=e&&e.data&&e.data.__cmpCall;a&&c.push({callId:a.callId,command:a.command,parameter:a.parameter,event:e})},
+                e.config=t.cmpConfig||{globalVendorListLocation:"ahttps://cmp.network-n.com/vendorlist.json"},e}();var e=n.createElement("script");e.async=!0,
+            e.src="ahttps://cmp.network-n.com/js/cmp.cf.complete.bundle.js",n.getElementsByTagName("head")[0].appendChild(e)}}(window,document);
+        </script>
+    
+        <script>
+        Session = {
+            csrf: "",
+            steamid: "",
+            admin: false,
+            appid: 440,
+            appcontextid: 2,
+            appMarketMode: false,
+            rawCurrency: {value: 0.04 }
+        };
+    </script>
+</head>
+
+<body class="app-440 ">
+<script src="a/js/bundle.js?v=55"></script>
+<script src="a/js/vendor-support.js?v=55"></script>
+
+        <noscript>
+        <iframe src="ahttps://www.googletagmanager.com/ns.html?id=GTM-KGS4MWF"
+                height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div class="navbar navbar-fixed-top navbar-default" id="#navbar" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                            <a type="button" class="navbar-steam-login" href="/new?url=https://backpack.tf/login">
+                    <i class="stm stm-steam"></i>
+                </a>
+            
+            <a href="/new?url=https://backpack.tf/msearch" type="button" class="xs-search">
+                <i class="fa fa-search"></i>
+            </a>
+            <a class="navbar-brand" href="/new?url=https://backpack.tf/">
+                <img src="a/images/logo_440.svg" alt="Logo">
+            </a>
+            <div class="dropdown navbar-game-select">
+                <div data-toggle="dropdown">
+                    <img src="a/images/game_selector.png">
+                </div>
+                <ul class="dropdown-menu">
+                                            <li>
+                            <a href="/new?url=https://backpack.tf/switch/440">
+                                <img src="a/images/logo_440.svg" alt="TF2">
+                                <p>Team Fortress 2</p>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/new?url=https://backpack.tf/switch/570">
+                                <img src="a/images/logo_570.svg" alt="">
+                                <p>Dota 2</p>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/new?url=https://backpack.tf/switch/730">
+                                <img src="a/images/logo_730.svg" alt="CS:GO">
+                                <p>Counter-Strike: Global Offensive</p>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                </li>
+                <li>
+                    <a href="/new?url=http://forums.backpack.tf/">
+                        <i class="fa fa-comments"></i> Forums
+                    </a>
+                </li>
+                                    <li class="dropdown">
+                        <a href="/new?url=https://backpack.tf/about:blank#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-check"></i> Pricing <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Community Pricing
+                            </li>
+                            <li><a href="/new?url=https://backpack.tf/pricelist"><i class="fa fa-fw fa-th"></i>
+                                    Pricegrid</a></li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/spreadsheet">
+                                    <i class="fa fa-fw fa-list"></i>
+                                    Spreadsheet
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/vote"><i class="fa fa-fw fa-check"></i>
+                                    Browse Suggestions</a>
+                            </li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/latest"><i class="fa fa-fw fa-calendar"></i>
+                                    Latest Changes</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Unusual Pricelist
+                            </li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/unusuals"><i class="fa fa-fw fa-moon-o"></i>
+                                    Browse by Item</a>
+                            </li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/effects"><i class="fa fa-fw fa-fire"></i>
+                                    Browse by Effect</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Steam Community
+                                Market
+                            </li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/market"><i class="stm fa-fw stm-steam"></i>
+                                    Market Pricelist</a>
+                            </li>
+                        </ul>
+                    </li>
+                                <li class="dropdown">
+                    <a href="/new?url=https://backpack.tf/about:blank#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-exchange"></i> Trading <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Classifieds</li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/classifieds"><i class="fa fa-fw fa-search"></i>
+                                Classified Listings</a>
+                        </li>
+                                                <li class="divider"></li>
+                        <li class="dropdown-header">Utilities</li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/calculator"><i class="fa fa-fw fa-calculator"></i>
+                                Calculator</a>
+                        </li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/premium/search"><i class="fa fa-fw fa-star"></i>
+                                Premium Search</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" id="nav_toplist">
+                    <a href="/new?url=https://backpack.tf/about:blank#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bar-chart"></i> Statistics <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">TF2</li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/stats">
+                                <i class="fa fa-fw fa-cubes"></i> Browse
+                                Items
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Top Lists</li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/top/backpacks">
+                                <i class="fa fa-fw fa-briefcase"></i> Top
+                                Inventories
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/top/donators">
+                                <i class="fa fa-fw fa-heart"></i> Top
+                                Donators
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/new?url=https://backpack.tf/top/generous">
+                                <i class="fa fa-fw fa-star"></i> Top Gifters
+                            </a>
+                        </li>
+                                                    <li>
+                                <a href="/new?url=https://backpack.tf/top/contributors">
+                                    <i class="fa fa-fw fa-comments-o"></i>
+                                    Top Contributors
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/new?url=https://backpack.tf/top/accurate">
+                                    <i class="fa fa-fw fa-check"></i> Most
+                                    Accurate
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-search navbar-left hidden-xs" action="a/im_feeling_lucky" id="navbar-search-container" role="search">
+                <div class="form-group">
+                    <input class="form-control search-query" id="navbar-search" name="text" type="text" placeholder="Search" autocomplete="off">
+                </div>
+            </form>
+
+            <div class="navbar-right">
+                    <form method="post" action="a/login" id="login" class="navbar-form hidden-xs">
+        <input type="image" src="a/images/sits_small.png" alt="Sign In">
+        <input type="hidden" name="return" value="bp">
+    </form>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="container" id="page-content">
+            <div class="hidden-xs">
+    <div id="media-side">
+        <div id="nn_ws1"></div>
+    </div>
+</div>    
+    
+        <div class="row">
+    <div class="col-md-12">
+        <div class="top-prices">
+                            
+                                    
+    
+                                                                                
+            
+<a class="currency-box" href="/new?url=https://backpack.tf/stats/Unique/Refined%20Metal/Tradable/Craftable">
+    <div class="image">
+        <img src="ahttps://steamcdn-a.akamaihd.net/apps/440/icons/pile_of_junk3.6f7e42fae0507065287c7b5c51aa05c2420161ba.png" alt="Refined Metal">
+    </div>
+    <div class="text">
+        <p class="value" title="Up $0.00 4 months ago" data-tip="bottom">
+            <i class="fa fa-green fa-arrow-up"></i> $0.04
+        </p>
+
+        <p class="updated text-muted">
+            updated 4 months ago
+        </p>
+    </div>
+</a>                                            
+                                    
+    
+                                                                                
+            
+<a class="currency-box" href="/new?url=https://backpack.tf/stats/Unique/Mann%20Co.%20Supply%20Crate%20Key/Tradable/Craftable">
+    <div class="image">
+        <img src="ahttps://steamcdn-a.akamaihd.net/apps/440/icons/key.be0a5e2cda3a039132c35b67319829d785e50352.png" alt="Mann Co. Supply Crate Key">
+    </div>
+    <div class="text">
+        <p class="value" title="Up 0.78 ref 2 days ago" data-tip="bottom">
+            <i class="fa fa-green fa-arrow-up"></i> 47.33–47.44 ref
+        </p>
+
+        <p class="updated text-muted">
+            updated 2 days ago
+        </p>
+    </div>
+</a>                                            
+                                    
+    
+                                                                                
+            
+<a class="currency-box" href="/new?url=https://backpack.tf/stats/Unique/Earbuds/Tradable/Craftable">
+    <div class="image">
+        <img src="a/images/440/items/143.png" alt="Earbuds">
+    </div>
+    <div class="text">
+        <p class="value" title="Down 5.83 ref 3 weeks ago" data-tip="bottom">
+            <i class="fa fa-red fa-arrow-down"></i> 2.85 keys
+        </p>
+
+        <p class="updated text-muted">
+            updated 3 weeks ago
+        </p>
+    </div>
+</a>                                    </div>
+    </div>
+</div>
+    <div class="row row-media">
+        <div class="col-md-7">
+            
+    <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Promoted Listings</span>
+
+                    <span class="panel-extras">
+                                                                                    <div>
+                                    <a class="btn btn-panel" href="/new?url=https://backpack.tf/classifieds" target="" id="">
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class="panel-body " id="">
+                    <div class="index-classifieds">
+            <ul class="item-list">
+                                    <li title="Hat of Undeniable Wealth And Respect" class="item q-440-6 q-440-border-6" data-priceindex="0" data-market_p="25645" data-market_s="12" data-listing_account_id="209674135" data-listing_name="Apoq [�​�]" data-listing_intent="sell" data-listing_comment="DOUBLE SPELLED! Rare and high tier Spectral Spectrum+ Team Spirit Footprints! Can go lower for pure. Open to offers!" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=209674135&amp;token=XZBzFl8D" data-listing_price="249 keys" data-equipped="0" data-summary="Level 28 Hat" data-level="28" data-slot="misc" data-tradable="1" data-craftable="1" data-q_name="Unique" data-quality="6" data-name="Hat of Undeniable Wealth And Respect" data-base_name="Hat of Undeniable Wealth And Respect" data-app="440" data-defindex="334" data-original_id="214043459" data-id="7757224759" data-origin="Third-Party Promotion" data-spell_1="Halloween Spell: Spectral Spectrum" data-spell_color_1="ff7f00" data-spell_2="Halloween Spell: Team Spirit Footprints" data-spell_color_2="dddd00" data-p_bptf="130–145 keys" data-p_bptf_all="6,515.44 ref, $260.62" data-p_scm="$256.45" data-p_scm_all="5,193.11 ref, 109.59 keys, $207.72" data-custom_name="Squidward Tennisballs" data-price="6515.4375">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/treasure_hat_oct.a23789eec62d48d665b9a6f4c7b53b82f172aa9e.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>249 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unique Hat of Undeniable Wealth And Respect 28 Third-Party Promotion 7757224759 214043459</span></li><li title="Strange Flashdance Footies" class="item q-440-11 q-440-border-11" data-priceindex="0" data-market_p="121" data-market_s="13" data-listing_account_id="85657087" data-listing_name="Llam​a" data-listing_intent="sell" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=85657087&amp;token=njJPWL7A" data-listing_buyout="1" data-listing_price="21 ref" data-equipped="0" data-ke1="0 Points Scored" data-summary="Level 86 Cosmetic Item" data-level="86" data-slot="misc" data-tradable="1" data-craftable="1" data-q_name="Strange" data-quality="11" data-name="Flashdance Footies" data-base_name="Flashdance Footies" data-app="440" data-defindex="30551" data-original_id="7768100572" data-id="7768100572" data-origin="Gifted" data-p_bptf="20.22–20.33 ref" data-p_bptf_all="$0.81" data-p_scm="$1.21" data-p_scm_all="24.50 ref, $0.98" data-price="20.275">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hiphunter_boots.e7735c5d71ef4dce5cea5248c049dd457cda1109.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>21 ref</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Strange Flashdance Footies 86 Gifted 7768100572 7768100572</span></li><li title="Strange Chiroptera Venenata Private Eye" class="item q-440-5 q-440-border-11" data-priceindex="75" data-market_p="4411" data-market_s="12" data-listing_account_id="16259210" data-listing_name="[ o/ ]​DiabLo" data-listing_intent="sell" data-listing_comment="- Clean
+-Tri-class 
+-Strange" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=16259210&amp;token=Hhh4x6DA" data-listing_buyout="1" data-listing_price="90 keys" data-equipped="1" data-quality_elevated="11" data-qe_name="Strange" data-ke1="0 Points Scored" data-part_name_1="Airborne Enemy Kills" data-part_score_1="0" data-part_price_1="2.85 keys" data-part_name_2="Assists" data-part_score_2="0" data-part_price_2="26–27 ref" data-part_name_3="Kills" data-part_score_3="0" data-part_price_3="4.75–5.25 keys" data-summary="Level 75 Hat" data-level="75" data-slot="misc" data-class="Multi" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Private Eye" data-base_name="Private Eye" data-app="440" data-defindex="388" data-original_id="2046253140" data-id="7470331670" data-origin="Found in Crate" data-p_bptf="60 keys" data-p_bptf_all="2,843.10 ref, $113.72" data-price="2843.1" data-effect_name="Chiroptera Venenata" data-effect_id="75">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/spy_private_eye.3fbb7721be648719b2cf2f072514958ed8db7023.png),url(a/images/440/particles/75_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>90 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Private Eye 75 Found in Crate Chiroptera Venenata 7470331670 2046253140</span></li><li title="Strange War Paint (Minimal Wear)" class="item q-440-11 q-440-border-11" data-priceindex="0" data-market_p="-1" data-listing_account_id="191430695" data-listing_name="Del ​Boy" data-listing_intent="sell" data-listing_comment="𝙇𝙄𝙈𝙄𝙏𝙀𝘿: 𝐒𝐭𝐫𝐚𝐧𝐠𝐞 𝐌𝐖 𝐄𝐥𝐞𝐜𝐭𝐫𝐨𝐬𝐡𝐨𝐜𝐤𝐞𝐝 war paint buy now on 💀Marketplace.tf💀, add me if you wish to buy via keys!🔑 | All inquiries or negotiations feel free to add me!" data-listing_mp="1" data-listing_price="91 keys" data-listing_mp_price="$162.32" data-equipped="0" data-ke1="0 Kills" data-summary="Level 99 War Paint (Minimal Wear)" data-level="99" data-tradable="1" data-craftable="1" data-q_name="Strange" data-quality="11" data-name="War Paint" data-base_name="War Paint" data-app="440" data-defindex="17241" data-original_id="7583637727" data-id="7766027891" data-wear_tier="Minimal Wear" data-origin="Timed Drop" data-stat_clock="1" data-price="0">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/War%20Paint_241_2_0.png)"></div><div class="tag bottom-right"><i class="icon-mp"></i> <span>91 keys</span></div><div class="tag top-left">MW</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Strange War Paint 99 Timed Drop 7766027891 7583637727</span></li><li title="Ominous Night Taunt: Second Rate Sorcery" class="item q-440-5 q-440-border-5" data-priceindex="3022" data-market_p="1230" data-market_s="12" data-listing_account_id="107824533" data-listing_name="Mr. ​Lucksman" data-listing_intent="sell" data-listing_comment="Selling for 25 Keys in Pure or 30 Keys in Items. Send me a trade offer if interested." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=107824533&amp;token=2gzJfBMs" data-listing_buyout="1" data-listing_price="25 keys" data-equipped="1" data-summary="Level 62 Special Taunt" data-level="62" data-slot="taunt" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Taunt: Second Rate Sorcery" data-base_name="Taunt: Second Rate Sorcery" data-app="440" data-defindex="30816" data-original_id="5689031586" data-id="7289843448" data-origin="Purchased" data-p_bptf="25–28 keys" data-p_bptf_all="1,255.70 ref, $50.23" data-price="1255.7025" data-effect_name="Ominous Night" data-effect_id="3022">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/secondrate_sorcery.3bf299a8f606d17bccddc84f0315a539a59456b8.png),url(a/images/440/particles/3022_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>25 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Taunt: Second Rate Sorcery 62 Purchased Ominous Night 7289843448 5689031586</span></li><li title="Scorching Flames Combustible Kabuto" class="item q-440-5 q-440-border-5" data-priceindex="14" data-market_p="4549" data-market_s="12" data-paint_price="2.95–3.05 keys" data-listing_account_id="6894011" data-listing_name="-».•´​Puddilicious`•.«-" data-listing_intent="sell" data-listing_comment="or $420 bitcoin" data-listing_mp="1" data-listing_price="210 keys" data-listing_mp_price="$465.00" data-equipped="0" data-summary="Level 38 Hat" data-level="38" data-slot="misc" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Combustible Kabuto" data-base_name="Combustible Kabuto" data-app="440" data-defindex="30418" data-original_id="3335076953" data-id="6944394761" data-origin="Timed Drop" data-p_bptf="150–195 keys" data-p_bptf_all="8,173.91 ref, $326.96" data-price="8173.9125" data-effect_name="Scorching Flames" data-effect_id="14" data-paint_name="An Extraordinary Abundance of Tinge" data-paint_hex="e6e6e6">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/short2014_honnoji_helm.47571856e1eb9577b69472c670aa5442ed67eaa7.png),url(a/images/440/particles/14_94x94.png)"></div><div class="tag bottom-right"><i class="icon-mp"></i> <span>210 keys</span></div><div class="paint" style="background-color: #e6e6e6"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Combustible Kabuto 38 Timed Drop Scorching Flames An Extraordinary Abundance of Tinge 6944394761 3335076953</span></li><li title="Strange Atomic Corona Australis" class="item q-440-5 q-440-border-11" data-priceindex="92" data-market_p="-1" data-listing_account_id="325991610" data-listing_name="unna​m3d" data-listing_intent="sell" data-listing_comment="or real good overpay" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=325991610&amp;token=vSY62gb1" data-listing_buyout="1" data-listing_price="650 keys" data-equipped="0" data-quality_elevated="11" data-qe_name="Strange" data-ke1="136 Points Scored" data-summary="Level 80 Cosmetic Augmentation" data-level="80" data-slot="misc" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Corona Australis" data-base_name="Corona Australis" data-app="440" data-defindex="30648" data-original_id="7021332282" data-id="7321429353" data-origin="Found in Crate" data-p_bptf="300 keys" data-p_bptf_all="14,215.50 ref, $568.62" data-price="14215.5" data-effect_name="Atomic" data-effect_id="92">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/invasion_corona_australis.0ffdb504afdbc582102dda56453bebb99daaec6c.png),url(a/images/440/particles/92_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>650 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Corona Australis 80 Found in Crate Atomic 7321429353 7021332282</span></li><li title="Macaw Masked Bazaar Bargain (Factory New)" class="item q-440-15 q-440-border-15" data-priceindex="0" data-market_p="-1" data-listing_account_id="149624557" data-listing_name="Appah​ ♥" data-listing_intent="sell" data-listing_comment="This skin is a flawless white with only a tiny ammount of blue, likely the highest tier macaw skin in existence and is exceptionally unique in looks.
+Dont offer me backpack price, serious offers only" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=149624557&amp;token=UL-_C5Lk" data-listing_price="500 keys" data-equipped="0" data-summary="Level 99 Sniper Rifle (Factory New)" data-level="99" data-slot="primary" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Macaw Masked | Bazaar Bargain (Factory New)" data-base_name="Bazaar Bargain" data-app="440" data-defindex="402" data-original_id="7339210890" data-id="7339210890" data-wear_tier="Factory New" data-origin="War Paint" data-price="0">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Bazaar%20Bargain_303_1_0.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>500 keys</span></div><div class="tag top-left">FN</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Decorated Weapon Bazaar Bargain 99 War Paint Macaw Masked 7339210890 7339210890</span></li><li title="Skill Gotten Gains Taunt: Spent Well Spirits" class="item q-440-5 q-440-border-5" data-priceindex="3007" data-market_p="894" data-market_s="12" data-listing_account_id="62374525" data-listing_name="Wond​erboltsCadet" data-listing_intent="sell" data-listing_comment="I Strongly Prefer Pure, But I Might Accept Unusual/Item Overpay If I Like The Items.
+Demoman Taunt With Skill Gotten Gains Effect.
+I Would Prefer It If You Send A Trade Offer." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=62374525&amp;token=nTM4gbEH" data-listing_price="3 keys, 23 ref" data-equipped="1" data-summary="Level 39 Special Taunt" data-level="39" data-slot="taunt" data-class="Demoman" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Taunt: Spent Well Spirits" data-base_name="Taunt: Spent Well Spirits" data-app="440" data-defindex="1114" data-original_id="2933149531" data-id="7776331110" data-origin="Found in Crate" data-p_bptf="4.5–6 keys" data-p_bptf_all="248.77 ref, $9.95" data-price="248.77125" data-effect_name="Skill Gotten Gains" data-effect_id="3007">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/taunt_spent_well.422a7b805fb6643466f8d3a30a6e53e85371fcef.png),url(a/images/440/particles/3007_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>3.49 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Taunt: Spent Well Spirits 39 Found in Crate Skill Gotten Gains 7776331110 2933149531</span></li><li title="Strange Smoking Anger" class="item q-440-5 q-440-border-11" data-priceindex="35" data-market_p="5613" data-market_s="12" data-listing_account_id="374680428" data-listing_name="hails​ter" data-listing_intent="sell" data-listing_comment="Clean" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=374680428&amp;token=Rl9zswWA" data-listing_price="35 keys" data-equipped="1" data-quality_elevated="11" data-qe_name="Strange" data-ke1="24 Points Scored" data-summary="Level 10 Hat" data-level="10" data-slot="misc" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Anger" data-base_name="Anger" data-app="440" data-defindex="518" data-original_id="1878508149" data-id="7732806934" data-origin="Found in Crate" data-p_bptf="27–32 keys" data-p_bptf_all="1,397.86 ref, $55.91" data-price="1397.8575" data-effect_name="Smoking" data-effect_id="35">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_bet_brinkhood.16b34cf3a5b777028b11347262fecc6c9fc2ca0e.png),url(a/images/440/particles/35_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>35 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Anger 10 Found in Crate Smoking 7732806934 1878508149</span></li><li title="Green Black Hole Tough Stuff Muffs" class="item q-440-5 q-440-border-5" data-priceindex="71" data-market_p="6698" data-market_s="12" data-paint_price="1.1 keys" data-listing_account_id="50441275" data-listing_name="L​unarias" data-listing_intent="sell" data-listing_comment="Clean and short history      200 keys pure | 250+ Item offers" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=50441275&amp;token=9oLMNmhl" data-listing_price="200 keys" data-equipped="1" data-summary="Level 38 Hat" data-level="38" data-slot="misc" data-style="Boston Style" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Tough Stuff Muffs" data-base_name="Tough Stuff Muffs" data-app="440" data-defindex="984" data-original_id="4842469192" data-id="7427498983" data-origin="Found in Crate" data-p_bptf="170–200 keys" data-p_bptf_all="8,766.23 ref, $350.65" data-price="8766.225" data-effect_name="Green Black Hole" data-effect_id="71" data-paint_name="Team Spirit" data-paint_hex="b8383b">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/all_earmuffs_style1.563d793eb6bdcf4bb0f67a4b7561ee81f2722bb5.png),url(a/images/440/particles/71_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>200 keys</span></div><div class="paint" style="background-color: #b8383b"></div><div class="paint secondary" style="background-color: #5885a2"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Tough Stuff Muffs 38 Found in Crate Green Black Hole Team Spirit 7427498983 4842469192</span></li><li title="Cloud 9 Honcho"s Headgear" class="item q-440-5 q-440-border-5" data-priceindex="58" data-market_p="3945" data-market_s="13" data-listing_account_id="386404035" data-listing_name="K​attocate" data-listing_intent="sell" data-listing_comment="Open to offers of any kind." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=386404035&amp;token=RfVmZk76" data-listing_price="20 keys" data-equipped="0" data-summary="Level 86 Hat" data-level="86" data-slot="misc" data-class="Soldier" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Honcho"s Headgear" data-base_name="Honcho"s Headgear" data-app="440" data-defindex="391" data-original_id="2458688595" data-id="7664413288" data-origin="Found in Crate" data-p_bptf="19–21 keys" data-p_bptf_all="947.70 ref, $37.91" data-price="947.7" data-effect_name="Cloud 9" data-effect_id="58">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/honchos_headgear.43719ff488323237da2d5650167dd0b471ac8b28.png),url(a/images/440/particles/58_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>20 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Honcho"s Headgear 86 Found in Crate Cloud 9 7664413288 2458688595</span></li><li title="Vivid Plasma Exquisite Rack" class="item q-440-5 q-440-border-5" data-priceindex="16" data-market_p="14490" data-market_s="14" data-paint_price="6.44–6.55 ref" data-listing_account_id="194801221" data-listing_name="Free​ 2 Play Scootz" data-listing_intent="sell" data-listing_comment="Add me if you want to buy with cash. Item overpay is accepted!" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=194801221&amp;token=uj904Ix-" data-listing_price="110 keys" data-equipped="1" data-summary="Level 84 Cosmetic Item" data-level="84" data-slot="misc" data-class="Soldier" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Exquisite Rack" data-base_name="Exquisite Rack" data-app="440" data-defindex="339" data-original_id="264545849" data-id="7687084623" data-origin="Traded" data-p_bptf="89–110 keys" data-p_bptf_all="4,714.81 ref, $188.59" data-price="4714.8075" data-effect_name="Vivid Plasma" data-effect_id="16" data-paint_name="Peculiarly Drab Tincture" data-paint_hex="c5af91">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/soldier_holiday_antlers.1f3a3cdaeff55df059b2570686138f0c7163713c.png),url(a/images/440/particles/16_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>110 keys</span></div><div class="paint" style="background-color: #c5af91"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Exquisite Rack 84 Traded Vivid Plasma Peculiarly Drab Tincture 7687084623 264545849</span></li><li title="Strange Circling Heart Head Warmer" class="item q-440-5 q-440-border-11" data-priceindex="19" data-market_p="2760" data-market_s="1" data-paint_price="2.45 keys" data-listing_account_id="107309408" data-listing_name="A Deli​cious Cashew™" data-listing_intent="sell" data-listing_comment="One of the rare strange unusual headwarmers. Will listen to any reasonable offer, send a trade offer if interested. Looking for pure/mixed/unusual offers." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=107309408&amp;token=JYLA2YQ4" data-listing_price="800 keys" data-equipped="1" data-quality_elevated="11" data-qe_name="Strange" data-ke1="13 Points Scored" data-summary="Level 76 Hat" data-level="76" data-slot="misc" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Head Warmer" data-base_name="Head Warmer" data-app="440" data-defindex="644" data-original_id="5064385814" data-id="5313297035" data-origin="Gifted" data-p_bptf="281 keys" data-p_bptf_all="13,315.19 ref, $532.61" data-price="13315.185" data-effect_name="Circling Heart" data-effect_id="19" data-paint_name="Pink as Hell" data-paint_hex="ff69b4">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/xms_pyro_parka.c0edc76f3da0f19f84887976acf02c043fe063e1.png),url(a/images/440/particles/19_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>800 keys</span></div><div class="paint" style="background-color: #ff69b4"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Head Warmer 76 Gifted Circling Heart Pink as Hell 5313297035 5064385814</span></li><li title="Amaranthine Tartan Spartan" class="item q-440-5 q-440-border-5" data-priceindex="82" data-market_p="2899" data-market_s="12" data-paint_price="23–23.33 ref" data-listing_account_id="122868479" data-listing_name="OddFut​ure" data-listing_intent="sell" data-listing_comment="1 of 1 forever, Price is in pure, paying with item(s) will require overpay. Don"t lowball, not accepting skins/unusual taunts as payment." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=122868479&amp;token=c_l0ZSx2" data-listing_price="70 keys" data-equipped="0" data-summary="Level 80 Helmet" data-level="80" data-slot="misc" data-class="Demoman" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Tartan Spartan" data-base_name="Tartan Spartan" data-app="440" data-defindex="30106" data-original_id="3143555406" data-id="7638788814" data-origin="Gifted" data-p_bptf="52 keys" data-p_bptf_all="2,464.02 ref, $98.56" data-custom_desc="Helm of the Everlasting, Only one in existence" data-price="2464.02" data-effect_name="Amaranthine" data-effect_id="82" data-paint_name="A Deep Commitment to Purple" data-paint_hex="7d4071">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/jul13_trojan_helmet.e5360186df9a1c4dfa913446e6d7bb287c5f21ef.png),url(a/images/440/particles/82_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>70 keys</span></div><div class="paint" style="background-color: #7d4071"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Tartan Spartan 80 Gifted Amaranthine A Deep Commitment to Purple 7638788814 3143555406</span></li><li title="Burning Flames Sergeant"s Drill Hat" class="item q-440-5 q-440-border-5" data-priceindex="13" data-market_p="7223" data-market_s="12" data-paint_price="1.1 keys" data-listing_account_id="171367434" data-listing_name="Parado​x trade.tf" data-listing_intent="sell" data-listing_comment="Duped. Price in pure. In unusuals/items 15-40% overpay from original price." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=171367434&amp;token=UtJ4ZbNN" data-listing_price="150 keys" data-equipped="1" data-summary="Level 53 Hat" data-level="53" data-slot="misc" data-class="Soldier" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Sergeant"s Drill Hat" data-base_name="Sergeant"s Drill Hat" data-app="440" data-defindex="183" data-original_id="707222162" data-id="7690415083" data-origin="Found in Crate" data-spell_1="Halloween Spell: Violent Violet Footprints" data-spell_color_1="ff77ff" data-p_bptf="125–155 keys" data-p_bptf_all="6,633.90 ref, $265.36" data-price="6633.9" data-effect_name="Burning Flames" data-effect_id="13" data-paint_name="Team Spirit" data-paint_hex="b8383b">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/soldier_sargehat.ea8a22b4c923a8bbc70c2b477e4cf4809ee13aea.png),url(a/images/440/particles/13_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>150 keys</span></div><div class="paint" style="background-color: #b8383b"></div><div class="paint secondary" style="background-color: #5885a2"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Sergeant"s Drill Hat 53 Found in Crate Burning Flames Team Spirit 7690415083 707222162</span></li><li title="Galactic Gateway Defragmenting Hard Hat 17%" class="item q-440-5 q-440-border-5" data-priceindex="114" data-market_p="13240" data-market_s="12" data-listing_account_id="249375248" data-listing_name="BlazingHail​fire" data-listing_intent="sell" data-listing_comment="Selling this beaut for 400 keys, can do a pretty significant drop from this for full pure, otherwise looking for unusual offers around this range! Just shoot me a trade!" data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=249375248&amp;token=L_eT0GTZ" data-listing_price="400 keys" data-equipped="1" data-summary="Level 16 Hat" data-level="16" data-slot="misc" data-class="Engineer" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Defragmenting Hard Hat 17%" data-base_name="Defragmenting Hard Hat 17%" data-app="440" data-defindex="31011" data-original_id="7251011522" data-id="7728367953" data-origin="Found in Crate" data-price="0" data-effect_name="Galactic Gateway" data-effect_id="114">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hwn2018_defragmenting_hat.94b42ea87f683bae23c5e5da055f99347cc8785f.png),url(a/images/440/particles/114_94x94.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>400 keys</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unusual Defragmenting Hard Hat 17% 16 Found in Crate Galactic Gateway 7728367953 7251011522</span></li><li title="Max"s Severed Head" class="item q-440-6 q-440-border-6" data-priceindex="0" data-market_p="4946" data-market_s="14" data-paint_price="2.6 keys" data-listing_account_id="102295341" data-listing_name="Waf​u" data-listing_intent="sell" data-listing_comment="Item offers appreciated, send trade offers." data-listing_offers_url="ahttps://steamcommunity.com/tradeoffer/new/?partner=102295341&amp;token=pz4zJji4" data-listing_buyout="1" data-listing_price="22 keys" data-equipped="1" data-summary="Level 1 Hat" data-level="1" data-slot="misc" data-tradable="1" data-craftable="1" data-q_name="Unique" data-quality="6" data-name="Max"s Severed Head" data-base_name="Max"s Severed Head" data-app="440" data-defindex="162" data-original_id="6060718407" data-id="7744436039" data-origin="Steam Purchase" data-p_bptf="21.35–21.55 keys" data-p_bptf_all="1,016.41 ref, $40.66" data-p_scm="$49.46" data-p_scm_all="1,001.57 ref, 21.14 keys, $40.06" data-price="1041.04845" data-paint_name="A Distinctive Lack of Hue" data-paint_hex="141414">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/medic_ttg_max.08cc3314af9fa3c9f7d6a08ad1b1f418feba04dc.png)"></div><div class="tag bottom-right"><i class="fa fa-tag"></i> <span>22 keys</span></div><div class="paint" style="background-color: #141414"></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-arrow-right listing-intent-sell"></i></div></div>
+<span style="display:none">Unique Max"s Severed Head 1 Steam Purchase A Distinctive Lack of Hue 7744436039 6060718407</span></li>
+                            </ul>
+        </div>
+        <table class="table" id="table-classified-stats">
+            <tbody>
+            <tr>
+                <td>Total Listed:
+                    <strong>204311</strong></td>
+                <td>Last Hour:
+                    <strong>129800</strong>
+                </td>
+                <td>Promoted: <strong>750</strong>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+            </div>
+    </div>
+        </div>
+
+        
+        <div class="col-md-4">
+                            
+    <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Advertisement</span>
+
+                    <span class="panel-extras">
+                                                                                                </span>
+                            </div>
+                <div class="panel-body " id="">
+                    <div class="media-top-box">
+    <div id="nn_content_mpu1"></div>
+</div>            </div>
+    </div>
+                    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-6">
+        
+    <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Latest Forum Threads</span>
+
+                    <span class="panel-extras">
+                                                                                    <div>
+                                    <a class="btn btn-panel" href="/new?url=http://forums.backpack.tf/" target="" id="">
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class="panel-body " id="">
+                            <ul class="rss-feed">
+            <li>
+            <a href="/new?url=https://forums.backpack.tf/topic/70908-cant-acces-a-scammers-profile-because-they-removed-me/?do=findComment&amp;comment=622696">
+                can"t acces a scammers profile because they removed me
+                <small class="text-muted"><time class="timeago" datetime="2019-05-18T13:42:05+00:00">Sat, 18 May 19 13:42:05 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://forums.backpack.tf/topic/70907-why-is-my-tf2-now-square-and-not-taking-up-my-full-screen/?do=findComment&amp;comment=622692">
+                Why is my tf2 now square and not taking up my full screen?
+                <small class="text-muted"><time class="timeago" datetime="2019-05-18T10:18:03+00:00">Sat, 18 May 19 10:18:03 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://forums.backpack.tf/topic/70906-a-tf2-irl-item-pc/?do=findComment&amp;comment=622688">
+                A tf2 irl item pc
+                <small class="text-muted"><time class="timeago" datetime="2019-05-18T06:27:05+00:00">Sat, 18 May 19 06:27:05 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://forums.backpack.tf/topic/70902-its-official-mechawreck-is-a-pedo/?do=findComment&amp;comment=622656">
+                It"s official. Mechawreck is a pedo.
+                <small class="text-muted"><time class="timeago" datetime="2019-05-17T16:47:15+00:00">Fri, 17 May 19 16:47:15 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://forums.backpack.tf/topic/70901-are-we-not-allowed-to-comment-on-price-suggestions-anymore/?do=findComment&amp;comment=622654">
+                Are we not allowed to comment on price suggestions anymore?
+                <small class="text-muted"><time class="timeago" datetime="2019-05-17T16:36:14+00:00">Fri, 17 May 19 16:36:14 +0000</time></small>
+            </a>
+        </li>
+    </ul>                    </div>
+    </div>
+    </div>
+
+    <div class="col-md-6">
+        
+    <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Latest News</span>
+
+                    <span class="panel-extras">
+                                                                                    <div>
+                                    <a class="btn btn-panel" href="/new?url=http://steamcommunity.com/groups/meetthestats" target="" id="">
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class="panel-body " id="">
+                            <ul class="rss-feed">
+            <li>
+            <a href="/new?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/3021261699908839878">
+                Open discussion on rules for trading with scammers.
+                <small class="text-muted"><time class="timeago" datetime="2019-04-16T19:06:12+00:00">Tue, 16 Apr 19 19:06:12 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/3145099913366946429">
+                Quick PSA about the current state of phishing scams.
+                <small class="text-muted"><time class="timeago" datetime="2018-12-15T02:27:41+00:00">Sat, 15 Dec 18 02:27:41 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/1702817596418698554">
+                A few nice things for you
+                <small class="text-muted"><time class="timeago" datetime="2018-10-28T21:25:21+00:00">Sun, 28 Oct 18 21:25:21 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/1698312095254248111">
+                Quick PSA on "pending bans"
+                <small class="text-muted"><time class="timeago" datetime="2018-10-04T22:54:51+00:00">Thu, 04 Oct 18 22:54:51 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href="/new?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/1698312095254232141">
+                Win a Golden Frying Pan at Tip of the Hats!
+                <small class="text-muted"><time class="timeago" datetime="2018-10-04T22:51:18+00:00">Thu, 04 Oct 18 22:51:18 +0000</time></small>
+            </a>
+        </li>
+    </ul>                    </div>
+    </div>
+    </div>
+</div>
+        
+    <div class="row">
+        <div class="col-md-12">
+                <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Latest Changes</span>
+
+                    <span class="panel-extras">
+                                                                                    <div>
+                                    <a class="btn btn-panel" href="/new?url=https://backpack.tf/latest" target="" id="">
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class="panel-body " id="">
+                    <div class="index-latest-changes">
+            <ul class="item-list" style="display: flex; flex-wrap: wrap">
+                                                    
+                    
+                                        <li title="Strange Rust Botkiller Flame Thrower Mk.I" class="item q-440-11 q-440-border-11" data-priceindex="0" data-market_p="28" data-market_s="14" data-equipped="0" data-summary="Level 1 Flame Thrower" data-slot="primary" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Strange" data-quality="11" data-name="Rust Botkiller Flame Thrower Mk.I" data-base_name="Rust Botkiller Flame Thrower Mk.I" data-app="440" data-defindex="887" data-original_id="" data-id="" data-p_bptf="5–5.11 ref" data-p_bptf_all="$0.20" data-p_scm="$0.28" data-p_scm_all="5.67 ref, $0.23" data-price="5.055" data-vote="5ce03e006780721b4e31a082">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fob_h_flamethrower_rust.fecd38d6f006c7f6d67b79444889f55b5b1db257.png)"></div><div class="tag bottom-right"><span>~5–5.11 ref</span></div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-green fa-arrow-up"></i></div></div>
+<span style="display:none">Strange Rust Botkiller Flame Thrower Mk.I</span></li>
+                                    
+                    
+                                        <li title="Orbiting Fire Stout Shako" class="item q-440-5 q-440-border-5" data-priceindex="33" data-market_p="5793" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Soldier" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Stout Shako" data-base_name="Stout Shako" data-app="440" data-defindex="251" data-original_id="" data-id="" data-p_bptf="12–14 keys" data-p_bptf_all="616.01 ref, $24.64" data-price="616.005" data-effect_name="Orbiting Fire" data-effect_id="33" data-vote="5cc91f0ad381724a4459821f">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/soldier_shako.258a94dd9a6f1a470854113cb4e2a9d7b67798fe.png),url(a/images/440/particles/33_94x94.png)"></div><div class="tag bottom-right"><span>~12–14 keys</span></div><div class="tag top-left">o.fire</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Stout Shako Orbiting Fire</span></li>
+                                    
+                    
+                                        <li title="Orbiting Fire Gauzed Gaze" class="item q-440-5 q-440-border-5" data-priceindex="33" data-market_p="4531" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Medic" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Gauzed Gaze" data-base_name="Gauzed Gaze" data-app="440" data-defindex="30786" data-original_id="" data-id="" data-p_bptf="18–20 keys" data-p_bptf_all="900.32 ref, $36.01" data-price="900.315" data-effect_name="Orbiting Fire" data-effect_id="33" data-vote="5cd8276b6780722a68665540">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/surgical_stare.12b339ff99faefc36fd610ef10d1ebe7dda1a8e1.png),url(a/images/440/particles/33_94x94.png)"></div><div class="tag bottom-right"><span>~18–20 keys</span></div><div class="tag top-left">o.fire</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Gauzed Gaze Orbiting Fire</span></li>
+                                    
+                    
+                                        <li title="Orbiting Planets Slick Cut" class="item q-440-5 q-440-border-5" data-priceindex="32" data-market_p="3823" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Medic" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Slick Cut" data-base_name="Slick Cut" data-app="440" data-defindex="30187" data-original_id="" data-id="" data-p_bptf="10 keys" data-p_bptf_all="473.85 ref, $18.95" data-price="473.85" data-effect_name="Orbiting Planets" data-effect_id="32" data-vote="5cdcfee96780727b553b65ab">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fall2013_medic_wc_hair.8bd3ca56464754f041ea72a25a13ea21429898f8.png),url(a/images/440/particles/32_94x94.png)"></div><div class="tag bottom-right"><span>~10 keys</span></div><div class="tag top-left">o.planets</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Slick Cut Orbiting Planets</span></li>
+                                    
+                    
+                                        <li title="Orbiting Planets Toy Soldier" class="item q-440-5 q-440-border-5" data-priceindex="32" data-market_p="3673" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Multi" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Toy Soldier" data-base_name="Toy Soldier" data-app="440" data-defindex="30316" data-original_id="" data-id="" data-p_bptf="10–13 keys" data-p_bptf_all="544.93 ref, $21.80" data-price="544.9275" data-effect_name="Orbiting Planets" data-effect_id="32" data-vote="5cdc36a5d381722a3c4b3459">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/xms2013_sniper_shako.3b4bb23923374d035563a6d5cf7e7ae7945b7c02.png),url(a/images/440/particles/32_94x94.png)"></div><div class="tag bottom-right"><span>~10–13 keys</span></div><div class="tag top-left">o.planets</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Toy Soldier Orbiting Planets</span></li>
+                                    
+                    
+                                        <li title="Stormy Storm Larrikin Robin" class="item q-440-5 q-440-border-5" data-priceindex="29" data-market_p="3332" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Larrikin Robin" data-base_name="Larrikin Robin" data-app="440" data-defindex="314" data-original_id="" data-id="" data-p_bptf="11 keys" data-p_bptf_all="521.24 ref, $20.85" data-price="521.235" data-effect_name="Stormy Storm" data-effect_id="29" data-vote="5cb861a06780725f284f5d7b">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/larrikin_robin.51cbc21821642e63b93946b05a535f0976c9d878.png),url(a/images/440/particles/29_94x94.png)"></div><div class="tag bottom-right"><span>~11 keys</span></div><div class="tag top-left">stormy</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Larrikin Robin Stormy Storm</span></li>
+                                    
+                    
+                                        <li title="Stormy Storm Fruit Shoot" class="item q-440-5 q-440-border-5" data-priceindex="29" data-market_p="3712" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Fruit Shoot" data-base_name="Fruit Shoot" data-app="440" data-defindex="759" data-original_id="" data-id="" data-p_bptf="12–13 keys" data-p_bptf_all="592.31 ref, $23.69" data-price="592.3125" data-effect_name="Stormy Storm" data-effect_id="29" data-vote="5cd901f7678072570e5a7d53">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/sniper_applearrow.7c5fe4f23b50c1400bcbdfa46413dcb0e1f1b9ab.png),url(a/images/440/particles/29_94x94.png)"></div><div class="tag bottom-right"><span>~12–13 keys</span></div><div class="tag top-left">stormy</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Fruit Shoot Stormy Storm</span></li>
+                                    
+                    
+                                        <li title="Stormy Storm Jumper"s Jeepcap" class="item q-440-5 q-440-border-5" data-priceindex="29" data-market_p="3643" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Soldier" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Jumper"s Jeepcap" data-base_name="Jumper"s Jeepcap" data-app="440" data-defindex="417" data-original_id="" data-id="" data-p_bptf="14 keys" data-p_bptf_all="663.39 ref, $26.54" data-price="663.39" data-effect_name="Stormy Storm" data-effect_id="29" data-vote="5ccbea8067807250771907dc">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/soldier_jeepcap.7749556fc753bbee5c4acc9a7e5f52e48646b88a.png),url(a/images/440/particles/29_94x94.png)"></div><div class="tag bottom-right"><span>~14 keys</span></div><div class="tag top-left">stormy</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Jumper"s Jeepcap Stormy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Big Elfin Deal" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="2503" data-market_s="13" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Scout" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Big Elfin Deal" data-base_name="Big Elfin Deal" data-app="440" data-defindex="652" data-original_id="" data-id="" data-p_bptf="15–18 keys" data-p_bptf_all="781.85 ref, $31.27" data-price="781.8525" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5ccd48276780726317420cc0">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/xms_scout_elf_hat.3303da1993090d655f52f551da61608f4bde2bc7.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~15–18 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Big Elfin Deal Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Sinner"s Shade" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="2393" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Heavy" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Sinner"s Shade" data-base_name="Sinner"s Shade" data-app="440" data-defindex="30959" data-original_id="" data-id="" data-p_bptf="12–14 keys" data-p_bptf_all="616.01 ref, $24.64" data-price="616.005" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5cdd893667807261fe070943">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/dec17_sinners_shade.09bb8b9d7352d2d581ad39e25747e332b0fd434b.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~12–14 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-yellow fa-retweet"></i></div></div>
+<span style="display:none">Unusual Sinner"s Shade Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Fortunate Son" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="7147" data-market_s="13" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Scout" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Fortunate Son" data-base_name="Fortunate Son" data-app="440" data-defindex="30636" data-original_id="" data-id="" data-p_bptf="30 keys" data-p_bptf_all="1,421.55 ref, $56.86" data-price="1421.55" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5cd95c05d3817243331f4b15">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/cc_summer2015_fortunate_son.4d454c88c23aa2a368d915101bd019914e93cc6d.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~30 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Fortunate Son Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Das Hazmattenhatten" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="8151" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Safety Apparatus" data-slot="misc" data-class="Medic" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Das Hazmattenhatten" data-base_name="Das Hazmattenhatten" data-app="440" data-defindex="30095" data-original_id="" data-id="" data-p_bptf="32 keys" data-p_bptf_all="1,516.32 ref, $60.65" data-price="1516.32" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5cd96d53d381724f513f8174">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/jul13_positive_pressure_veil.a8cd0596e26823b4a731aa87d6b08b13a92c5ae4.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~32 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-yellow fa-retweet"></i></div></div>
+<span style="display:none">Unusual Das Hazmattenhatten Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Noble Nickel Amassment of Hats" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="3773" data-market_s="13" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Noble Nickel Amassment of Hats" data-base_name="Noble Nickel Amassment of Hats" data-app="440" data-defindex="30006" data-original_id="" data-id="" data-p_bptf="16–18 keys" data-p_bptf_all="805.55 ref, $32.22" data-price="805.545" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5cdafaa2d381725c21674644">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/robo_all_noble_amassment.9d4fa932eeaa44b3021e1729bda5dc8db0111f1a.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~16–18 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Noble Nickel Amassment of Hats Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Galvanized Gibus" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="8403" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Galvanized Gibus" data-base_name="Galvanized Gibus" data-app="440" data-defindex="30003" data-original_id="" data-id="" data-p_bptf="27–30 keys" data-p_bptf_all="1,350.47 ref, $54.02" data-price="1350.4725" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5cdafb09d381725be4696819">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/robo_all_gibus.f0ec7d3daa73dd1849d1b26c24b7892431bc820b.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~27–30 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Galvanized Gibus Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Blizzardy Storm Slick Cut" class="item q-440-5 q-440-border-5" data-priceindex="30" data-market_p="3823" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Medic" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Slick Cut" data-base_name="Slick Cut" data-app="440" data-defindex="30187" data-original_id="" data-id="" data-p_bptf="14–19 keys" data-p_bptf_all="781.85 ref, $31.27" data-price="781.8525" data-effect_name="Blizzardy Storm" data-effect_id="30" data-vote="5cdcfe066780727b553b645e">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fall2013_medic_wc_hair.8bd3ca56464754f041ea72a25a13ea21429898f8.png),url(a/images/440/particles/30_94x94.png)"></div><div class="tag bottom-right"><span>~14–19 keys</span></div><div class="tag top-left">blizzard</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Slick Cut Blizzardy Storm</span></li>
+                                    
+                    
+                                        <li title="Tesla Coil Slick Cut" class="item q-440-5 q-440-border-5" data-priceindex="108" data-market_p="3823" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Medic" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Slick Cut" data-base_name="Slick Cut" data-app="440" data-defindex="30187" data-original_id="" data-id="" data-p_bptf="40 keys" data-p_bptf_all="1,895.40 ref, $75.82" data-price="1895.4" data-effect_name="Tesla Coil" data-effect_id="108" data-vote="5cdcf9e867807275292684a2">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fall2013_medic_wc_hair.8bd3ca56464754f041ea72a25a13ea21429898f8.png),url(a/images/440/particles/108_94x94.png)"></div><div class="tag bottom-right"><span>~40 keys</span></div><div class="tag top-left">tesla</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-green fa-arrow-up"></i></div></div>
+<span style="display:none">Unusual Slick Cut Tesla Coil</span></li>
+                                    
+                    
+                                        <li title="Nuts n" Bolts Conjurer"s Cowl" class="item q-440-5 q-440-border-5" data-priceindex="31" data-market_p="4756" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Demoman" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Conjurer"s Cowl" data-base_name="Conjurer"s Cowl" data-app="440" data-defindex="465" data-original_id="" data-id="" data-p_bptf="10 keys" data-p_bptf_all="473.85 ref, $18.95" data-price="473.85" data-effect_name="Nuts n" Bolts" data-effect_id="31" data-vote="5cdfa1efd381725e1b4d0ace">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/demo_hood.6b28ebd5b7194201634c878aa17e9f1968cf6912.png),url(a/images/440/particles/31_94x94.png)"></div><div class="tag bottom-right"><span>~10 keys</span></div><div class="tag top-left">n&amp;b</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Conjurer"s Cowl Nuts n" Bolts</span></li>
+                                    
+                    
+                                        <li title="Skill Gotten Gains Taunt: The Balloonibouncer" class="item q-440-5 q-440-border-5" data-priceindex="3007" data-market_p="1308" data-market_s="15" data-equipped="0" data-summary="Level 1-100 Special Taunt" data-slot="taunt" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Taunt: The Balloonibouncer" data-base_name="Taunt: The Balloonibouncer" data-app="440" data-defindex="30763" data-original_id="" data-id="" data-p_bptf="4.5–5 keys" data-p_bptf_all="225.08 ref, $9.00" data-price="225.07875" data-effect_name="Skill Gotten Gains" data-effect_id="3007" data-vote="5cdfafa1d38172671859012c">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/spring_rider.64077e06a6fe8f3c1359bc0d24a460c66e0b8f85.png),url(a/images/440/particles/3007_94x94.png)"></div><div class="tag bottom-right"><span>~4.5–5 keys</span></div><div class="tag top-left">gains</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Taunt: The Balloonibouncer Skill Gotten Gains</span></li>
+                                    
+                    
+                                        <li title="Hot Macaw Masked Jag (Well-Worn)" class="item q-440-15 q-440-border-5" data-priceindex="701" data-market_p="-1" data-equipped="0" data-summary="Level 15 Wrench (Well-Worn)" data-slot="melee" data-class="Engineer" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Macaw Masked | Jag (Well-Worn)" data-base_name="Jag" data-app="440" data-defindex="329" data-original_id="" data-id="" data-wear_tier="Well-Worn" data-p_bptf="34 keys" data-p_bptf_all="1,611.09 ref, $64.44" data-price="1611.09" data-effect_name="Hot" data-effect_id="701" data-vote="5cb9952467807266a1499f12">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Jag_303_4_0.png),url(a/images/440/particles/701_94x94.png)"></div><div class="tag bottom-right"><span>~34 keys</span></div><div class="tag top-left">WW</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Decorated Weapon Jag Hot Macaw Masked</span></li>
+                                    
+                    
+                                        <li title="Hot Cabin Fevered War Paint (Field-Tested)" class="item q-440-15 q-440-border-5" data-priceindex="701" data-market_p="6406" data-market_s="12" data-equipped="0" data-summary="Level 99 War Paint (Field-Tested)" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Cabin Fevered | War Paint (Field-Tested)" data-base_name="War Paint" data-app="440" data-defindex="9536" data-original_id="" data-id="" data-wear_tier="Field-Tested" data-p_bptf="34 keys" data-p_bptf_all="1,611.09 ref, $64.44" data-price="1611.09" data-effect_name="Hot" data-effect_id="701" data-vote="5cb98740d381720fad3ff033">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/War%20Paint_220_3_0.png),url(a/images/440/particles/701_94x94.png)"></div><div class="tag bottom-right"><span>~34 keys</span></div><div class="tag top-left">FT</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Decorated Weapon War Paint Hot Cabin Fevered</span></li>
+                                            </ul>
+        </div>
+            </div>
+    </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            
+    <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Active Price Suggestions</span>
+
+                    <span class="panel-extras">
+                                                                                    <div>
+                                    <a class="btn btn-panel" href="/new?url=https://backpack.tf/vote?sort=popular" target="" id="">
+                                        Expand
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class="panel-body " id="">
+                                                        
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5cc48e13d381724f6d6882ec">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5cc48e13d381724f6d6882ec">
+                    Disco Beat Down Rotation Sensation
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-04-27T17:14:59+00:00">Sat, 27 Apr 19 17:14:59 +0000</time> by <span class="user-handle"><a class="user-link awesome3" data-offers-params="?partner=843750004&amp;token=zmhtXxZ1" data-online="1" data-name="j58 tradeit.gg" data-id="76561198804015732" data-avatar="c6/c60afb1581c2dc1d0ba8e1306e4e5eabab701144_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198804015732"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 793)" data-tip="bottom">★</span><span class="belt label-orange-text" title="Prestige 1 (43/750)" data-tip="bottom">★</span> j58 tradeit.gg</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5cc48e13d381724f6d6882ec">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            75–83 keys
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            66–73 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5cc48e13d381724f6d6882ec">
+                            <i class="fa fa-comment"></i> 2
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">196</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Disco Beat Down Rotation Sensation" class="item q-440-5 q-440-border-5" data-priceindex="62" data-market_p="6628" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Rotation Sensation" data-base_name="Rotation Sensation" data-app="440" data-defindex="30623" data-original_id="" data-id="" data-p_bptf="75–83 keys" data-p_bptf_all="3,743.42 ref, $149.74" data-price="3743.415" data-effect_name="Disco Beat Down" data-effect_id="62" data-vote="5cc48e13d381724f6d6882ec">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/cc_summer2015_the_rotation_sensation.797f13ad026de3b5c065412d847494a812c0be4d.png),url(a/images/440/particles/62_94x94.png)"></div><div class="tag bottom-right"><span>~79 keys</span></div><div class="tag top-left">dbd</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Rotation Sensation Disco Beat Down</span></div>
+        </div>
+                    <div class="comments">
+                <p><strong>Sale 1: 58k</strong></p>
+<p><a href="/new?url=https://marketplace.tf/items/30623;5;u62" target="_blank" rel="noopener">https://marketplace.tf/items/30623;5;u62</a></p>
+<p>$105 on 1/29</p>
+<br><p><strong>Sale 2: 79k</strong></p>
+<p><a href="/new?url=https://marketplace.tf/items/30623;5;u62" target="_blank" rel="noopener">https://marketplace.tf/items/30623;5;u62</a></p>
+<p><a href="/new?url=https://backpack.tf/item/4158729602" target="_blank" rel="noopener">https://backpack.tf/item/4158729602</a><span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5cc79297d3817248481738ec">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5cc79297d3817248481738ec">
+                    Green Confetti Trophy Belt
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-04-30T00:11:03+00:00">Tue, 30 Apr 19 00:11:03 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=146802096&amp;token=oylBDb0t" data-online="0" data-name="TF2Scourge" data-id="76561198107067824" data-avatar="42/4213863daa86879ddf25e0d906b35283d740e6e1_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198107067824"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 1649)" data-tip="bottom">★</span><span class="belt label-black-text" title="Prestige 1 (750/750)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 2 (149/750)" data-tip="bottom">★</span> TF2Scourge</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5cc79297d3817248481738ec">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            23 keys
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            22–25 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5cc79297d3817248481738ec">
+                            <i class="fa fa-comment"></i> 2
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">193</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Green Confetti Trophy Belt" class="item q-440-5 q-440-border-5" data-priceindex="6" data-market_p="8012" data-market_s="12" data-equipped="0" data-summary="Level 1-100 Hat" data-slot="misc" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Trophy Belt" data-base_name="Trophy Belt" data-app="440" data-defindex="53" data-original_id="" data-id="" data-p_bptf="23 keys" data-p_bptf_all="1,089.86 ref, $43.59" data-price="1089.855" data-effect_name="Green Confetti" data-effect_id="6" data-vote="5cc79297d3817248481738ec">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/tooth_hat.361d6727af3f39d2b11d5336029dc106544e4cb3.png),url(a/images/440/particles/6_94x94.png)"></div><div class="tag bottom-right"><span>~23 keys</span></div><div class="tag top-left">g.fetti</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-green fa-arrow-up"></i></div></div>
+<span style="display:none">Unusual Trophy Belt Green Confetti</span></div>
+        </div>
+                    <div class="comments">
+                <p>Sale 1:</p>
+<p><a href="/new?url=https://backpack.tf/profiles/76561198063478666#!/compare/1550707200/1550793600" target="_blank" rel="noopener">https://backpack.tf/profiles/76561198063478666#!/compare/1550707200/1550793600</a></p>
+<p><a href="/new?url=https://backpack.tf/profiles/76561198170190173#!/compare/1550707200/1550966400" target="_blank" rel="noopener">https://backpack.tf/profiles/76561198170190173#!/compare/1550707200/1550966400</a><span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5cc736716780726e7f4b09b3">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5cc736716780726e7f4b09b3">
+                    Circling TF Logo Anger
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-04-29T17:37:53+00:00">Mon, 29 Apr 19 17:37:53 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=146802096&amp;token=oylBDb0t" data-online="0" data-name="TF2Scourge" data-id="76561198107067824" data-avatar="42/4213863daa86879ddf25e0d906b35283d740e6e1_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198107067824"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 1649)" data-tip="bottom">★</span><span class="belt label-black-text" title="Prestige 1 (750/750)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 2 (149/750)" data-tip="bottom">★</span> TF2Scourge</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5cc736716780726e7f4b09b3">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            33 keys
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            34 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5cc736716780726e7f4b09b3">
+                            <i class="fa fa-comment"></i> 3
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">155</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Circling TF Logo Anger" class="item q-440-5 q-440-border-5" data-priceindex="11" data-market_p="8948" data-market_s="12" data-equipped="0" data-summary="Level 10 Hat" data-slot="misc" data-class="Sniper" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Anger" data-base_name="Anger" data-app="440" data-defindex="518" data-original_id="" data-id="" data-p_bptf="33 keys" data-p_bptf_all="1,563.71 ref, $62.55" data-price="1563.705" data-effect_name="Circling TF Logo" data-effect_id="11" data-vote="5cc736716780726e7f4b09b3">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_bet_brinkhood.16b34cf3a5b777028b11347262fecc6c9fc2ca0e.png),url(a/images/440/particles/11_94x94.png)"></div><div class="tag bottom-right"><span>~33 keys</span></div><div class="tag top-left">tf logo</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-green fa-arrow-up"></i></div></div>
+<span style="display:none">Unusual Anger Circling TF Logo</span></div>
+        </div>
+                    <div class="comments">
+                <p>Sale 1:</p>
+<p><a href="/new?url=https://backpack.tf/profiles/76561198028210902#!/compare/1553644800/1553731200" target="_blank" rel="noopener">https://backpack.tf/profiles/76561198028210902#!/compare/1553644800/1553731200</a></p>
+<p><a href="/new?url=https://backpack.tf/profiles/76561198272599003#!/compare/1553644800/1553731200" target="_blank" rel="noopener">https://backpack.tf/profiles/76561198272599003#!/compare/1553644800/1553731200</a><span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5ccb4586d381723f074e69c1">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5ccb4586d381723f074e69c1">
+                    Mega Strike Taunt: The Schadenfreude
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-05-02T19:31:18+00:00">Thu, 02 May 19 19:31:18 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=104392927&amp;token=VBSr52HX" data-online="1" data-name="Offline" data-id="76561198064658655" data-avatar="61/612fab323d02a6c9d9386c8dbba7512a688e0dec_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198064658655"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 964)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 1 (214/750)" data-tip="bottom">★</span> Offline</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5ccb4586d381723f074e69c1">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            16–18 keys
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            11–14 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5ccb4586d381723f074e69c1">
+                            <i class="fa fa-comment"></i> 5
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">143</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Mega Strike Taunt: The Schadenfreude" class="item q-440-5 q-440-border-5" data-priceindex="3010" data-market_p="2808" data-market_s="13" data-equipped="0" data-summary="Level 5 Special Taunt" data-slot="taunt" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Taunt: The Schadenfreude" data-base_name="Taunt: The Schadenfreude" data-app="440" data-defindex="463" data-original_id="" data-id="" data-p_bptf="16–18 keys" data-p_bptf_all="805.55 ref, $32.22" data-price="805.545" data-effect_name="Mega Strike" data-effect_id="3010" data-vote="5ccb4586d381723f074e69c1">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/all_laugh_taunt.c39eefee7e62b6daccc4f9233e11eaf6f8fc06dc.png),url(a/images/440/particles/3010_94x94.png)"></div><div class="tag bottom-right"><span>~17 keys</span></div><div class="tag top-left">strike</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Unusual Taunt: The Schadenfreude Mega Strike</span></div>
+        </div>
+                    <div class="comments">
+                <p><a href="/new?url=https://marketplace.tf/items/463;5;u3010" target="_blank" rel="noopener">https://marketplace.tf/items/463;5;u3010</a></p>
+<p>February 23 - $20.99 / 1.81 = 11.6 keys</p>
+<p>March 23 - $11.21, this is buy order price</p>
+<p>March 30 - $23.39 / 1.79 =<span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5cbe24dc6780724ef90fc6fd">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5cbe24dc6780724ef90fc6fd">
+                    Poisonous Bubbles of Regret Taunt: The Box Trot
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-04-22T20:32:28+00:00">Mon, 22 Apr 19 20:32:28 +0000</time> by <span class="user-handle"><a class="user-link premium" data-offers-params="?partner=201074988&amp;token=Ijy0a5qq" data-online="1" data-name="Doc Chicken" data-id="76561198161340716" data-avatar="67/67e005e98482d62e516ef4f50cab6a9c19c95c41_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198161340716"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 1546)" data-tip="bottom">★</span><span class="belt label-black-text" title="Prestige 1 (750/750)" data-tip="bottom">★</span><span class="belt label-orange-text" title="Prestige 2 (46/750)" data-tip="bottom">★</span> Doc Chicken</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5cbe24dc6780724ef90fc6fd">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            n/a
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            7.5–10 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5cbe24dc6780724ef90fc6fd">
+                            <i class="fa fa-comment"></i> 2
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">114</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Poisonous Bubbles of Regret Taunt: The Box Trot" class="item q-440-5 q-440-border-5" data-priceindex="3019" data-market_p="1439" data-market_s="13" data-equipped="0" data-summary="Level 1-100 Special Taunt" data-slot="taunt" data-class="Spy" data-tradable="1" data-craftable="1" data-q_name="Unusual" data-quality="5" data-name="Taunt: The Box Trot" data-base_name="Taunt: The Box Trot" data-app="440" data-defindex="30615" data-original_id="" data-id="" data-price="0" data-effect_name="Poisonous Bubbles of Regret" data-effect_id="3019" data-vote="5cbe24dc6780724ef90fc6fd">
+<div class="item-icon" style="background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/taunt_spy_boxtrot.b71a3e6a9d3c8bb53b4ef7782a2091dfffea8518.png),url(a/images/440/particles/3019_94x94.png)"></div><div class="tag top-left">poisonous bubbles of regret</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Unusual Taunt: The Box Trot Poisonous Bubbles of Regret</span></div>
+        </div>
+                    <div class="comments">
+                <p><strong>Sale #1:</strong></p>
+<p><a href="/new?url=https://bot.tf/stats/listings/M0JD9WQY" target="_blank" rel="noopener">https://bot.tf/stats/listings/M0JD9WQY</a></p>
+<p><a href="/new?url=https://backpack.tf/profiles/76561198363395191#!/compare/1553040000/1553126400" target="_blank" rel="noopener">https://backpack.tf/profiles/76561198363395191#!/compare/1553040000/1553126400</a></p>
+<br><p>Bought for 7 keys<span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+                                            </div>
+    </div>
+        </div>
+        <div class="col-md-6">
+            
+    <div class="panel panel-main">
+                    <div class="panel-heading">
+                                    <span>Recent Suggestions</span>
+
+                    <span class="panel-extras">
+                                                                                    <div>
+                                    <a class="btn btn-panel" href="/new?url=https://backpack.tf/vote" target="" id="">
+                                        Expand
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class="panel-body " id="">
+                                                        
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5ce0d9f8d381725b6744f318">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5ce0d9f8d381725b6744f318">
+                    Strange Rainbow Grenade Launcher (Minimal Wear)
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-05-19T04:22:16+00:00">Sun, 19 May 19 04:22:16 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=104392927&amp;token=VBSr52HX" data-online="1" data-name="Offline" data-id="76561198064658655" data-avatar="61/612fab323d02a6c9d9386c8dbba7512a688e0dec_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198064658655"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 964)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 1 (214/750)" data-tip="bottom">★</span> Offline</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5ce0d9f8d381725b6744f318">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            n/a
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            56 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5ce0d9f8d381725b6744f318">
+                            <i class="fa fa-comment"></i> 1
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">4</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Strange Rainbow Grenade Launcher (Minimal Wear)" class="item q-440-15 q-440-border-11" data-priceindex="0" data-market_p="4813" data-market_s="12" data-equipped="0" data-quality_elevated="11" data-qe_name="Strange" data-ke1="0 Kills" data-summary="Level 1 Grenade Launcher (Minimal Wear)" data-slot="primary" data-class="Demoman" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Rainbow | Grenade Launcher (Minimal Wear)" data-base_name="Grenade Launcher" data-app="440" data-defindex="206" data-original_id="" data-id="" data-wear_tier="Minimal Wear" data-p_scm="$48.13" data-p_scm_all="974.63 ref, 20.57 keys, $38.99" data-price="974.6325" data-vote="5ce0d9f8d381725b6744f318">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Grenade%20Launcher_67_2_0.png)"></div><div class="tag bottom-right"><span>~20.57 keys</span></div><div class="tag top-left">MW</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Decorated Weapon Grenade Launcher Rainbow</span></div>
+        </div>
+                    <div class="comments">
+                <p><a href="/new?url=https://marketplace.tf/items/15091;15;w2;pk67;strange;kt-3/" target="_blank" rel="noopener">https://marketplace.tf/items/15091;15;w2;pk67;strange;kt-3/</a></p>
+<p>Sold on May 8, 2019 for $99.99 / 1.80 = 56 keys<span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5ce0d9b7d381725b7149f4d2">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5ce0d9b7d381725b7149f4d2">
+                    Isotope Black Dahlia Pistol (Well-Worn)
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-05-19T04:21:11+00:00">Sun, 19 May 19 04:21:11 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=104392927&amp;token=VBSr52HX" data-online="1" data-name="Offline" data-id="76561198064658655" data-avatar="61/612fab323d02a6c9d9386c8dbba7512a688e0dec_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198064658655"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 964)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 1 (214/750)" data-tip="bottom">★</span> Offline</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5ce0d9b7d381725b7149f4d2">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            n/a
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            28 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5ce0d9b7d381725b7149f4d2">
+                            <i class="fa fa-comment"></i> 1
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">4</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Isotope Black Dahlia Pistol (Well-Worn)" class="item q-440-15 q-440-border-5" data-priceindex="702" data-market_p="10858" data-market_s="12" data-equipped="0" data-summary="Level 1 Pistol (Well-Worn)" data-slot="secondary" data-class="Multi" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Black Dahlia | Pistol (Well-Worn)" data-base_name="Pistol" data-app="440" data-defindex="23" data-original_id="" data-id="" data-wear_tier="Well-Worn" data-price="0" data-effect_name="Isotope" data-effect_id="702" data-vote="5ce0d9b7d381725b7149f4d2">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Pistol_46_4_0.png),url(a/images/440/particles/702_94x94.png)"></div><div class="tag top-left">WW</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Decorated Weapon Pistol Isotope Black Dahlia</span></div>
+        </div>
+                    <div class="comments">
+                <p><a href="/new?url=https://marketplace.tf/items/15046;15;u702;w4;pk46;kt-3;festive/" target="_blank" rel="noopener">https://marketplace.tf/items/15046;15;u702;w4;pk46;kt-3;festive/</a></p>
+<p>Sold on February 21, 2019 for $50.00 / 1.80 = 28 keys</p>
+<p><a href="/new?url=https://backpack.tf/item/3942947854" target="_blank" rel="noopener">https://backpack.tf/item/3942947854</a><span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5ce0d91a6780722713208480">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5ce0d91a6780722713208480">
+                    Hot Anodized Aloha Powerjack (Minimal Wear)
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-05-19T04:18:34+00:00">Sun, 19 May 19 04:18:34 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=104392927&amp;token=VBSr52HX" data-online="1" data-name="Offline" data-id="76561198064658655" data-avatar="61/612fab323d02a6c9d9386c8dbba7512a688e0dec_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198064658655"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 964)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 1 (214/750)" data-tip="bottom">★</span> Offline</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5ce0d91a6780722713208480">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            35 keys
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            32–35 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5ce0d91a6780722713208480">
+                            <i class="fa fa-comment"></i> 1
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">5</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Hot Anodized Aloha Powerjack (Minimal Wear)" class="item q-440-15 q-440-border-5" data-priceindex="701" data-market_p="-1" data-equipped="0" data-summary="Level 5 Sledgehammer (Minimal Wear)" data-slot="melee" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Anodized Aloha | Powerjack (Minimal Wear)" data-base_name="Powerjack" data-app="440" data-defindex="214" data-original_id="" data-id="" data-wear_tier="Minimal Wear" data-p_bptf="35 keys" data-p_bptf_all="1,658.48 ref, $66.34" data-price="1658.475" data-effect_name="Hot" data-effect_id="701" data-vote="5ce0d91a6780722713208480">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Powerjack_305_2_0.png),url(a/images/440/particles/701_94x94.png)"></div><div class="tag bottom-right"><span>~35 keys</span></div><div class="tag top-left">MW</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-red fa-arrow-down"></i></div></div>
+<span style="display:none">Decorated Weapon Powerjack Hot Anodized Aloha</span></div>
+        </div>
+                    <div class="comments">
+                <p><a href="/new?url=https://backpack.tf/item/6436055435" target="_blank" rel="noopener">https://backpack.tf/item/6436055435</a></p>
+<br><p><a href="/new?url=https://marketplace.tf/items/214;15;u701;w2;pk305/" target="_blank" rel="noopener">https://marketplace.tf/items/214;15;u701;w2;pk305/</a></p>
+<p>May 7, 2019 sold for $58.41 / 1.80 = 32 keys</p>
+<br><p>Last suggestion is<span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5ce0d888d381725b4a193cc8">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5ce0d888d381725b4a193cc8">
+                    Isotope Bloom Buffed Powerjack (Field-Tested)
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-05-19T04:16:08+00:00">Sun, 19 May 19 04:16:08 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=104392927&amp;token=VBSr52HX" data-online="1" data-name="Offline" data-id="76561198064658655" data-avatar="61/612fab323d02a6c9d9386c8dbba7512a688e0dec_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198064658655"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 964)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 1 (214/750)" data-tip="bottom">★</span> Offline</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5ce0d888d381725b4a193cc8">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            n/a
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            26 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5ce0d888d381725b4a193cc8">
+                            <i class="fa fa-comment"></i> 1
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">5</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Isotope Bloom Buffed Powerjack (Field-Tested)" class="item q-440-15 q-440-border-5" data-priceindex="702" data-market_p="-1" data-equipped="0" data-summary="Level 5 Sledgehammer (Field-Tested)" data-slot="melee" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Decorated Weapon" data-quality="15" data-name="Bloom Buffed | Powerjack (Field-Tested)" data-base_name="Powerjack" data-app="440" data-defindex="214" data-original_id="" data-id="" data-wear_tier="Field-Tested" data-price="0" data-effect_name="Isotope" data-effect_id="702" data-vote="5ce0d888d381725b4a193cc8">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Powerjack_200_3_0.png),url(a/images/440/particles/702_94x94.png)"></div><div class="tag top-left">FT</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Decorated Weapon Powerjack Isotope Bloom Buffed</span></div>
+        </div>
+                    <div class="comments">
+                <p><a href="/new?url=https://marketplace.tf/items/214;15;u702;w3;pk200/" target="_blank" rel="noopener">https://marketplace.tf/items/214;15;u702;w3;pk200/</a></p>
+<p><a href="/new?url=https://backpack.tf/item/6328291614" target="_blank" rel="noopener">https://backpack.tf/item/6328291614</a></p>
+<p>Sold on May 1, 2019 for $46.95 / 1.81 = 26 keys<span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class="suggestion sg-base" id="suggestion-5ce0d71c678072270701f9b6">
+    <div class="gutter">
+        <div class="sg-controls btn-group-vertical btn-group-sm">
+                                                                    <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="btn btn-default" href="/new?url=https://backpack.tf/login">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                                </div>
+    </div>
+    <div class="main">
+        <div class="body">
+            <div class="header">
+                <a class="item-name" href="/new?url=https://backpack.tf/suggestion/5ce0d71c678072270701f9b6">
+                    Strange Fire Glazed Powerjack (Minimal Wear)
+                </a>
+                <div class="submitter-info">
+                    Submitted <time class="timeago" datetime="2019-05-19T04:10:04+00:00">Sun, 19 May 19 04:10:04 +0000</time> by <span class="user-handle"><a class="user-link awesome1" data-offers-params="?partner=104392927&amp;token=VBSr52HX" data-online="1" data-name="Offline" data-id="76561198064658655" data-avatar="61/612fab323d02a6c9d9386c8dbba7512a688e0dec_medium.jpg" data-target="#" href="/new?url=https://backpack.tf/u/76561198064658655"><span class="belt label-black-text" title="Black Belt (Accepted suggestions: 964)" data-tip="bottom">★</span><span class="belt label-blue-text" title="Prestige 1 (214/750)" data-tip="bottom">★</span> Offline</a></span>
+                </div>
+                <div class="controls">
+                                        <a class="price-change" href="/new?url=https://backpack.tf/suggestion/5ce0d71c678072270701f9b6">
+            
+        <div class="price-old" title="Current price." data-tip="top">
+            n/a
+        </div>
+        <div class="price-new" title="Proposed price." data-tip="top">
+            33 keys
+        </div>
+    </a>                    <span>
+                        <a class="btn btn-default btn-xs" href="/new?url=https://backpack.tf/suggestion/5ce0d71c678072270701f9b6">
+                            <i class="fa fa-comment"></i> 1
+                        </a>
+                    </span>
+                    <span title="Total number of votes so far." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-balance-scale"></i> <span class="vote-count">10</span>
+                        </button>
+                    </span>
+                    <span title="How many of this item the submitter owned when creating the suggestion." data-tip="top">
+                        <button class="btn btn-default btn-xs disabled">
+                            <i class="fa fa-briefcase"></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title="Strange Fire Glazed Powerjack (Minimal Wear)" class="item q-440-11 q-440-border-11" data-priceindex="0" data-market_p="-1" data-equipped="0" data-summary="Level 5 Sledgehammer (Minimal Wear)" data-slot="melee" data-class="Pyro" data-tradable="1" data-craftable="1" data-q_name="Strange" data-quality="11" data-name="Fire Glazed | Powerjack (Minimal Wear)" data-base_name="Powerjack" data-app="440" data-defindex="214" data-original_id="" data-id="" data-wear_tier="Minimal Wear" data-price="0" data-vote="5ce0d71c678072270701f9b6">
+<div class="item-icon" style="background-image:url(ahttps://scrap.tf/img/items/warpaint/Powerjack_205_2_0.png)"></div><div class="tag top-left">MW</div><div class="icon-stack"><div class="arrow-icon"><i class="fa fa-certificate"></i></div></div>
+<span style="display:none">Strange Powerjack Fire Glazed</span></div>
+        </div>
+                    <div class="comments">
+                <p><a href="/new?url=https://marketplace.tf/items/214;15;w2;pk205;strange;kt-2/" target="_blank" rel="noopener">https://marketplace.tf/items/214;15;w2;pk205;strange;kt-2/</a></p>
+<p>Sold on May 8 for $60.00 / 1.80 = 33 keys<span class="text-more">…</span></p>
+            </div>
+            </div>
+</div>
+                                            </div>
+    </div>
+        </div>
+    </div>
+            <div id="media-footer" class="hidden-xs">
+            
+    <div class="panel panel-main">
+                <div class="panel-body " id="">
+                    <div class="media-frame">
+            <div id="nn_content_lb1"></div>
+        </div>
+            </div>
+    </div>
+        </div>
+    
+    <script type="text/javascript">
+    $(".notification-list > li > .body").click(function (data) {
+        if (data.target.localName !== "a" && $(this).attr("data-link")) {
+            window.location = $(this).attr("data-link");
+        }
+    });
+
+    $("#graph-tabs > li > a").click(function (e) {
+        e.preventDefault();
+        $(this).tab("show");
+    });
+</script>
+    <style>
+        body.app-440 {
+            background: url(a/images/walls/440_rb.jpg) #59c4e7;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+</main>
+
+<footer>
+    <div class="footer-block blurb">
+        <div class="container links-row">
+            <div class="footer-link-list">
+                <h2>Backpack.tf</h2>
+                <ul>
+                    <li><a href="/new?url=http://forums.backpack.tf/">Community forums</a></li>
+                    <li><a href="/new?url=https://backpack.tf/about">About backpack.tf</a></li>
+                    <li><a href="/new?url=https://backpack.tf/help">Help &amp; Support</a></li>
+                    <li><a href="/new?url=https://backpack.tf/rules">Community rules</a></li>
+                    <li><a href="/new?url=https://backpack.tf/issues">Issue tracker</a>
+                    </li><li><a href="/new?url=https://backpack.tf/developer">Developer center</a>
+                </li></ul>
+            </div>
+            <div class="footer-link-list">
+                <h2>Pricing</h2>
+                <ul>
+                                            <li><a href="/new?url=https://backpack.tf/pricelist">Pricegrid</a></li>
+                        <li><a href="/new?url=https://backpack.tf/spreadsheet">Spreadsheet</a>
+                        </li>
+                        <li><a href="/new?url=https://backpack.tf/unusuals">Unusuals by Item</a></li>
+                        <li><a href="/new?url=https://backpack.tf/effects">Unusuals by Effect</a></li>
+                                        <li><a href="/new?url=https://backpack.tf/market">Market Pricelist</a></li>
+                    <li><a href="/new?url=https://backpack.tf/calculator">Calculator</a></li>
+                </ul>
+            </div>
+                            <div class="footer-link-list">
+                    <h2>Voting</h2>
+                    <ul>
+                        <li><a href="/new?url=https://backpack.tf/vote">Vote on prices</a></li>
+                        <li><a href="/new?url=https://backpack.tf/latest">Latest changes</a></li>
+                        <li><a href="/new?url=https://backpack.tf/top/contributors">Top contributors</a>
+                        </li>
+                        <li><a href="/new?url=https://backpack.tf/top/accurate">Most accurate</a></li>
+                    </ul>
+                </div>
+                        <div class="footer-link-list">
+                <h2>Community</h2>
+                <ul>
+                    <li>
+                        <a href="/new?url=http://www.steamrep.com/" target="_blank"><i class="stm stm-steamrep fa-fw"></i>
+                            SteamRep</a></li>
+                    <li>
+                        <a href="/new?url=http://www.kritzkast.com/" target="_blank"><i class="stm stm-kritzkast fa-fw"></i>
+                            KritzKast</a>
+                    </li>
+                    <li>
+                        <a href="/new?url=http://scrap.tf/" target="_blank"><i class="stm stm-scrap-tf fa-fw"></i>
+                            Scrap.TF</a>
+                    </li>
+                    <li>
+                        <a href="/new?url=https://rep.tf/" target="_blank"><i class="fa fa-check-square fa-fw"></i>
+                            Rep.tf</a></li>
+                    <li><a href="/new?url=http://bazaar.tf/" target="_blank"><i class="stm stm-bazaar-tf fa-fw"></i>
+                            Bazaar.tf</a>
+                    </li>
+                    <li><a href="/new?url=http://dispenser.tf/" target="_blank"><i class="stm stm-dispenser-tf fa-fw"></i>
+                            Dispenser.tf</a></li>
+                    <li><a href="/new?url=https://marketplace.tf/?r=76561198045802942" target="_blank"><i class="stm stm-scrap-tf fa-fw"></i>
+                            Marketplace.tf</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-block social">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="/new?url=http://forums.backpack.tf/" class="btn btn-footer" target="_blank">
+                        <i class="social-icon fa fa-comments-o"></i>
+
+                        <p>Forums</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/new?url=https://discord.gg/f5VS7cr" class="btn btn-footer" target="_blank">
+                        <i class="social-icon fa fa-commenting-o"></i>
+                        <p>Discord</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/new?url=http://steamcommunity.com/groups/meetthestats" class="btn btn-footer" target="_blank">
+                        <i class="social-icon stm stm-steam"></i>
+                        <p>Steam</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/new?url=https://twitter.com/backpacktf" class="btn btn-footer" target="_blank">
+                        <i class="social-icon fa fa-twitter"></i>
+                        <p>Twitter</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/new?url=https://backpack.tf/servers" class="btn btn-footer">
+                        <i class="social-icon fa fa-hdd-o"></i>
+                        <p>Servers</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-block copyright">
+        <div class="container">
+            <p class="signature">
+                <a href="/new?url=https://backpack.tf/"><i class="stm stm-backpack-tf"></i> backpack.tf</a>
+            </p>
+
+            <p class="signature-links">
+                <small>
+                    © 2012-2019 ·
+                    ScrapTF, LLC ·
+                    <a href="/new?url=http://steampowered.com/" target="_blank">Powered by
+                        Steam</a> ·
+                    <a href="/new?url=https://backpack.tf/help/privacy">privacy policy</a>
+                                            · <a style="cursor:pointer" onclick="window.__cmp("showConsentModal")" href="/new?url=https://backpack.tf/">manage cookie settings</a>
+                                    </small>
+            </p>
+        </div>
+    </div>
+</footer>
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(["_setAccount", "UA-31723405-1"]);
+    _gaq.push(["_trackPageview"]);
+
+    (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src = ("ahttps:" === document.location.protocol ? "ahttps://ssl" : "ahttp://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body></html>

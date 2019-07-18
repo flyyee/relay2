@@ -1,0 +1,20 @@
+store credentials
+array of ids
+load new heroku credentials
+unicode characters in html
+exposed api for host requests
+server side for client requests
+test http(s) switching
+optimise for mobile
+give user options to load different amounts of content
+load js as well
+async all requests
+Hide credentials of db
+Encrypt data sent
+Manage different users' (passwords) abilities like maximum rows written, type of request
+Proper error handling
+
+Problems pages:
+phub (not loading at all)
+dexerto (links converted to ahttps)
+scrap.tf (you're becomes you"re)

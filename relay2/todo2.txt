@@ -1,0 +1,2 @@
+every time a get request is sent to page, cookie auth changes
+use something like sda to periodically change pass
