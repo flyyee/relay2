@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
+    <title>
+        G's html passer
+    </title>
+</head>
+
+<style>
+    .hidden {
+        visibility: hidden;
+    }
+
+    .hiddenpw {
+        visibility: hidden;
+    }
+
+    body {
+        padding-top: 50px;
+        padding-left: 30px;
+        /* text-align: center; */
+        background-color: rgba(50, 205, 50, 0.726);
+        color: olive;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body input:not(.submit) {
+        padding-left: 7px;
+        border: none;
+        border-bottom: 2px solid thistle;
+        background-color: transparent;
+        color: olive;
+        border-bottom-left-radius: 20px;
+    }
+
+    body input:not(.submit):focus {
+        background-color: thistle;
+        color: limegreen;
+        outline: 0;
+        /* border-radius: 50px; */
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    body input {
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+
+    body .submit {
+        margin-left: 5px;
+        text-decoration: none;
+        border: none;
+        background-color: thistle;
+        color: olive;
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 4px;
+    }
+
+    body .submit:hover {
+        border: 2px solid thistle;
+        background-color: transparent;
+        padding: 0px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    body .submit:active {
+        outline: 0;
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: none;
+    }
+
+    body #urlc:hover {
+        cursor: not-allowed;
+    }
+
+    body #urlc:active {
+        cursor: text;
+    }
+
+    body input:disabled {
+        cursor: not-allowed;
+    }
+
+    #divcontainer {
+        display: flex;
+    }
+
+    #divcontainer div {
+        flex: auto;
+    }
+
+    #iframe {
+        overflow: hidden;
+        width: 100%;
+        height: 1080px;
+    }
+
+</style>
+
+
+<script>
+        savepassword = () => {
+            for (x in document.getElementsByClassName("hiddenpw")) {
+                document.getElementsByClassName("hiddenpw")[x].value = document.getElementById("password").value
+            }
+            document.getElementById("password").value = ""
+        }
+    
+        encrypt = () => {
+            var text = document.getElementById("urlunencrypted").value
+            var key = document.getElementById("key").value.split(' ').map(Number);
+            if (!key.some(Number.isNaN) && key.length === 4) {
+                key = key.concat(key)
+                key = key.concat(key)
+                key = key.concat(key)
+    
+                // Convert text to bytes
+                var textBytes = aesjs.utils.utf8.toBytes(text);
+    
+                // The counter is optional, and if omitted will begin at 1
+                var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+                var encryptedBytes = aesCtr.encrypt(textBytes);
+    
+                // To print or store the binary data, you may convert it to hex
+                var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+    
+                document.getElementById("urlc").value = encryptedHex
+                document.getElementById("submitencrypted").disabled = false
+            } else {
+                alert("bad key")
+            }
+    
+        }
+        warning = () => {
+            var ret = confirm("skip the encryption process?")
+            if (ret) {
+                document.getElementById("urlc").onclick = 0;
+                document.getElementById("urlc").addEventListener('mouseenter', e => {
+                    document.getElementById("urlc").style.cursor = "text"
+                });
+    
+                document.getElementById("urlc").addEventListener('mouseleave', e => {
+                    document.getElementById("urlc").style.cursor = "text"
+                });
+                document.getElementById("submitencrypted").disabled = false
+            }
+        }
+    </script>
+
+<body>
+    <section id="divcontainer">
+        <div>
+            password: <input type="password" id="password" name="password">
+            <input class="submit" type="submit" value="save" onclick=savepassword()>
+        </div>
+        <div>
+            <form action="/html" method="post" autocomplete="off">
+                url: <input type="text" id="urlunencrypted" name="urlunencrypted" required>
+                <input class="submit" type="submit" value="submit unencrypted">
+                <input type="text" class="hidden" value="unencrypted" name="type">
+                <input type="text" class="hiddenpw" id="hiddenpw" name="hiddenpw">
+            </form>
+
+            key: <input type="text" id="key">
+            <input class="submit" type="submit" value="encrypt" onclick=encrypt()>
+
+            <form action="/html" method="post" autocomplete="off">
+                encrypted url:
+                <input type="text" id="urlc" name="urlc" required onclick=warning()>
+                <input class="submit" type="submit" value="submit encrypted" id="submitencrypted" disabled><br>
+                <input type="text" class="hidden" value="encrypted" name="type" class="encrypted">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <br>step 1 - enter your url into the url box<br>
+        (click submit unencrypted if you do not wish to encrypt the url)<br>
+        <br>step 2 - enter your key into the key box<br>
+        <br>step 3 - click encrypt<br>
+        (your url will be ciphered based on the key provided)<br>
+        <br>step 4 - click submit encrypted<br>
+    </section>
+    <br><br>
+    <iframe id="iframe" srcdoc="
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+<!-- have a nice day <3 -->
+<title>Pricing, Trading and Statistics for Team Fortress 2 - backpack.tf</title>
+
+<meta name=&quot;title&quot; content=&quot;aPricing, Trading and Statistics for Team Fortress 2&quot;>
+<meta name=&quot;description&quot;
+      content=&quot;a    backpack.tf: statistics, prices, and a whole lot more for Team Fortress 2,
+    Counter-Strike: Global Offensive and other Steam games.
+&quot;>
+<meta name=&quot;viewport&quot; content=&quot;awidth=device-width, initial-scale=1&quot;>
+<meta http-equiv=&quot;Content-Type&quot; content=&quot;atext/html; charset=utf-8&quot; />
+
+<link rel=&quot;mask-icon&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/favicon_440.ico&quot;
+      color=&quot;#54748b&quot;>
+
+<meta name=&quot;msapplication-TileColor&quot; content=&quot;a#54748b&quot;>
+
+<meta name=&quot;theme-color&quot; content=&quot;a#54748b&quot;/>
+
+<meta name=&quot;twitter:card&quot; content=&quot;asummary&quot;>
+<meta name=&quot;twitter:site&quot; content=&quot;a@backpacktf&quot;>
+<meta name=&quot;twitter:title&quot;
+      content=&quot;aPricing, Trading and Statistics for Team Fortress 2&quot;>
+<meta name=&quot;twitter:description&quot;
+      content=&quot;a    backpack.tf: statistics, prices, and a whole lot more for Team Fortress 2,
+    Counter-Strike: Global Offensive and other Steam games.
+&quot;>
+<meta name=&quot;twitter:image&quot; content=&quot;a&quot;>
+
+
+<meta property=&quot;og:title&quot;
+      content=&quot;aPricing, Trading and Statistics for Team Fortress 2&quot;>
+<meta property=&quot;og:description&quot;
+      content=&quot;a    backpack.tf: statistics, prices, and a whole lot more for Team Fortress 2,
+    Counter-Strike: Global Offensive and other Steam games.
+&quot;>
+<meta property=&quot;og:site_name&quot; content=&quot;abackpack.tf&quot;>
+<meta property=&quot;og:image&quot; content=&quot;a&quot;>
+<meta property=&quot;og:type&quot; content=&quot;awebsite&quot;>
+<meta property=&quot;og:locale&quot; content=&quot;aen_US&quot;>
+
+<link rel=&quot;shortcut icon&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/favicon_440.ico?v=1&quot;>
+<link rel=&quot;apple-touch-icon&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/favicon_440.ico?v=1&quot;>
+<link rel=&quot;apple-touch-icon-precomposed&quot;
+      href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/favicon_440.ico?v=1&quot;>
+
+<link rel=&quot;stylesheet&quot;
+      href=&quot;http://localhost:8880/html?url=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;
+      integrity=&quot;sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN&quot;
+      crossorigin=&quot;anonymous&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/css/steam-icons.css?version=55&quot;>
+<link rel=&quot;stylesheet&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/css/bundle.css?version=55&quot;>
+
+<link href=&quot;http://localhost:8880/html?url=https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&quot;
+      rel=&quot;stylesheet&quot;/>
+
+                    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l !== 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KGS4MWF');</script>
+                <script>
+        window.cmpConfig = {
+            customLogo: 'https://backpack.tf/images/tf-icon.png',
+            customLogoLink: 'https://backpack.tf',
+            customLogoTitle: 'backpack.tf'
+        };
+        !function(t,n){if(!t.__cmp){t.__cmp=function(){(t.attachEvent||t.addEventListener)(&quot;message&quot;,function(e){t.__cmp.receiveMessage(e)},!1),function e(){
+            if(!t.frames.__cmpLocator)if(n.body){var a=n.createElement(&quot;iframe&quot;);a.style.display=&quot;none&quot;,a.name=&quot;__cmpLocator&quot;,n.body.appendChild(a)}else setTimeout(e,5)}();
+            var c=[],e=function(e,a,n){&quot;ping&quot;===e?n&&n({gdprAppliesGlobally:!!(t.__cmp&&t.__cmp.config&&t.__cmp.config.storeConsentGlobally),cmpLoaded:!1}):c.push({command:e,parameter:a,callback:n})};
+            return e.commandQueue=c,e.receiveMessage=function(e){var a=e&&e.data&&e.data.__cmpCall;a&&c.push({callId:a.callId,command:a.command,parameter:a.parameter,event:e})},
+                e.config=t.cmpConfig||{globalVendorListLocation:&quot;https://cmp.network-n.com/vendorlist.json&quot;},e}();var e=n.createElement(&quot;script&quot;);e.async=!0,
+            e.src=&quot;ahttps://cmp.network-n.com/js/cmp.cf.complete.bundle.js&quot;,n.getElementsByTagName(&quot;head&quot;)[0].appendChild(e)}}(window,document);
+        </script>
+    
+        <script>
+        Session = {
+            csrf: &quot;&quot;,
+            steamid: &quot;&quot;,
+            admin: false,
+            appid: 440,
+            appcontextid: 2,
+            appMarketMode: false,
+            rawCurrency: {value: 0.04 }
+        };
+    </script>
+</head>
+
+<body class=&quot;app-440 &quot;>
+<script src=&quot;a/js/bundle.js?v=55&quot;></script>
+<script src=&quot;a/js/vendor-support.js?v=55&quot;></script>
+
+        <noscript>
+        <iframe src=&quot;ahttps://www.googletagmanager.com/ns.html?id=GTM-KGS4MWF&quot;
+                height=&quot;0&quot; width=&quot;0&quot;
+                style=&quot;display:none;visibility:hidden&quot;></iframe>
+    </noscript>
+
+<div class=&quot;navbar navbar-fixed-top navbar-default&quot; id='#navbar'
+     role=&quot;navigation&quot;>
+    <div class=&quot;container&quot;>
+        <div class=&quot;navbar-header&quot;>
+            <button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot;
+                    data-toggle=&quot;collapse&quot; data-target=&quot;#main-navbar&quot;>
+                <span class=&quot;sr-only&quot;>Toggle navigation</span>
+                <span class=&quot;icon-bar&quot;></span>
+                <span class=&quot;icon-bar&quot;></span>
+                <span class=&quot;icon-bar&quot;></span>
+            </button>
+                            <a type=&quot;button&quot; class=&quot;navbar-steam-login&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login&quot;>
+                    <i class=&quot;stm stm-steam&quot;></i>
+                </a>
+            
+            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/msearch' type=&quot;button&quot; class=&quot;xs-search&quot;>
+                <i class=&quot;fa fa-search&quot;></i>
+            </a>
+            <a class=&quot;navbar-brand&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/&quot;>
+                <img src=&quot;a/images/logo_440.svg&quot; alt=&quot;Logo&quot;/>
+            </a>
+            <div class=&quot;dropdown navbar-game-select&quot;>
+                <div data-toggle=&quot;dropdown&quot;>
+                    <img src=&quot;a/images/game_selector.png&quot;/>
+                </div>
+                <ul class=&quot;dropdown-menu&quot;>
+                                            <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/switch/440&quot;>
+                                <img src=&quot;a/images/logo_440.svg&quot; alt=&quot;TF2&quot;>
+                                <p>Team Fortress 2</p>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/switch/570&quot;>
+                                <img src=&quot;a/images/logo_570.svg&quot; alt=&quot;&quot;>
+                                <p>Dota 2</p>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/switch/730&quot;>
+                                <img src=&quot;a/images/logo_730.svg&quot; alt=&quot;CS:GO&quot;>
+                                <p>Counter-Strike: Global Offensive</p>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+        <div class=&quot;collapse navbar-collapse&quot; id=&quot;main-navbar&quot;>
+            <ul class=&quot;nav navbar-nav&quot;>
+                <li class=&quot;dropdown&quot;>
+                </li>
+                <li>
+                    <a href=&quot;http://localhost:8880/html?url=http://forums.backpack.tf&quot;>
+                        <i class=&quot;fa fa-comments&quot;></i> Forums
+                    </a>
+                </li>
+                                    <li class=&quot;dropdown&quot;>
+                        <a href=&quot;#&quot; class=&quot;dropdown-toggle&quot;
+                           data-toggle=&quot;dropdown&quot;>
+                            <i class=&quot;fa fa-check&quot;></i> Pricing <b
+                                    class=&quot;caret&quot;></b></a>
+                        <ul class=&quot;dropdown-menu&quot;>
+                            <li class=&quot;dropdown-header&quot;>Community Pricing
+                            </li>
+                            <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/pricelist&quot;><i
+                                            class='fa fa-fw fa-th'></i>
+                                    Pricegrid</a></li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/spreadsheet&quot;>
+                                    <i class='fa fa-fw fa-list'></i>
+                                    Spreadsheet
+                                </a>
+                            </li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/vote&quot;><i
+                                            class='fa fa-fw fa-check'></i>
+                                    Browse Suggestions</a>
+                            </li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/latest&quot;><i
+                                            class='fa fa-fw fa-calendar'></i>
+                                    Latest Changes</a>
+                            </li>
+                            <li class=&quot;divider&quot;></li>
+                            <li class=&quot;dropdown-header&quot;>Unusual Pricelist
+                            </li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/unusuals&quot;><i
+                                            class='fa fa-fw fa-moon-o'></i>
+                                    Browse by Item</a>
+                            </li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/effects&quot;><i
+                                            class='fa fa-fw fa-fire'></i>
+                                    Browse by Effect</a>
+                            </li>
+                            <li class=&quot;divider&quot;></li>
+                            <li class=&quot;dropdown-header&quot;>Steam Community
+                                Market
+                            </li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/market&quot;><i
+                                            class='stm fa-fw stm-steam'></i>
+                                    Market Pricelist</a>
+                            </li>
+                        </ul>
+                    </li>
+                                <li class=&quot;dropdown&quot;>
+                    <a href=&quot;#&quot; class=&quot;dropdown-toggle&quot;
+                       data-toggle=&quot;dropdown&quot;>
+                        <i class=&quot;fa fa-exchange&quot;></i> Trading <b
+                                class=&quot;caret&quot;></b></a>
+                    <ul class=&quot;dropdown-menu&quot;>
+                        <li class=&quot;dropdown-header&quot;>Classifieds</li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/classifieds&quot;><i
+                                        class='fa fa-fw fa-search'></i>
+                                Classified Listings</a>
+                        </li>
+                                                <li class=&quot;divider&quot;></li>
+                        <li class=&quot;dropdown-header&quot;>Utilities</li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/calculator&quot;><i
+                                        class='fa fa-fw fa-calculator'></i>
+                                Calculator</a>
+                        </li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/premium/search&quot;><i
+                                        class='fa fa-fw fa-star'></i>
+                                Premium Search</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=&quot;dropdown&quot; id='nav_toplist'>
+                    <a href=&quot;#&quot; class=&quot;dropdown-toggle&quot;
+                       data-toggle=&quot;dropdown&quot;>
+                        <i class=&quot;fa fa-bar-chart&quot;></i> Statistics <b
+                                class=&quot;caret&quot;></b></a>
+                    <ul class=&quot;dropdown-menu&quot;>
+                        <li
+                                class=&quot;dropdown-header&quot;>TF2</li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/stats&quot;>
+                                <i class='fa fa-fw fa-cubes'></i> Browse
+                                Items
+                            </a>
+                        </li>
+                        <li class=&quot;divider&quot;></li>
+                        <li class=&quot;dropdown-header&quot;>Top Lists</li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/backpacks&quot;>
+                                <i class='fa fa-fw fa-briefcase'></i> Top
+                                Inventories
+                            </a>
+                        </li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/donators&quot;>
+                                <i class='fa fa-fw fa-heart'></i> Top
+                                Donators
+                            </a>
+                        </li>
+                        <li>
+                            <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/generous&quot;>
+                                <i class='fa fa-fw fa-star'></i> Top Gifters
+                            </a>
+                        </li>
+                                                    <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/contributors&quot;>
+                                    <i class='fa fa-fw fa-comments-o'></i>
+                                    Top Contributors
+                                </a>
+                            </li>
+                            <li>
+                                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/accurate&quot;>
+                                    <i class='fa fa-fw fa-check'></i> Most
+                                    Accurate
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+            </ul>
+
+            <form class=&quot;navbar-form navbar-search navbar-left hidden-xs&quot;
+                  action=&quot;a/im_feeling_lucky&quot;
+                  id=&quot;navbar-search-container&quot; role=&quot;search&quot;>
+                <div class=&quot;form-group&quot;>
+                    <input class=&quot;form-control search-query&quot;
+                           id='navbar-search' name='text' type=&quot;text&quot;
+                           placeholder='Search' autocomplete='off'/>
+                </div>
+            </form>
+
+            <div class=&quot;navbar-right&quot;>
+                    <form method=&quot;post&quot; action=&quot;a/login&quot; id=&quot;login&quot;
+          class=&quot;navbar-form hidden-xs&quot;>
+        <input type=&quot;image&quot;
+               src=&quot;a/images/sits_small.png&quot;
+               alt='Sign In'>
+        <input type='hidden' name='return' value='bp'>
+    </form>
+            </div>
+        </div>
+    </div>
+</div>
+<main class=&quot;container&quot; id=&quot;page-content&quot;>
+            <div class='hidden-xs'>
+    <div id='media-side'>
+        <div id='nn_ws1'></div>
+    </div>
+</div>    
+    
+        <div class=&quot;row&quot;>
+    <div class=&quot;col-md-12&quot;>
+        <div class='top-prices'>
+                            
+                                    
+    
+                                                                                
+            
+<a class='currency-box' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/stats/Unique/Refined%20Metal/Tradable/Craftable'>
+    <div class='image'>
+        <img src=&quot;ahttps://steamcdn-a.akamaihd.net/apps/440/icons/pile_of_junk3.6f7e42fae0507065287c7b5c51aa05c2420161ba.png' alt='Refined Metal'/>
+    </div>
+    <div class='text'>
+        <p class='value' title='Up $0.00 4 months ago' data-tip='bottom'>
+            <i class=&quot;fa fa-green fa-arrow-up&quot;></i> $0.04
+        </p>
+
+        <p class='updated text-muted'>
+            updated 4 months ago
+        </p>
+    </div>
+</a>                                            
+                                    
+    
+                                                                                
+            
+<a class='currency-box' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/stats/Unique/Mann%20Co.%20Supply%20Crate%20Key/Tradable/Craftable'>
+    <div class='image'>
+        <img src=&quot;ahttps://steamcdn-a.akamaihd.net/apps/440/icons/key.be0a5e2cda3a039132c35b67319829d785e50352.png' alt='Mann Co. Supply Crate Key'/>
+    </div>
+    <div class='text'>
+        <p class='value' title='Up 0.78 ref 2 hours ago' data-tip='bottom'>
+            <i class=&quot;fa fa-green fa-arrow-up&quot;></i> 47.33–47.44 ref
+        </p>
+
+        <p class='updated text-muted'>
+            updated 2 hours ago
+        </p>
+    </div>
+</a>                                            
+                                    
+    
+                                                                                
+            
+<a class='currency-box' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/stats/Unique/Earbuds/Tradable/Craftable'>
+    <div class='image'>
+        <img src=&quot;a/images/440/items/143.png' alt='Earbuds'/>
+    </div>
+    <div class='text'>
+        <p class='value' title='Down 5.83 ref 3 weeks ago' data-tip='bottom'>
+            <i class=&quot;fa fa-red fa-arrow-down&quot;></i> 2.85 keys
+        </p>
+
+        <p class='updated text-muted'>
+            updated 3 weeks ago
+        </p>
+    </div>
+</a>                                    </div>
+    </div>
+</div>
+    <div class='row row-media'>
+        <div class=&quot;col-md-7&quot;>
+            
+    <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Promoted Listings</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                    <div>
+                                    <a class=&quot;btn btn-panel&quot;
+                                       href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/classifieds&quot; target=&quot;&quot; id=&quot;&quot;>
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                    <div class='index-classifieds'>
+            <ul class='item-list'>
+                                    <li title=&quot;Green Energy Deep Cover Operator&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;9&quot; data-market_p=&quot;4652&quot; data-market_s=&quot;13&quot; data-paint_price=&quot;2.6 keys&quot; data-listing_account_id=&quot;176246065&quot; data-listing_name=&quot;Eterno tf2hunt.c​om&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Selling for 80 k! Can sell on marketplace.tf too!&quot; data-listing_price=&quot;80 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 30 Hat&quot; data-level=&quot;30&quot; data-slot=&quot;misc&quot; data-class=&quot;Multi&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Deep Cover Operator&quot; data-base_name=&quot;Deep Cover Operator&quot; data-app=&quot;440&quot; data-defindex=&quot;30375&quot; data-original_id=&quot;5703622154&quot; data-id=&quot;7771804209&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;76–80 keys&quot; data-p_bptf_all=&quot;3,696.03 ref, $147.84&quot; data-price=&quot;3696.03&quot; data-effect_name=&quot;Green Energy&quot; data-effect_id=&quot;9&quot; data-paint_name=&quot;A Distinctive Lack of Hue&quot; data-paint_hex=&quot;141414&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/sbox2014_camo_headband.21ab05ed1a47493e0ac58d1e6046d8fc4a4a7dcd.png),url(a/images/440/particles/9_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>80 keys</span></div><div class='paint' style='background-color: #141414'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Deep Cover Operator 30 Found in Crate Green Energy A Distinctive Lack of Hue 7771804209 5703622154</span></li><li title=&quot;Memory Leak Sergeant's Drill Hat&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;65&quot; data-market_p=&quot;7223&quot; data-market_s=&quot;12&quot; data-paint_price=&quot;2.2–2.3 keys&quot; data-listing_account_id=&quot;44109698&quot; data-listing_name=&quot;✪W​rein&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Selling this unusual for the listed price in pure or Unusual Overpay&quot; data-listing_mp=&quot;1&quot; data-listing_price=&quot;20 keys&quot; data-listing_mp_price=&quot;$39.99&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 17 Hat&quot; data-level=&quot;17&quot; data-slot=&quot;misc&quot; data-class=&quot;Soldier&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Sergeant's Drill Hat&quot; data-base_name=&quot;Sergeant's Drill Hat&quot; data-app=&quot;440&quot; data-defindex=&quot;183&quot; data-original_id=&quot;1648423294&quot; data-id=&quot;7758198672&quot; data-origin=&quot;Timed Drop&quot; data-p_bptf=&quot;20 keys&quot; data-p_bptf_all=&quot;947.70 ref, $37.91&quot; data-price=&quot;947.7&quot; data-effect_name=&quot;Memory Leak&quot; data-effect_id=&quot;65&quot; data-paint_name=&quot;The Bitter Taste of Defeat and Lime&quot; data-paint_hex=&quot;32cd32&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/soldier_sargehat.ea8a22b4c923a8bbc70c2b477e4cf4809ee13aea.png),url(a/images/440/particles/65_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;icon-mp&quot;></i> <span>20 keys</span></div><div class='paint' style='background-color: #32cd32'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Sergeant's Drill Hat 17 Timed Drop Memory Leak The Bitter Taste of Defeat and Lime 7758198672 1648423294</span></li><li title=&quot;Burning Flames Fed-Fightin' Fedora&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;13&quot; data-market_p=&quot;4401&quot; data-market_s=&quot;14&quot; data-paint_price=&quot;2.6 keys&quot; data-listing_account_id=&quot;201387737&quot; data-listing_name=&quot;F​isk&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Also open for offers&quot; data-listing_price=&quot;145 keys&quot; data-equipped=&quot;1&quot; data-summary=&quot;Level 31 Hat&quot; data-level=&quot;31&quot; data-slot=&quot;misc&quot; data-class=&quot;Scout&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Fed-Fightin' Fedora&quot; data-base_name=&quot;Fed-Fightin' Fedora&quot; data-app=&quot;440&quot; data-defindex=&quot;780&quot; data-original_id=&quot;3417699742&quot; data-id=&quot;7509032092&quot; data-origin=&quot;Found in Crate&quot; data-spell_1=&quot;Halloween Spell: Rotten Orange Footprints&quot; data-spell_color_1=&quot;ff6400&quot; data-p_bptf=&quot;130 keys&quot; data-p_bptf_all=&quot;6,160.05 ref, $246.40&quot; data-price=&quot;6160.05&quot; data-effect_name=&quot;Burning Flames&quot; data-effect_id=&quot;13&quot; data-paint_name=&quot;A Distinctive Lack of Hue&quot; data-paint_hex=&quot;141414&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/pep_hat.d8855e671f95f72b0b74cea0bc8b171f003b3dfc.png),url(a/images/440/particles/13_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>145 keys</span></div><div class='paint' style='background-color: #141414'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Fed-Fightin' Fedora 31 Found in Crate Burning Flames A Distinctive Lack of Hue 7509032092 3417699742</span></li><li title=&quot;Haunted Ghosts Puffy Polar Cap&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;8&quot; data-market_p=&quot;2483&quot; data-market_s=&quot;12&quot; data-paint_price=&quot;6.44–6.55 ref&quot; data-listing_account_id=&quot;155174554&quot; data-listing_name=&quot;Willi-i​s-here trade.tf&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Send trade offer&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=155174554&token=WEPP_YGQ&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;23 keys&quot; data-equipped=&quot;1&quot; data-summary=&quot;Level 22 Hat&quot; data-level=&quot;22&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Puffy Polar Cap&quot; data-base_name=&quot;Puffy Polar Cap&quot; data-app=&quot;440&quot; data-defindex=&quot;30958&quot; data-original_id=&quot;6770190165&quot; data-id=&quot;7771596675&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;20–23 keys&quot; data-p_bptf_all=&quot;1,018.78 ref, $40.75&quot; data-price=&quot;1018.7775&quot; data-effect_name=&quot;Haunted Ghosts&quot; data-effect_id=&quot;8&quot; data-paint_name=&quot;Peculiarly Drab Tincture&quot; data-paint_hex=&quot;c5af91&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/dec17_puffy_polar_cap.fa399c38f6e423ae1461cc4118ab2f976c568b3f.png),url(a/images/440/particles/8_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>23 keys</span></div><div class='paint' style='background-color: #c5af91'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Puffy Polar Cap 22 Found in Crate Haunted Ghosts Peculiarly Drab Tincture 7771596675 6770190165</span></li><li title=&quot;Strange Specialized Killstreak Degreaser&quot; class='item q-440-11 q-440-border-11' data-priceindex=&quot;0&quot; data-market_p=&quot;375&quot; data-market_s=&quot;15&quot; data-listing_account_id=&quot;315779249&quot; data-listing_name=&quot;Greek(The Griff) ​Buying!!&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Nice parts and TS very cheap&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=315779249&token=AWrHhPx7&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;1 key, 18 ref&quot; data-equipped=&quot;0&quot; data-ke1=&quot;0 Kills&quot; data-part_name_1=&quot;Teammates Extinguished&quot; data-part_score_1=&quot;0&quot; data-part_price_1=&quot;1.2 keys&quot; data-part_name_2=&quot;Projectiles Reflected&quot; data-part_score_2=&quot;0&quot; data-part_price_2=&quot;1.9–2.5 keys&quot; data-summary=&quot;Level 10 Flame Thrower&quot; data-level=&quot;10&quot; data-slot=&quot;primary&quot; data-class=&quot;Pyro&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Strange&quot; data-quality=&quot;11&quot; data-name=&quot;Degreaser&quot; data-base_name=&quot;Degreaser&quot; data-app=&quot;440&quot; data-defindex=&quot;215&quot; data-original_id=&quot;597211886&quot; data-id=&quot;7773050118&quot; data-origin=&quot;Found in Crate&quot; data-ks_tier=&quot;2&quot; data-sheen=&quot;Team Shine&quot; data-stat_clock=&quot;1&quot; data-p_scm=&quot;$3.75&quot; data-p_scm_all=&quot;76.59 ref, 1.62 keys, $3.06&quot; data-custom_name=&quot;♥ D E S P A C I T O ♥&quot; data-custom_desc=&quot;Aguante el GOTH vieja no me importa nada!&quot; data-price=&quot;92.70303362069&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_degreaser.0a934206b32be241915edb1919937c4c9dfa2440.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>1.38 keys</span></div><div class='icon-stack'><div class='killstreaker killstreaker-specialized'></div><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Strange Degreaser 10 Found in Crate killstreak specialized specialised 7773050118 597211886</span></li><li title=&quot;Archimedes #1&quot; class='item q-440-6 q-440-border-6' data-priceindex=&quot;0&quot; data-market_p=&quot;-1&quot; data-listing_account_id=&quot;129881807&quot; data-listing_name=&quot;Liv​inLikeLog&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;&quot;If you ain&#039;t first, you&#039;re last.&quot; Just looking for offers, hence the high b/o. Incredibly clean history; only traded once before I obtained it.&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=129881807&token=FBRT5ZAh&quot; data-listing_price=&quot;5000 keys&quot; data-equipped=&quot;1&quot; data-is_unique=&quot;1&quot; data-summary=&quot;Level 91 Mascot&quot; data-level=&quot;91&quot; data-slot=&quot;misc&quot; data-class=&quot;Medic&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Archimedes&quot; data-base_name=&quot;Archimedes&quot; data-app=&quot;440&quot; data-defindex=&quot;828&quot; data-original_id=&quot;1033524728&quot; data-id=&quot;7723875688&quot; data-origin=&quot;Crafted&quot; data-crafter_id=&quot;68409780&quot; data-crafter_name=&quot;Booster&quot; data-p_bptf=&quot;3.44–3.55 ref&quot; data-p_bptf_all=&quot;$0.14&quot; data-price=&quot;3.495&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/archimedes.127a270019db0b3ac069f871aa17ce1d5d45bd07.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>5000 keys</span></div><div class='tag top-left'>#1</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unique Archimedes 91 Crafted 7723875688 1033524728</span></li><li title=&quot;Hot Killstreak Cardboard Boxed Scattergun (Well-Worn)&quot; class='item q-440-15 q-440-border-5' data-priceindex=&quot;701&quot; data-market_p=&quot;5561&quot; data-market_s=&quot;4&quot; data-listing_account_id=&quot;88586017&quot; data-listing_name=&quot;Toad ​🍄&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⭐ Discounted ⭐ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀🍄 Someone selling less than me? ILL BEAT THEM! 🍄⠀⠀⠀🏰 Check out my profile for more discounted unusuals 🏰 ⠀⠀⠀⠀Backpack.tf/profiles/76561198048851745&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=88586017&token=6QSwi2GH&quot; data-listing_price=&quot;23 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 99 Scattergun (Well-Worn)&quot; data-level=&quot;99&quot; data-slot=&quot;primary&quot; data-class=&quot;Scout&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Decorated Weapon&quot; data-quality=&quot;15&quot; data-name=&quot;Cardboard Boxed | Scattergun (Well-Worn)&quot; data-base_name=&quot;Scattergun&quot; data-app=&quot;440&quot; data-defindex=&quot;200&quot; data-original_id=&quot;6342774553&quot; data-id=&quot;7747773686&quot; data-wear_tier=&quot;Well-Worn&quot; data-origin=&quot;War Paint&quot; data-ks_tier=&quot;1&quot; data-gifted_id=&quot;30610533&quot; data-gifted_name=&quot;corsa&quot; data-price=&quot;0&quot; data-effect_name=&quot;Hot&quot; data-effect_id=&quot;701&quot; >
+<div class='item-icon' style='background-image:url(ahttps://scrap.tf/img/items/warpaint/Scattergun_211_4_0.png),url(a/images/440/particles/701_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>23 keys</span></div><div class='tag top-left'>WW</div><div class='icon-stack'><div class='killstreaker killstreaker-basic'></div><div class='gifted-item'><i class='fa fa-gift'></i></div><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Decorated Weapon Scattergun 99 War Paint Hot Cardboard Boxed killstreak 7747773686 6342774553</span></li><li title=&quot;Blizzardy Storm Coffin Kit&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;30&quot; data-market_p=&quot;92534&quot; data-market_s=&quot;3&quot; data-listing_account_id=&quot;97186992&quot; data-listing_name=&quot;orang​ezest&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;1 of 2 of the only unusual coffin kits for sale, Blizzardy Storm Coffin Kit, Can go a considerable amount less for full pure/mixed, feel free to offer.&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=97186992&token=AJnPwIil&quot; data-listing_price=&quot;1500 keys&quot; data-equipped=&quot;1&quot; data-summary=&quot;Level 19 Backpack&quot; data-level=&quot;19&quot; data-slot=&quot;misc&quot; data-class=&quot;Pyro&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Coffin Kit&quot; data-base_name=&quot;Coffin Kit&quot; data-app=&quot;440&quot; data-defindex=&quot;938&quot; data-original_id=&quot;1279717279&quot; data-id=&quot;7707298639&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;1100 keys&quot; data-p_bptf_all=&quot;52,123.50 ref, $2084.94&quot; data-custom_name=&quot;Another Ice Age&quot; data-custom_desc=&quot;Only this time it's the Pyro dinosaurs who survive and the humans who perish&quot; data-price=&quot;52123.5&quot; data-effect_name=&quot;Blizzardy Storm&quot; data-effect_id=&quot;30&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hwn_pyro_coffinpack.89d7f640763d3d29a40d2e1f72753b154409b59f.png),url(a/images/440/particles/30_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>1500 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Coffin Kit 19 Found in Crate Blizzardy Storm 7707298639 1279717279</span></li><li title=&quot;Burning Flames Tipped Lid&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;13&quot; data-market_p=&quot;5322&quot; data-market_s=&quot;12&quot; data-listing_account_id=&quot;123212660&quot; data-listing_name=&quot;Radiant Ameth​yst Player&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;400 Pure or 450+ Unusual Overpay&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=123212660&token=zgzZqFyE&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;400 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 18 Hat&quot; data-level=&quot;18&quot; data-slot=&quot;misc&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Tipped Lid&quot; data-base_name=&quot;Tipped Lid&quot; data-app=&quot;440&quot; data-defindex=&quot;30425&quot; data-original_id=&quot;5640650304&quot; data-id=&quot;7701260894&quot; data-origin=&quot;Gifted&quot; data-p_bptf=&quot;370–470 keys&quot; data-p_bptf_all=&quot;19,901.70 ref, $796.07&quot; data-price=&quot;19901.7&quot; data-effect_name=&quot;Burning Flames&quot; data-effect_id=&quot;13&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/short2014_tip_of_the_hats.5af3f0b9598c8ab51d5a2562f39f5fb0c00b7fd4.png),url(a/images/440/particles/13_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>400 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Tipped Lid 18 Gifted Burning Flames 7701260894 5640650304</span></li><li title=&quot;Cool Macaw Masked Shotgun (Field-Tested)&quot; class='item q-440-15 q-440-border-5' data-priceindex=&quot;703&quot; data-market_p=&quot;-1&quot; data-listing_account_id=&quot;102788316&quot; data-listing_name=&quot;Tobb​by™&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;All offers considered&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=102788316&token=Ph_aeN_q&quot; data-listing_price=&quot;45 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 99 Shotgun (Field-Tested)&quot; data-level=&quot;99&quot; data-slot=&quot;primary&quot; data-class=&quot;Multi&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Decorated Weapon&quot; data-quality=&quot;15&quot; data-name=&quot;Macaw Masked | Shotgun (Field-Tested)&quot; data-base_name=&quot;Shotgun&quot; data-app=&quot;440&quot; data-defindex=&quot;199&quot; data-original_id=&quot;6261320569&quot; data-id=&quot;7677988182&quot; data-wear_tier=&quot;Field-Tested&quot; data-origin=&quot;War Paint&quot; data-p_bptf=&quot;31 keys&quot; data-p_bptf_all=&quot;1,468.94 ref, $58.76&quot; data-price=&quot;1468.935&quot; data-effect_name=&quot;Cool&quot; data-effect_id=&quot;703&quot; >
+<div class='item-icon' style='background-image:url(ahttps://scrap.tf/img/items/warpaint/Shotgun_303_3_0.png),url(a/images/440/particles/703_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>45 keys</span></div><div class='tag top-left'>FT</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Decorated Weapon Shotgun 99 War Paint Cool Macaw Masked 7677988182 6261320569</span></li><li title=&quot;Ghastly Ghosts Jr Swagman's Swatter&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;85&quot; data-market_p=&quot;4284&quot; data-market_s=&quot;12&quot; data-paint_price=&quot;23–23.33 ref&quot; data-listing_account_id=&quot;162338347&quot; data-listing_name=&quot;theglenc​oco TRADEIT.GG&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Clean ✅ Chromatic corruption!!! ✅ Best paint spell ✅ Purple paint ✅ I accept Pure/Items/Mixed/MarketplaceTF/SCM payment. Send me a trade offer/ add me to offer!&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=162338347&token=Od7J3LIh&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;70 keys&quot; data-equipped=&quot;1&quot; data-summary=&quot;Level 10 Hat&quot; data-level=&quot;10&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Swagman's Swatter&quot; data-base_name=&quot;Swagman's Swatter&quot; data-app=&quot;440&quot; data-defindex=&quot;626&quot; data-original_id=&quot;3145557315&quot; data-id=&quot;7716454113&quot; data-origin=&quot;Gifted&quot; data-spell_1=&quot;Halloween Spell: Chromatic Corruption&quot; data-spell_color_1=&quot;ff0000&quot; data-p_bptf=&quot;52–60 keys&quot; data-p_bptf_all=&quot;2,653.56 ref, $106.14&quot; data-price=&quot;2653.56&quot; data-effect_name=&quot;Ghastly Ghosts Jr&quot; data-effect_id=&quot;85&quot; data-paint_name=&quot;A Deep Commitment to Purple&quot; data-paint_hex=&quot;7d4071&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fwk_sniper_corkhat.9580444e8812c8f85f66b1ce164d9e0eabdf1473.png),url(a/images/440/particles/85_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>70 keys</span></div><div class='paint' style='background-color: #7d4071'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Swagman's Swatter 10 Gifted Ghastly Ghosts Jr A Deep Commitment to Purple 7716454113 3145557315</span></li><li title=&quot;Poisoned Shadows Harmburg&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;76&quot; data-market_p=&quot;5030&quot; data-market_s=&quot;12&quot; data-paint_price=&quot;23–23.33 ref&quot; data-listing_account_id=&quot;146802096&quot; data-listing_name=&quot;TF2Sc​ourge&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;looking for offers! Clean!&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=146802096&token=oylBDb0t&quot; data-listing_price=&quot;110 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 44 Hat&quot; data-level=&quot;44&quot; data-slot=&quot;misc&quot; data-class=&quot;Spy&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Harmburg&quot; data-base_name=&quot;Harmburg&quot; data-app=&quot;440&quot; data-defindex=&quot;30123&quot; data-original_id=&quot;2055675320&quot; data-id=&quot;7567046798&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;82 keys&quot; data-p_bptf_all=&quot;3,885.57 ref, $155.42&quot; data-price=&quot;3885.57&quot; data-effect_name=&quot;Poisoned Shadows&quot; data-effect_id=&quot;76&quot; data-paint_name=&quot;A Deep Commitment to Purple&quot; data-paint_hex=&quot;7d4071&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/jul13_harmburg.4f64a8d680c145d4c92b10177d1c31c1c03ded39.png),url(a/images/440/particles/76_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>110 keys</span></div><div class='paint' style='background-color: #7d4071'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Harmburg 44 Found in Crate Poisoned Shadows A Deep Commitment to Purple 7567046798 2055675320</span></li><li title=&quot;Burning Flames Rotation Sensation&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;13&quot; data-market_p=&quot;6564&quot; data-market_s=&quot;12&quot; data-paint_price=&quot;2.45 keys&quot; data-listing_account_id=&quot;908878352&quot; data-listing_name=&quot;Ṡ̷́͗̂̿ad̵̈̎̄​i̵st̷͆&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Pure price, i love unusual offers too, and specially miscs or halloween effects. feel free to add me or send an offer i don&#039;t bite&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=908878352&token=fQTqHIZE&quot; data-listing_price=&quot;230 keys&quot; data-equipped=&quot;1&quot; data-summary=&quot;Level 66 Hat&quot; data-level=&quot;66&quot; data-slot=&quot;misc&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Rotation Sensation&quot; data-base_name=&quot;Rotation Sensation&quot; data-app=&quot;440&quot; data-defindex=&quot;30623&quot; data-original_id=&quot;7349333569&quot; data-id=&quot;7757929128&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;221–244 keys&quot; data-p_bptf_all=&quot;11,017.01 ref, $440.68&quot; data-price=&quot;11017.0125&quot; data-effect_name=&quot;Burning Flames&quot; data-effect_id=&quot;13&quot; data-paint_name=&quot;Pink as Hell&quot; data-paint_hex=&quot;ff69b4&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/cc_summer2015_the_rotation_sensation.797f13ad026de3b5c065412d847494a812c0be4d.png),url(a/images/440/particles/13_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>230 keys</span></div><div class='paint' style='background-color: #ff69b4'></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Rotation Sensation 66 Found in Crate Burning Flames Pink as Hell 7757929128 7349333569</span></li><li title=&quot;Collector's Tide Turner&quot; class='item q-440-14 q-440-border-14' data-priceindex=&quot;0&quot; data-market_p=&quot;6940&quot; data-market_s=&quot;11&quot; data-listing_account_id=&quot;83929463&quot; data-listing_name=&quot;Mindac​os&quot; data-listing_intent=&quot;sell&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=83929463&token=qrH9MEeI&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;90 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 53 Shield&quot; data-level=&quot;53&quot; data-slot=&quot;secondary&quot; data-class=&quot;Demoman&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Collector's&quot; data-quality=&quot;14&quot; data-name=&quot;Tide Turner&quot; data-base_name=&quot;Tide Turner&quot; data-app=&quot;440&quot; data-defindex=&quot;1099&quot; data-original_id=&quot;6780861309&quot; data-id=&quot;7647752041&quot; data-origin=&quot;Recipe output&quot; data-p_bptf=&quot;45 keys&quot; data-p_bptf_all=&quot;2,132.33 ref, $85.29&quot; data-p_scm=&quot;$69.40&quot; data-p_scm_all=&quot;1,417.47 ref, 29.91 keys, $56.70&quot; data-price=&quot;2132.325&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_wheel_shield.467c4fb55b8ea4bb22249faac376ecf3d2dfdbd5.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>90 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Collector's Tide Turner 53 Recipe output 7647752041 6780861309</span></li><li title=&quot;Sunbeams Frenchman's Beret&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;17&quot; data-market_p=&quot;4588&quot; data-market_s=&quot;12&quot; data-listing_account_id=&quot;176246065&quot; data-listing_name=&quot;Eterno tf2​hunt.com&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;Selling for 42k ! Can sell on marketplace.tf too&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=176246065&token=7wd2xaD_&quot; data-listing_price=&quot;42 keys&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 79 Hat&quot; data-level=&quot;79&quot; data-slot=&quot;misc&quot; data-class=&quot;Spy&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Frenchman's Beret&quot; data-base_name=&quot;Frenchman's Beret&quot; data-app=&quot;440&quot; data-defindex=&quot;180&quot; data-original_id=&quot;233207094&quot; data-id=&quot;7771804199&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;33–39 keys&quot; data-p_bptf_all=&quot;1,705.86 ref, $68.23&quot; data-price=&quot;1705.86&quot; data-effect_name=&quot;Sunbeams&quot; data-effect_id=&quot;17&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/spy_beret.f92e05f4dd70b0b1da54049f21f120fd955b1c08.png),url(a/images/440/particles/17_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>42 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Frenchman's Beret 79 Found in Crate Sunbeams 7771804199 233207094</span></li><li title=&quot;Non-Craftable Ali Baba's Wee Booties&quot; class='item nocraft q-440-6 q-440-border-6' data-priceindex=&quot;0&quot; data-market_p=&quot;-1&quot; data-listing_account_id=&quot;357537016&quot; data-listing_name=&quot;hot milfs ​in your area&quot; data-listing_intent=&quot;sell&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=357537016&token=g45GM4IO&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;1 ref&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 10 Boots&quot; data-level=&quot;10&quot; data-slot=&quot;primary&quot; data-class=&quot;Demoman&quot; data-tradable=&quot;1&quot; data-craftable=&quot;0&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Ali Baba's Wee Booties&quot; data-base_name=&quot;Ali Baba's Wee Booties&quot; data-app=&quot;440&quot; data-defindex=&quot;405&quot; data-original_id=&quot;5614706921&quot; data-id=&quot;7621703349&quot; data-origin=&quot;Purchased&quot; data-p_bptf=&quot;0.11 ref&quot; data-p_bptf_all=&quot;$0.00&quot; data-price=&quot;0.11&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/demo_booties.6c832304c83b2efe0f4ee87060ae26277f919d1f.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>1 ref</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unique Ali Baba's Wee Booties 10 Purchased 7621703349 5614706921</span></li><li title=&quot;Skill Gotten Gains Taunt: Results Are In&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;3007&quot; data-market_p=&quot;940&quot; data-market_s=&quot;12&quot; data-listing_account_id=&quot;62374525&quot; data-listing_name=&quot;Wonderb​oltsCadet&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;I Strongly Prefer Pure, But I Might Accept Unusual/Item Overpay If I Like The Items.
+Medic Taunt With Skill Gotten Gains Effect.
+I Would Prefer It If You Send A Trade Offer.&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=62374525&token=nTM4gbEH&quot; data-listing_price=&quot;3 keys, 23 ref&quot; data-equipped=&quot;1&quot; data-summary=&quot;Level 38 Special Taunt&quot; data-level=&quot;38&quot; data-slot=&quot;taunt&quot; data-class=&quot;Medic&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Taunt: Results Are In&quot; data-base_name=&quot;Taunt: Results Are In&quot; data-app=&quot;440&quot; data-defindex=&quot;1109&quot; data-original_id=&quot;7410582988&quot; data-id=&quot;7756188751&quot; data-origin=&quot;Purchased&quot; data-p_bptf=&quot;5–7 keys&quot; data-p_bptf_all=&quot;284.31 ref, $11.37&quot; data-price=&quot;284.31&quot; data-effect_name=&quot;Skill Gotten Gains&quot; data-effect_id=&quot;3007&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/taunt_results_are_in.a728e5bea382e5d8b9779e2d33cc1122aeed6c9c.png),url(a/images/440/particles/3007_94x94.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>3.49 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unusual Taunt: Results Are In 38 Purchased Skill Gotten Gains 7756188751 7410582988</span></li><li title=&quot;Strange Unique Neon Annihilator&quot; class='item q-440-6 q-440-border-11' data-priceindex=&quot;0&quot; data-market_p=&quot;-1&quot; data-listing_account_id=&quot;31211420&quot; data-listing_name=&quot;HACK THE G​IBSON&quot; data-listing_intent=&quot;sell&quot; data-listing_comment=&quot;1 of 3&quot; data-listing_offers_url=&quot;https://steamcommunity.com/tradeoffer/new/?partner=31211420&token=yXa1Ey7W&quot; data-listing_buyout=&quot;1&quot; data-listing_price=&quot;100 keys&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Kills&quot; data-summary=&quot;Level 27 Sign&quot; data-level=&quot;27&quot; data-slot=&quot;melee&quot; data-class=&quot;Pyro&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Neon Annihilator&quot; data-base_name=&quot;Neon Annihilator&quot; data-app=&quot;440&quot; data-defindex=&quot;813&quot; data-original_id=&quot;5185134943&quot; data-id=&quot;7331426251&quot; data-origin=&quot;Found in Crate&quot; data-p_bptf=&quot;25 keys&quot; data-p_bptf_all=&quot;1,184.63 ref, $47.38&quot; data-price=&quot;1184.625&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_sd_neonsign.dda1158a80419da433862e963d798df95391e952.png)'></div><div class='tag bottom-right'><i class=&quot;fa fa-tag&quot;></i> <span>100 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-arrow-right listing-intent-sell'></i></div></div>
+<span style='display:none'>Unique Neon Annihilator 27 Found in Crate 7331426251 5185134943</span></li>
+                            </ul>
+        </div>
+        <table class=&quot;table&quot;
+               id=&quot;table-classified-stats&quot;>
+            <tbody>
+            <tr>
+                <td>Total Listed:
+                    <strong>201196</strong></td>
+                <td>Last Hour:
+                    <strong>152880</strong>
+                </td>
+                <td>Promoted: <strong>741</strong>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+            </div>
+    </div>
+        </div>
+
+        
+        <div class=&quot;col-md-4&quot;>
+                            
+    <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Advertisement</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                                </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                    <div class='media-top-box'>
+    <div id='nn_content_mpu1'></div>
+</div>            </div>
+    </div>
+                    </div>
+    </div>
+
+    <div class=&quot;row&quot;>
+    <div class=&quot;col-md-6&quot;>
+        
+    <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Latest Forum Threads</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                    <div>
+                                    <a class=&quot;btn btn-panel&quot;
+                                       href=&quot;http://localhost:8880/html?url=http://forums.backpack.tf&quot; target=&quot;&quot; id=&quot;&quot;>
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                            <ul class=&quot;rss-feed&quot;>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://forums.backpack.tf/topic/70896-minor-request-steamrep-icons/?do=findComment&amp;comment=622632&quot;>
+                Minor request: SteamRep Icons
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2019-05-17T03:46:00+00:00'>Fri, 17 May 19 03:46:00 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://forums.backpack.tf/topic/70895-saxton-hale-masks/?do=findComment&amp;comment=622623&quot;>
+                Saxton Hale masks
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2019-05-17T01:16:14+00:00'>Fri, 17 May 19 01:16:14 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://forums.backpack.tf/topic/70890-what%E2%80%99s-your-most-prized-possession-in-your-backpack/?do=findComment&amp;comment=622570&quot;>
+                What’s your most prized possession in your backpack?
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2019-05-16T16:20:43+00:00'>Thu, 16 May 19 16:20:43 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://forums.backpack.tf/topic/70889-pc-ks-stormy-storm-family-fez/?do=findComment&amp;comment=622569&quot;>
+                [PC] KS Stormy Storm Family Fez
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2019-05-16T16:12:22+00:00'>Thu, 16 May 19 16:12:22 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://forums.backpack.tf/topic/70882-how-to-value-spelled-items/?do=findComment&amp;comment=622545&quot;>
+                How to value spelled items
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2019-05-15T23:00:00+00:00'>Wed, 15 May 19 23:00:00 +0000</time></small>
+            </a>
+        </li>
+    </ul>                    </div>
+    </div>
+    </div>
+
+    <div class=&quot;col-md-6&quot;>
+        
+    <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Latest News</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                    <div>
+                                    <a class=&quot;btn btn-panel&quot;
+                                       href=&quot;http://localhost:8880/html?url=http://steamcommunity.com/groups/meetthestats&quot; target=&quot;&quot; id=&quot;&quot;>
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                            <ul class=&quot;rss-feed&quot;>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/3021261699908839878&quot;>
+                Open discussion on rules for trading with scammers.
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2019-04-16T19:06:12+00:00'>Tue, 16 Apr 19 19:06:12 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/3145099913366946429&quot;>
+                Quick PSA about the current state of phishing scams.
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2018-12-15T02:27:41+00:00'>Sat, 15 Dec 18 02:27:41 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/1702817596418698554&quot;>
+                A few nice things for you
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2018-10-28T21:25:21+00:00'>Sun, 28 Oct 18 21:25:21 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/1698312095254248111&quot;>
+                Quick PSA on &quot;pending bans&quot;
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2018-10-04T22:54:51+00:00'>Thu, 04 Oct 18 22:54:51 +0000</time></small>
+            </a>
+        </li>
+            <li>
+            <a href=&quot;http://localhost:8880/html?url=https://steamcommunity.com/groups/meetthestats/announcements/detail/1698312095254232141&quot;>
+                Win a Golden Frying Pan at Tip of the Hats!
+                <small class=&quot;text-muted&quot;><time class='timeago' datetime='2018-10-04T22:51:18+00:00'>Thu, 04 Oct 18 22:51:18 +0000</time></small>
+            </a>
+        </li>
+    </ul>                    </div>
+    </div>
+    </div>
+</div>
+        
+    <div class=&quot;row&quot;>
+        <div class=&quot;col-md-12&quot;>
+                <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Latest Changes</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                    <div>
+                                    <a class=&quot;btn btn-panel&quot;
+                                       href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/latest&quot; target=&quot;&quot; id=&quot;&quot;>
+                                        View More
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                    <div class=&quot;index-latest-changes&quot;>
+            <ul class='item-list' style=&quot;display: flex; flex-wrap: wrap&quot;>
+                                                    
+                    
+                                        <li title=&quot;Cloud 9 Black Watch&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;58&quot; data-market_p=&quot;3786&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Demoman&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Black Watch&quot; data-base_name=&quot;Black Watch&quot; data-app=&quot;440&quot; data-defindex=&quot;30105&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;17–20 keys&quot; data-p_bptf_all=&quot;876.62 ref, $35.06&quot; data-price=&quot;876.6225&quot; data-effect_name=&quot;Cloud 9&quot; data-effect_id=&quot;58&quot; data-vote=&quot;5cde35af67807265aa52613e&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/jul13_blam_o_shanter.d338088366a5f827f3f089e70f6e519e0feabb42.png),url(a/images/440/particles/58_94x94.png)'></div><div class='tag bottom-right'><span>~17–20 keys</span></div><div class='tag top-left'>cloud 9</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Black Watch Cloud 9</span></li>
+                                    
+                    
+                                        <li title=&quot;Searing Plasma Human Cannonball&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;15&quot; data-market_p=&quot;5212&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Human Cannonball&quot; data-base_name=&quot;Human Cannonball&quot; data-app=&quot;440&quot; data-defindex=&quot;817&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;32–39 keys&quot; data-p_bptf_all=&quot;1,682.17 ref, $67.29&quot; data-price=&quot;1682.1675&quot; data-effect_name=&quot;Searing Plasma&quot; data-effect_id=&quot;15&quot; data-vote=&quot;5cde4888d3817278c6504b4a&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/sd_helm_demo.e173f96f7241dee7894bbee5dcc95de5ad850e58.png),url(a/images/440/particles/15_94x94.png)'></div><div class='tag bottom-right'><span>~32–39 keys</span></div><div class='tag top-left'>searing</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Human Cannonball Searing Plasma</span></li>
+                                    
+                    
+                                        <li title=&quot;Mann Co. Supply Crate Key&quot; class='item q-440-6 q-440-border-6' data-priceindex=&quot;0&quot; data-market_p=&quot;232&quot; data-market_s=&quot;2149&quot; data-equipped=&quot;0&quot; data-is_key=&quot;1&quot; data-summary=&quot;Level 5 Tool&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Mann Co. Supply Crate Key&quot; data-base_name=&quot;Mann Co. Supply Crate Key&quot; data-app=&quot;440&quot; data-defindex=&quot;5021&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;47.33–47.44 ref&quot; data-p_bptf_all=&quot;$1.90&quot; data-p_scm=&quot;$2.32&quot; data-p_scm_all=&quot;47.39 ref, 1.00 key, $1.90&quot; data-price=&quot;47.385&quot; data-vote=&quot;5cd7061967807240a1518a9f&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/key.be0a5e2cda3a039132c35b67319829d785e50352.png)'></div><div class='tag bottom-right'><span>~47.33–47.44 ref</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Unique Mann Co. Supply Crate Key</span></li>
+                                    
+                    
+                                        <li title=&quot;Strange Unique Medi Gun&quot; class='item q-440-6 q-440-border-11' data-priceindex=&quot;0&quot; data-market_p=&quot;-1&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Ubers&quot; data-summary=&quot;Level 1 Medi Gun&quot; data-slot=&quot;secondary&quot; data-class=&quot;Medic&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Medi Gun&quot; data-base_name=&quot;Medi Gun&quot; data-app=&quot;440&quot; data-defindex=&quot;29&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;67 keys&quot; data-p_bptf_all=&quot;3,174.80 ref, $126.99&quot; data-price=&quot;3174.795&quot; data-vote=&quot;5ca7ae33678072365b1387d7&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_medigun.b2bcbd173ce0d73db1f14766b882e1e7288b54bb.png)'></div><div class='tag bottom-right'><span>~67 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Unique Medi Gun</span></li>
+                                    
+                    
+                                        <li title=&quot;Misty Skull Handyman's Handle&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;44&quot; data-market_p=&quot;3060&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Pyro&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Handyman's Handle&quot; data-base_name=&quot;Handyman's Handle&quot; data-app=&quot;440&quot; data-defindex=&quot;253&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;35–40 keys&quot; data-p_bptf_all=&quot;1,776.94 ref, $71.08&quot; data-price=&quot;1776.9375&quot; data-effect_name=&quot;Misty Skull&quot; data-effect_id=&quot;44&quot; data-vote=&quot;5ca50eb6d381722aaf60b5cf&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/pyro_plunger.292458548cb49dc05342d4cc364b8a6276aa8dad.png),url(a/images/440/particles/44_94x94.png)'></div><div class='tag bottom-right'><span>~35–40 keys</span></div><div class='tag top-left'>misty</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Unusual Handyman's Handle Misty Skull</span></li>
+                                    
+                    
+                                        <li title=&quot;Tesla Coil Titanium Tyrolean&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;108&quot; data-market_p=&quot;2837&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Medic&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Titanium Tyrolean&quot; data-base_name=&quot;Titanium Tyrolean&quot; data-app=&quot;440&quot; data-defindex=&quot;30045&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;34 keys&quot; data-p_bptf_all=&quot;1,611.09 ref, $64.44&quot; data-price=&quot;1611.09&quot; data-effect_name=&quot;Tesla Coil&quot; data-effect_id=&quot;108&quot; data-vote=&quot;5cdd95f16780726ba56154a7&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/robo_medic_tyrolean.4cf564532e3c5985da21f10a0041ddf3f6c6351d.png),url(a/images/440/particles/108_94x94.png)'></div><div class='tag bottom-right'><span>~34 keys</span></div><div class='tag top-left'>tesla</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Titanium Tyrolean Tesla Coil</span></li>
+                                    
+                    
+                                        <li title=&quot;Eerie Orbiting Fire Ze Goggles&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;40&quot; data-market_p=&quot;3266&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Glasses&quot; data-slot=&quot;misc&quot; data-class=&quot;Medic&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Ze Goggles&quot; data-base_name=&quot;Ze Goggles&quot; data-app=&quot;440&quot; data-defindex=&quot;177&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;22 keys&quot; data-p_bptf_all=&quot;1,042.47 ref, $41.70&quot; data-price=&quot;1042.47&quot; data-effect_name=&quot;Eerie Orbiting Fire&quot; data-effect_id=&quot;40&quot; data-vote=&quot;5cdd93e7d38172047f09f456&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/medic_goggles.d83aea98f1e3059ff45a09e5bdb616b46ce4cf1b.png),url(a/images/440/particles/40_94x94.png)'></div><div class='tag bottom-right'><span>~22 keys</span></div><div class='tag top-left'>eerie</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Ze Goggles Eerie Orbiting Fire</span></li>
+                                    
+                    
+                                        <li title=&quot;Strange Black Box&quot; class='item q-440-11 q-440-border-11' data-priceindex=&quot;0&quot; data-market_p=&quot;93&quot; data-market_s=&quot;16&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 5 Rocket Launcher&quot; data-slot=&quot;primary&quot; data-class=&quot;Soldier&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Strange&quot; data-quality=&quot;11&quot; data-name=&quot;Black Box&quot; data-base_name=&quot;Black Box&quot; data-app=&quot;440&quot; data-defindex=&quot;228&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;17.33–17.44 ref&quot; data-p_bptf_all=&quot;$0.70&quot; data-p_scm=&quot;$0.93&quot; data-p_scm_all=&quot;18.99 ref, $0.76&quot; data-price=&quot;17.385&quot; data-vote=&quot;5cdd9c37d381720ece0a12d4&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_blackbox.073b328b6c73b6e9c34145d53e74d2e13d5edeb6.png)'></div><div class='tag bottom-right'><span>~17.33–17.44 ref</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Strange Black Box</span></li>
+                                    
+                    
+                                        <li title=&quot;Festive Black Box&quot; class='item q-440-6 q-440-border-6' data-priceindex=&quot;0&quot; data-market_p=&quot;68&quot; data-market_s=&quot;17&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-99 Rocket Launcher&quot; data-slot=&quot;primary&quot; data-class=&quot;Soldier&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Festive Black Box&quot; data-base_name=&quot;Festive Black Box&quot; data-app=&quot;440&quot; data-defindex=&quot;1085&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;15.66–15.77 ref&quot; data-p_bptf_all=&quot;$0.63&quot; data-p_scm=&quot;$0.68&quot; data-p_scm_all=&quot;13.89 ref, $0.56&quot; data-price=&quot;15.715&quot; data-vote=&quot;5cdd9cf0d381720f8417f164&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_blackbox_xmas.2180fc01fc837469ff99ec1e6ae94143decb4574.png)'></div><div class='tag bottom-right'><span>~15.66–15.77 ref</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unique Festive Black Box</span></li>
+                                    
+                    
+                                        <li title=&quot;Festive Rocket Launcher&quot; class='item q-440-6 q-440-border-6' data-priceindex=&quot;0&quot; data-market_p=&quot;182&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1 Rocket Launcher&quot; data-slot=&quot;primary&quot; data-class=&quot;Soldier&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Festive Rocket Launcher&quot; data-base_name=&quot;Festive Rocket Launcher&quot; data-app=&quot;440&quot; data-defindex=&quot;658&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;40.33 ref&quot; data-p_bptf_all=&quot;0.85 keys, $1.61&quot; data-p_scm=&quot;$1.82&quot; data-p_scm_all=&quot;37.17 ref, 0.78 keys, $1.49&quot; data-price=&quot;40.33&quot; data-vote=&quot;5cdd9a4267807273977d7910&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_rocketlauncher_xmas.1ffdbda83a35338c0478efe3ff51ff7c1195379c.png)'></div><div class='tag bottom-right'><span>~40.33 ref</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Unique Festive Rocket Launcher</span></li>
+                                    
+                    
+                                        <li title=&quot;The Chicken Kiev&quot; class='item q-440-6 q-440-border-6' data-priceindex=&quot;0&quot; data-market_p=&quot;-1&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Bird Head&quot; data-slot=&quot;misc&quot; data-class=&quot;Heavy&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unique&quot; data-quality=&quot;6&quot; data-name=&quot;Chicken Kiev&quot; data-base_name=&quot;Chicken Kiev&quot; data-app=&quot;440&quot; data-defindex=&quot;30238&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;12.05–12.6 keys&quot; data-p_bptf_all=&quot;584.02 ref, $23.36&quot; data-price=&quot;584.020125&quot; data-vote=&quot;5cdd032b6780727d411a7a1f&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hw2013_heavy_robin.76f9924b153b853b37c3c68e8ba29ae690ce3f48.png)'></div><div class='tag bottom-right'><span>~12.05–12.6 keys</span></div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unique Chicken Kiev</span></li>
+                                    
+                    
+                                        <li title=&quot;Green Confetti Highway Star&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;6&quot; data-market_p=&quot;3084&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Bandana&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Highway Star&quot; data-base_name=&quot;Highway Star&quot; data-app=&quot;440&quot; data-defindex=&quot;31010&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;10–12 keys&quot; data-p_bptf_all=&quot;521.24 ref, $20.85&quot; data-price=&quot;521.235&quot; data-effect_name=&quot;Green Confetti&quot; data-effect_id=&quot;6&quot; data-vote=&quot;5cdcda0d6780725f5d71edda&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hwn2018_highway_star.fcc8d035beffcd76ee585128f9b64558d4e933a3.png),url(a/images/440/particles/6_94x94.png)'></div><div class='tag bottom-right'><span>~10–12 keys</span></div><div class='tag top-left'>g.fetti</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Unusual Highway Star Green Confetti</span></li>
+                                    
+                    
+                                        <li title=&quot;Circling TF Logo Hot Dogger&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;11&quot; data-market_p=&quot;3878&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 10 Hat&quot; data-slot=&quot;misc&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Hot Dogger&quot; data-base_name=&quot;Hot Dogger&quot; data-app=&quot;440&quot; data-defindex=&quot;614&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;21–27 keys&quot; data-p_bptf_all=&quot;1,137.24 ref, $45.49&quot; data-price=&quot;1137.24&quot; data-effect_name=&quot;Circling TF Logo&quot; data-effect_id=&quot;11&quot; data-vote=&quot;5cb015ce67807208667bd52d&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fwk_hotdog.4686cd2dde1abea8a4ed6e153a91737eb7f6e4cc.png),url(a/images/440/particles/11_94x94.png)'></div><div class='tag bottom-right'><span>~21–27 keys</span></div><div class='tag top-left'>tf logo</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Hot Dogger Circling TF Logo</span></li>
+                                    
+                    
+                                        <li title=&quot;The Ooze Nuke&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;84&quot; data-market_p=&quot;6617&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hair&quot; data-slot=&quot;misc&quot; data-class=&quot;Multi&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Nuke&quot; data-base_name=&quot;Nuke&quot; data-app=&quot;440&quot; data-defindex=&quot;30885&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;80 keys&quot; data-p_bptf_all=&quot;3,790.80 ref, $151.63&quot; data-price=&quot;3790.8&quot; data-effect_name=&quot;The Ooze&quot; data-effect_id=&quot;84&quot; data-vote=&quot;5cb005fed38172333b45a5de&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fall17_nuke.49f7feb27746b0fa63879a84a4c53df407593830.png),url(a/images/440/particles/84_94x94.png)'></div><div class='tag bottom-right'><span>~80 keys</span></div><div class='tag top-left'>ooze</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Unusual Nuke The Ooze</span></li>
+                                    
+                    
+                                        <li title=&quot;Disco Beat Down Flipped Trilby&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;62&quot; data-market_p=&quot;4002&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Scout&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Flipped Trilby&quot; data-base_name=&quot;Flipped Trilby&quot; data-app=&quot;440&quot; data-defindex=&quot;324&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;26–33 keys&quot; data-p_bptf_all=&quot;1,397.86 ref, $55.91&quot; data-price=&quot;1397.8575&quot; data-effect_name=&quot;Disco Beat Down&quot; data-effect_id=&quot;62&quot; data-vote=&quot;5cb0001867807279d621bc45&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/scout_flipped_trilby.ec1ef5013ef34be1d2707f8a7f20de70a1bfef31.png),url(a/images/440/particles/62_94x94.png)'></div><div class='tag bottom-right'><span>~26–33 keys</span></div><div class='tag top-left'>dbd</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-yellow fa-retweet'></i></div></div>
+<span style='display:none'>Unusual Flipped Trilby Disco Beat Down</span></li>
+                                    
+                    
+                                        <li title=&quot;Strange Orbiting Planets Cat's Pajamas&quot; class='item q-440-5 q-440-border-11' data-priceindex=&quot;32&quot; data-market_p=&quot;20669&quot; data-market_s=&quot;9&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Points Scored&quot; data-summary=&quot;Level 1-100 Hood&quot; data-slot=&quot;misc&quot; data-class=&quot;Pyro&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Cat's Pajamas&quot; data-base_name=&quot;Cat's Pajamas&quot; data-app=&quot;440&quot; data-defindex=&quot;30937&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;45 keys&quot; data-p_bptf_all=&quot;2,132.33 ref, $85.29&quot; data-price=&quot;2132.325&quot; data-effect_name=&quot;Orbiting Planets&quot; data-effect_id=&quot;32&quot; data-vote=&quot;5caff8c7d381722b1508ee20&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/dec17_cats_pajamas.dd85ee26930a6a6f5783dc4439ea851d33f04ea5.png),url(a/images/440/particles/32_94x94.png)'></div><div class='tag bottom-right'><span>~45 keys</span></div><div class='tag top-left'>o.planets</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Unusual Cat's Pajamas Orbiting Planets</span></li>
+                                    
+                    
+                                        <li title=&quot;Flaming Lantern Hustler's Hallmark&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;37&quot; data-market_p=&quot;2592&quot; data-market_s=&quot;14&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Demoman&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Hustler's Hallmark&quot; data-base_name=&quot;Hustler's Hallmark&quot; data-app=&quot;440&quot; data-defindex=&quot;146&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;25–36 keys&quot; data-p_bptf_all=&quot;1,445.24 ref, $57.81&quot; data-price=&quot;1445.2425&quot; data-effect_name=&quot;Flaming Lantern&quot; data-effect_id=&quot;37&quot; data-vote=&quot;5cafe214d381721f3b33aa72&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hallmark.65378d3af14903f8787e00ea67fd951a8e011433.png),url(a/images/440/particles/37_94x94.png)'></div><div class='tag bottom-right'><span>~25–36 keys</span></div><div class='tag top-left'>lantern</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Hustler's Hallmark Flaming Lantern</span></li>
+                                    
+                    
+                                        <li title=&quot;Strange Burning Flames Your Worst Nightmare&quot; class='item q-440-5 q-440-border-11' data-priceindex=&quot;13&quot; data-market_p=&quot;11747&quot; data-market_s=&quot;4&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Points Scored&quot; data-summary=&quot;Level 10 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Your Worst Nightmare&quot; data-base_name=&quot;Your Worst Nightmare&quot; data-app=&quot;440&quot; data-defindex=&quot;600&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;121 keys&quot; data-p_bptf_all=&quot;5,733.59 ref, $229.34&quot; data-price=&quot;5733.585&quot; data-effect_name=&quot;Burning Flames&quot; data-effect_id=&quot;13&quot; data-vote=&quot;5cafd02d67807254772c0ed8&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/fwk_sniper_bandanahair.542d2de2d773195ff7db5d51b7ff768014181f6f.png),url(a/images/440/particles/13_94x94.png)'></div><div class='tag bottom-right'><span>~121 keys</span></div><div class='tag top-left'>burning</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Unusual Your Worst Nightmare Burning Flames</span></li>
+                                    
+                    
+                                        <li title=&quot;Anti-Freeze Milkman&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;69&quot; data-market_p=&quot;4038&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Scout&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Milkman&quot; data-base_name=&quot;Milkman&quot; data-app=&quot;440&quot; data-defindex=&quot;219&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;101 keys&quot; data-p_bptf_all=&quot;4,785.89 ref, $191.44&quot; data-price=&quot;4785.885&quot; data-effect_name=&quot;Anti-Freeze&quot; data-effect_id=&quot;69&quot; data-vote=&quot;5cafcb2667807251ef6df43a&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/milkhat.5110d47cb9d737dc01e09c1faff02a1b210d2e26.png),url(a/images/440/particles/69_94x94.png)'></div><div class='tag bottom-right'><span>~101 keys</span></div><div class='tag top-left'>anti-freeze</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Milkman Anti-Freeze</span></li>
+                                    
+                    
+                                        <li title=&quot;Strange Neutron Star Hellmet&quot; class='item q-440-5 q-440-border-11' data-priceindex=&quot;107&quot; data-market_p=&quot;10439&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Points Scored&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Soldier&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Hellmet&quot; data-base_name=&quot;Hellmet&quot; data-app=&quot;440&quot; data-defindex=&quot;30708&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;43 keys&quot; data-p_bptf_all=&quot;2,037.56 ref, $81.50&quot; data-price=&quot;2037.555&quot; data-effect_name=&quot;Neutron Star&quot; data-effect_id=&quot;107&quot; data-vote=&quot;5cafcaef678072518f4ca22e&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/hwn2015_hellmet.bfb3b9966930b9e860bc9abbdc8408278afa60bb.png),url(a/images/440/particles/107_94x94.png)'></div><div class='tag bottom-right'><span>~43 keys</span></div><div class='tag top-left'>star</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Hellmet Neutron Star</span></li>
+                                            </ul>
+        </div>
+            </div>
+    </div>
+
+        </div>
+    </div>
+
+    <div class=&quot;row&quot;>
+        <div class=&quot;col-md-6&quot;>
+            
+    <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Active Price Suggestions</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                    <div>
+                                    <a class=&quot;btn btn-panel&quot;
+                                       href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/vote?sort=popular&quot; target=&quot;&quot; id=&quot;&quot;>
+                                        Expand
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                                                        
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cb4464ed3817232e94ad37f'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cb4464ed3817232e94ad37f'>
+                    Misty Skull Bubble Pipe
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-04-15T08:52:30+00:00'>Mon, 15 Apr 19 08:52:30 +0000</time> by <span class='user-handle'><a class='user-link awesome1' data-offers-params=&quot;?partner=146802096&token=oylBDb0t&quot; data-online=&quot;1&quot; data-name=&quot;TF2Scourge&quot; data-id=&quot;76561198107067824&quot; data-avatar=&quot;42/4213863daa86879ddf25e0d906b35283d740e6e1_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198107067824'><span class='belt label-black-text' title='Black Belt (Accepted suggestions: 1638)' data-tip=bottom>&#9733;</span><span class=&quot;belt label-black-text&quot; title=&quot;Prestige 1 (750/750)&quot; data-tip=bottom>&#9733;</span><span class=&quot;belt label-blue-text&quot; title=&quot;Prestige 2 (138/750)&quot; data-tip=bottom>&#9733;</span> TF2Scourge</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cb4464ed3817232e94ad37f'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            142–152 keys
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            95 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cb4464ed3817232e94ad37f'>
+                            <i class='fa fa-comment'></i> 1
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>235</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Misty Skull Bubble Pipe&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;44&quot; data-market_p=&quot;3471&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Pyro&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Bubble Pipe&quot; data-base_name=&quot;Bubble Pipe&quot; data-app=&quot;440&quot; data-defindex=&quot;597&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;142–152 keys&quot; data-p_bptf_all=&quot;6,965.60 ref, $278.62&quot; data-price=&quot;6965.595&quot; data-effect_name=&quot;Misty Skull&quot; data-effect_id=&quot;44&quot; data-vote=&quot;5cb4464ed3817232e94ad37f&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/drg_pyro_bubblehelmet.af0911b562be220f246471dad59fbdc80b2781b8.png),url(a/images/440/particles/44_94x94.png)'></div><div class='tag bottom-right'><span>~147 keys</span></div><div class='tag top-left'>misty</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Bubble Pipe Misty Skull</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Sale 1:</p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198076588232#!/compare/1554076800/1554336000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198076588232#!/compare/1554076800/1554336000</a></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561197970509048#!/compare/1554163200/1554422400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561197970509048#!/compare/1554163200/1554422400</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cc48e13d381724f6d6882ec'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc48e13d381724f6d6882ec'>
+                    Disco Beat Down Rotation Sensation
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-04-27T17:14:59+00:00'>Sat, 27 Apr 19 17:14:59 +0000</time> by <span class='user-handle'><a class='user-link awesome3' data-offers-params=&quot;?partner=843750004&token=zmhtXxZ1&quot; data-online=&quot;0&quot; data-name=&quot;j58&quot; data-id=&quot;76561198804015732&quot; data-avatar=&quot;47/47fcf87e06b064d4c6ec29640e87807ad6993e11_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198804015732'><span class='belt label-black-text' title='Black Belt (Accepted suggestions: 772)' data-tip=bottom>&#9733;</span><span class=&quot;belt label-orange-text&quot; title=&quot;Prestige 1 (22/750)&quot; data-tip=bottom>&#9733;</span> j58</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc48e13d381724f6d6882ec'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            75–83 keys
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            66–73 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc48e13d381724f6d6882ec'>
+                            <i class='fa fa-comment'></i> 2
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>164</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Disco Beat Down Rotation Sensation&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;62&quot; data-market_p=&quot;6564&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Rotation Sensation&quot; data-base_name=&quot;Rotation Sensation&quot; data-app=&quot;440&quot; data-defindex=&quot;30623&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;75–83 keys&quot; data-p_bptf_all=&quot;3,743.42 ref, $149.74&quot; data-price=&quot;3743.415&quot; data-effect_name=&quot;Disco Beat Down&quot; data-effect_id=&quot;62&quot; data-vote=&quot;5cc48e13d381724f6d6882ec&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/cc_summer2015_the_rotation_sensation.797f13ad026de3b5c065412d847494a812c0be4d.png),url(a/images/440/particles/62_94x94.png)'></div><div class='tag bottom-right'><span>~79 keys</span></div><div class='tag top-left'>dbd</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Rotation Sensation Disco Beat Down</span></div>
+        </div>
+                    <div class='comments'>
+                <p><strong>Sale 1: 58k</strong></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/items/30623;5;u62&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://marketplace.tf/items/30623;5;u62</a></p>
+<p>$105 on 1/29</p>
+<br /><p><strong>Sale 2: 79k</strong></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/items/30623;5;u62&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://marketplace.tf/items/30623;5;u62</a></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/item/4158729602&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/item/4158729602</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cc79297d3817248481738ec'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc79297d3817248481738ec'>
+                    Green Confetti Trophy Belt
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-04-30T00:11:03+00:00'>Tue, 30 Apr 19 00:11:03 +0000</time> by <span class='user-handle'><a class='user-link awesome1' data-offers-params=&quot;?partner=146802096&token=oylBDb0t&quot; data-online=&quot;1&quot; data-name=&quot;TF2Scourge&quot; data-id=&quot;76561198107067824&quot; data-avatar=&quot;42/4213863daa86879ddf25e0d906b35283d740e6e1_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198107067824'><span class='belt label-black-text' title='Black Belt (Accepted suggestions: 1638)' data-tip=bottom>&#9733;</span><span class=&quot;belt label-black-text&quot; title=&quot;Prestige 1 (750/750)&quot; data-tip=bottom>&#9733;</span><span class=&quot;belt label-blue-text&quot; title=&quot;Prestige 2 (138/750)&quot; data-tip=bottom>&#9733;</span> TF2Scourge</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc79297d3817248481738ec'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            23 keys
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            22–25 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc79297d3817248481738ec'>
+                            <i class='fa fa-comment'></i> 2
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>154</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Green Confetti Trophy Belt&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;6&quot; data-market_p=&quot;8012&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Trophy Belt&quot; data-base_name=&quot;Trophy Belt&quot; data-app=&quot;440&quot; data-defindex=&quot;53&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;23 keys&quot; data-p_bptf_all=&quot;1,089.86 ref, $43.59&quot; data-price=&quot;1089.855&quot; data-effect_name=&quot;Green Confetti&quot; data-effect_id=&quot;6&quot; data-vote=&quot;5cc79297d3817248481738ec&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/tooth_hat.361d6727af3f39d2b11d5336029dc106544e4cb3.png),url(a/images/440/particles/6_94x94.png)'></div><div class='tag bottom-right'><span>~23 keys</span></div><div class='tag top-left'>g.fetti</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Unusual Trophy Belt Green Confetti</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Sale 1:</p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198063478666#!/compare/1550707200/1550793600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198063478666#!/compare/1550707200/1550793600</a></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198170190173#!/compare/1550707200/1550966400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198170190173#!/compare/1550707200/1550966400</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5ccd48276780726317420cc0'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5ccd48276780726317420cc0'>
+                    Blizzardy Storm Big Elfin Deal
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-05-04T08:07:03+00:00'>Sat, 04 May 19 08:07:03 +0000</time> by <span class='user-handle'><a class='user-link xmas' data-offers-params=&quot;?partner=216031789&token=DHNhL87y&quot; data-online=&quot;0&quot; data-name=&quot;§єя℘єитιиє ✠&quot; data-id=&quot;76561198176297517&quot; data-avatar=&quot;08/08d60cc0a52508c03dd338a59003a2d7836b71c3_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198176297517'><span class='belt label-brown-text' title='Brown Belt (Accepted suggestions: 656)' data-tip=bottom>&#9733;</span> §єя℘єитιиє ✠</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5ccd48276780726317420cc0'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            19–24 keys
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            15–18 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5ccd48276780726317420cc0'>
+                            <i class='fa fa-comment'></i> 1
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>148</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Blizzardy Storm Big Elfin Deal&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;30&quot; data-market_p=&quot;2496&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Scout&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Big Elfin Deal&quot; data-base_name=&quot;Big Elfin Deal&quot; data-app=&quot;440&quot; data-defindex=&quot;652&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;19–24 keys&quot; data-p_bptf_all=&quot;1,018.78 ref, $40.75&quot; data-price=&quot;1018.7775&quot; data-effect_name=&quot;Blizzardy Storm&quot; data-effect_id=&quot;30&quot; data-vote=&quot;5ccd48276780726317420cc0&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/xms_scout_elf_hat.3303da1993090d655f52f551da61608f4bde2bc7.png),url(a/images/440/particles/30_94x94.png)'></div><div class='tag bottom-right'><span>~21.5 keys</span></div><div class='tag top-left'>blizzard</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-red fa-arrow-down'></i></div></div>
+<span style='display:none'>Unusual Big Elfin Deal Blizzardy Storm</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Creds to scourge for the help </p>
+<br /><p>Sale 1:</p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198122486472#!/compare/1551830400/1552089600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198122486472#!/compare/1551830400/1552089600</a></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198798988421#!/compare/1552089600/1552694400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198798988421#!/compare/1552089600/1552694400</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cc736716780726e7f4b09b3'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc736716780726e7f4b09b3'>
+                    Circling TF Logo Anger
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-04-29T17:37:53+00:00'>Mon, 29 Apr 19 17:37:53 +0000</time> by <span class='user-handle'><a class='user-link awesome1' data-offers-params=&quot;?partner=146802096&token=oylBDb0t&quot; data-online=&quot;1&quot; data-name=&quot;TF2Scourge&quot; data-id=&quot;76561198107067824&quot; data-avatar=&quot;42/4213863daa86879ddf25e0d906b35283d740e6e1_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198107067824'><span class='belt label-black-text' title='Black Belt (Accepted suggestions: 1638)' data-tip=bottom>&#9733;</span><span class=&quot;belt label-black-text&quot; title=&quot;Prestige 1 (750/750)&quot; data-tip=bottom>&#9733;</span><span class=&quot;belt label-blue-text&quot; title=&quot;Prestige 2 (138/750)&quot; data-tip=bottom>&#9733;</span> TF2Scourge</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc736716780726e7f4b09b3'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            33 keys
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            34 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cc736716780726e7f4b09b3'>
+                            <i class='fa fa-comment'></i> 3
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>101</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Circling TF Logo Anger&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;11&quot; data-market_p=&quot;9991&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 10 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Anger&quot; data-base_name=&quot;Anger&quot; data-app=&quot;440&quot; data-defindex=&quot;518&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;33 keys&quot; data-p_bptf_all=&quot;1,563.71 ref, $62.55&quot; data-price=&quot;1563.705&quot; data-effect_name=&quot;Circling TF Logo&quot; data-effect_id=&quot;11&quot; data-vote=&quot;5cc736716780726e7f4b09b3&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/c_bet_brinkhood.16b34cf3a5b777028b11347262fecc6c9fc2ca0e.png),url(a/images/440/particles/11_94x94.png)'></div><div class='tag bottom-right'><span>~33 keys</span></div><div class='tag top-left'>tf logo</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Unusual Anger Circling TF Logo</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Sale 1:</p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198028210902#!/compare/1553644800/1553731200&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198028210902#!/compare/1553644800/1553731200</a></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198272599003#!/compare/1553644800/1553731200&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198272599003#!/compare/1553644800/1553731200</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+                                            </div>
+    </div>
+        </div>
+        <div class=&quot;col-md-6&quot;>
+            
+    <div class=&quot;panel panel-main&quot;>
+                    <div class=&quot;panel-heading&quot;>
+                                    <span>Recent Suggestions</span>
+
+                    <span class=&quot;panel-extras&quot;>
+                                                                                    <div>
+                                    <a class=&quot;btn btn-panel&quot;
+                                       href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/vote&quot; target=&quot;&quot; id=&quot;&quot;>
+                                        Expand
+                                    </a>
+                                </div>
+                                                                        </span>
+                            </div>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                                                        
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cdeb5286780724162581fe6'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb5286780724162581fe6'>
+                    Strange Kill-a-Watt Villain&#039;s Veil
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-05-17T13:20:40+00:00'>Fri, 17 May 19 13:20:40 +0000</time> by <span class='user-handle'><a class='user-link premium' data-offers-params=&quot;?partner=34517685&token=D66Thoix&quot; data-online=&quot;1&quot; data-name=&quot;(Crx) «XxTalonXx»&quot; data-id=&quot;76561197994783413&quot; data-avatar=&quot;b0/b06c9cdc28b518c4de51baedb10aad8a1913a96a_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561197994783413'><span class='belt label-white-text' title='White Belt (Accepted suggestions: 1)' data-tip=bottom>&#9733;</span> (Crx) «XxTalonXx»</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb5286780724162581fe6'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            n/a
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            200 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb5286780724162581fe6'>
+                            <i class='fa fa-comment'></i> 2
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>5</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 1
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Strange Kill-a-Watt Villain's Veil&quot; class='item q-440-5 q-440-border-11' data-priceindex=&quot;56&quot; data-market_p=&quot;9521&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Points Scored&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Villain's Veil&quot; data-base_name=&quot;Villain's Veil&quot; data-app=&quot;440&quot; data-defindex=&quot;393&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-p_bptf=&quot;115–155 keys&quot; data-p_bptf_all=&quot;6,396.98 ref, $255.88&quot; data-price=&quot;6396.975&quot; data-effect_name=&quot;Kill-a-Watt&quot; data-effect_id=&quot;56&quot; data-vote=&quot;5cdeb5286780724162581fe6&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/kerch.bb24ad28e11da141f12b75a4c78610d387a69865.png),url(a/images/440/particles/56_94x94.png)'></div><div class='tag bottom-right'><span>~135 keys</span></div><div class='tag top-left'>kill-a-watt</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Unusual Villain's Veil Kill-a-Watt</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Sale 1 <a href=&quot;http://localhost:8880/html?url=https://imgur.com/4XNgfBV&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://imgur.com/4XNgfBV</a></p>
+<br /><p>backback history:  <a href=&quot;http://localhost:8880/html?url=https://backpack.tf/item/1803915257&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/item/1803915257</a></p>
+<br /><p>steam trade history:  <a href=&quot;http://localhost:8880/html?url=https://imgur.com/4XNgfBV&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://imgur.com/4XNgfBV</a> -  <a href=&quot;http://localhost:8880/html?url=https://imgur.com/8w2Ekys&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://imgur.com/8w2Ekys</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cdeb2696780723fe74c3bbe'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb2696780723fe74c3bbe'>
+                    Isotope Dovetailed War Paint (Minimal Wear)
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-05-17T13:08:57+00:00'>Fri, 17 May 19 13:08:57 +0000</time> by <span class='user-handle'><a class='user-link awesome3' data-offers-params=&quot;?partner=49044053&token=_Z8fGvTz&quot; data-online=&quot;0&quot; data-name=&quot;I.M&quot; data-id=&quot;76561198009309781&quot; data-avatar=&quot;8b/8b44111d8a0d6ecaa23abf1d49ec2af9f87883a7_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198009309781'><span class='belt label-green-text' title='Green Belt (Accepted suggestions: 77)' data-tip=bottom>&#9733;</span> I.M</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb2696780723fe74c3bbe'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            n/a
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            30 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb2696780723fe74c3bbe'>
+                            <i class='fa fa-comment'></i> 1
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>7</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Isotope Dovetailed War Paint (Minimal Wear)&quot; class='item q-440-15 q-440-border-5' data-priceindex=&quot;702&quot; data-market_p=&quot;7192&quot; data-market_s=&quot;13&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 99 War Paint (Minimal Wear)&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Decorated Weapon&quot; data-quality=&quot;15&quot; data-name=&quot;Dovetailed | War Paint (Minimal Wear)&quot; data-base_name=&quot;War Paint&quot; data-app=&quot;440&quot; data-defindex=&quot;9536&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-wear_tier=&quot;Minimal Wear&quot; data-price=&quot;0&quot; data-effect_name=&quot;Isotope&quot; data-effect_id=&quot;702&quot; data-vote=&quot;5cdeb2696780723fe74c3bbe&quot; >
+<div class='item-icon' style='background-image:url(ahttps://scrap.tf/img/items/warpaint/War%20Paint_224_2_0.png),url(a/images/440/particles/702_94x94.png)'></div><div class='tag top-left'>MW</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Decorated Weapon War Paint Isotope Dovetailed</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Isotope Dovetailed War Paint (Minimal Wear)</p>
+<br /><p>MP: <a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/items/17224;15;u702;w2;pk224&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://marketplace.tf/items/17224;15;u702;w2;pk224</a> Sold for $55.00 USD 5-12-2019</p>
+<p>Keys@1.80 <a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/items/5021;6/Mann%20Co.%20Supply%20C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://marketplace.tf/items/5021;6/Mann%20Co.%20Supply%20C</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cdeb135d3817236ea1192c6'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb135d3817236ea1192c6'>
+                    Cool Polar Surprise War Paint (Minimal Wear)
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-05-17T13:03:49+00:00'>Fri, 17 May 19 13:03:49 +0000</time> by <span class='user-handle'><a class='user-link awesome3' data-offers-params=&quot;?partner=49044053&token=_Z8fGvTz&quot; data-online=&quot;0&quot; data-name=&quot;I.M&quot; data-id=&quot;76561198009309781&quot; data-avatar=&quot;8b/8b44111d8a0d6ecaa23abf1d49ec2af9f87883a7_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198009309781'><span class='belt label-green-text' title='Green Belt (Accepted suggestions: 77)' data-tip=bottom>&#9733;</span> I.M</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb135d3817236ea1192c6'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            n/a
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            47 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb135d3817236ea1192c6'>
+                            <i class='fa fa-comment'></i> 1
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>7</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Cool Polar Surprise War Paint (Minimal Wear)&quot; class='item q-440-15 q-440-border-5' data-priceindex=&quot;703&quot; data-market_p=&quot;7853&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 99 War Paint (Minimal Wear)&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Decorated Weapon&quot; data-quality=&quot;15&quot; data-name=&quot;Polar Surprise | War Paint (Minimal Wear)&quot; data-base_name=&quot;War Paint&quot; data-app=&quot;440&quot; data-defindex=&quot;9536&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-wear_tier=&quot;Minimal Wear&quot; data-price=&quot;0&quot; data-effect_name=&quot;Cool&quot; data-effect_id=&quot;703&quot; data-vote=&quot;5cdeb135d3817236ea1192c6&quot; >
+<div class='item-icon' style='background-image:url(ahttps://scrap.tf/img/items/warpaint/War%20Paint_221_2_0.png),url(a/images/440/particles/703_94x94.png)'></div><div class='tag top-left'>MW</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Decorated Weapon War Paint Cool Polar Surprise</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Cool Polar Surprise War Paint (Minimal Wear)</p>
+<br /><p>MP: <a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/items/17221;15;u703;w2;pk221&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://marketplace.tf/items/17221;15;u703;w2;pk221</a> Sold for $85.00 USD  5-14-2019</p>
+<p>Keys@1.80 <a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/items/5021;6/Mann%20Co.%20Supply%2&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://marketplace.tf/items/5021;6/Mann%20Co.%20Supply%2</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cdeb0c66780723d64184466'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb0c66780723d64184466'>
+                    Strange Isotope Low Profile SMG (Well-Worn)
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-05-17T13:01:58+00:00'>Fri, 17 May 19 13:01:58 +0000</time> by <span class='user-handle'><a class='user-link awesome1' data-offers-params=&quot;?partner=146802096&token=oylBDb0t&quot; data-online=&quot;1&quot; data-name=&quot;TF2Scourge&quot; data-id=&quot;76561198107067824&quot; data-avatar=&quot;42/4213863daa86879ddf25e0d906b35283d740e6e1_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561198107067824'><span class='belt label-black-text' title='Black Belt (Accepted suggestions: 1638)' data-tip=bottom>&#9733;</span><span class=&quot;belt label-black-text&quot; title=&quot;Prestige 1 (750/750)&quot; data-tip=bottom>&#9733;</span><span class=&quot;belt label-blue-text&quot; title=&quot;Prestige 2 (138/750)&quot; data-tip=bottom>&#9733;</span> TF2Scourge</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb0c66780723d64184466'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            20–22 keys
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            36 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeb0c66780723d64184466'>
+                            <i class='fa fa-comment'></i> 1
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>11</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Strange Isotope Low Profile SMG (Well-Worn)&quot; class='item q-440-15 q-440-border-11' data-priceindex=&quot;702&quot; data-market_p=&quot;-1&quot; data-equipped=&quot;0&quot; data-quality_elevated=&quot;11&quot; data-qe_name=&quot;Strange&quot; data-ke1=&quot;0 Kills&quot; data-summary=&quot;Level 1 SMG (Well-Worn)&quot; data-slot=&quot;secondary&quot; data-class=&quot;Sniper&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Decorated Weapon&quot; data-quality=&quot;15&quot; data-name=&quot;Low Profile | SMG (Well-Worn)&quot; data-base_name=&quot;SMG&quot; data-app=&quot;440&quot; data-defindex=&quot;203&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-wear_tier=&quot;Well-Worn&quot; data-p_bptf=&quot;20–22 keys&quot; data-p_bptf_all=&quot;995.09 ref, $39.80&quot; data-price=&quot;995.085&quot; data-effect_name=&quot;Isotope&quot; data-effect_id=&quot;702&quot; data-vote=&quot;5cdeb0c66780723d64184466&quot; >
+<div class='item-icon' style='background-image:url(ahttps://scrap.tf/img/items/warpaint/SMG_58_4_0.png),url(a/images/440/particles/702_94x94.png)'></div><div class='tag bottom-right'><span>~21 keys</span></div><div class='tag top-left'>WW</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-green fa-arrow-up'></i></div></div>
+<span style='display:none'>Decorated Weapon SMG Isotope Low Profile</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Sale 1:</p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198039731024#!/compare/1554768000/1554854400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198039731024#!/compare/1554768000/1554854400</a></p>
+<p><a href=&quot;http://localhost:8880/html?url=https://backpack.tf/profiles/76561198057452720#!/compare/1554768000/1554854400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/profiles/76561198057452720#!/compare/1554768000/1554854400</a><span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+
+
+
+
+    
+<div class='suggestion sg-base' id='suggestion-5cdeaa53d3817231121bdfc3'>
+    <div class='gutter'>
+        <div class='sg-controls btn-group-vertical btn-group-sm'>
+                                                                    <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-up'></i>
+                </a>
+                <a class='btn btn-default' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/login'>
+                    <i class='fa fa-chevron-down'></i>
+                </a>
+                                </div>
+    </div>
+    <div class='main'>
+        <div class='body'>
+            <div class='header'>
+                <a class='item-name' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeaa53d3817231121bdfc3'>
+                    Vicious Circle Phononaut
+                </a>
+                <div class='submitter-info'>
+                    Submitted <time class='timeago' datetime='2019-05-17T12:34:27+00:00'>Fri, 17 May 19 12:34:27 +0000</time> by <span class='user-handle'><a class='user-link premium' data-offers-params=&quot;?partner=34517685&token=D66Thoix&quot; data-online=&quot;1&quot; data-name=&quot;(Crx) «XxTalonXx»&quot; data-id=&quot;76561197994783413&quot; data-avatar=&quot;b0/b06c9cdc28b518c4de51baedb10aad8a1913a96a_medium.jpg&quot; data-target=&quot;#&quot; href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/u/76561197994783413'><span class='belt label-white-text' title='White Belt (Accepted suggestions: 1)' data-tip=bottom>&#9733;</span> (Crx) «XxTalonXx»</a></span>
+                </div>
+                <div class='controls'>
+                                        <a class='price-change' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeaa53d3817231121bdfc3'>
+            
+        <div class='price-old' title='Current price.' data-tip='top'>
+            n/a
+        </div>
+        <div class='price-new' title='Proposed price.' data-tip='top'>
+            97 keys
+        </div>
+    </a>                    <span>
+                        <a class='btn btn-default btn-xs' href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/suggestion/5cdeaa53d3817231121bdfc3'>
+                            <i class='fa fa-comment'></i> 1
+                        </a>
+                    </span>
+                    <span title='Total number of votes so far.' data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-balance-scale'></i> <span class='vote-count'>8</span>
+                        </button>
+                    </span>
+                    <span title='How many of this item the submitter owned when creating the suggestion.'
+                          data-tip='top'>
+                        <button class='btn btn-default btn-xs disabled'>
+                            <i class='fa fa-briefcase'></i> 0
+                        </button>
+                    </span>
+
+                                    </div>
+            </div>
+            <div title=&quot;Vicious Circle Phononaut&quot; class='item q-440-5 q-440-border-5' data-priceindex=&quot;118&quot; data-market_p=&quot;3871&quot; data-market_s=&quot;12&quot; data-equipped=&quot;0&quot; data-summary=&quot;Level 1-100 Hat&quot; data-slot=&quot;misc&quot; data-tradable=&quot;1&quot; data-craftable=&quot;1&quot; data-q_name=&quot;Unusual&quot; data-quality=&quot;5&quot; data-name=&quot;Phononaut&quot; data-base_name=&quot;Phononaut&quot; data-app=&quot;440&quot; data-defindex=&quot;30647&quot; data-original_id=&quot;&quot; data-id=&quot;&quot; data-price=&quot;0&quot; data-effect_name=&quot;Vicious Circle&quot; data-effect_id=&quot;118&quot; data-vote=&quot;5cdeaa53d3817231121bdfc3&quot; >
+<div class='item-icon' style='background-image:url(ahttps://steamcdn-a.akamaihd.net/apps/440/icons/invasion_phononaut.7be26beecbefe3c2967f092e7c3c1b2259158af2.png),url(a/images/440/particles/118_94x94.png)'></div><div class='tag top-left'>vicious circle</div><div class='icon-stack'><div class='arrow-icon'><i class='fa fa-certificate'></i></div></div>
+<span style='display:none'>Unusual Phononaut Vicious Circle</span></div>
+        </div>
+                    <div class='comments'>
+                <p>Sale 1 <a href=&quot;http://localhost:8880/html?url=https://backpack.tf/item/7311178576&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://backpack.tf/item/7311178576</a></p>
+<br /><p>steam trade history info payed 97 keys: <a href=&quot;http://localhost:8880/html?url=https://imgur.com/TUTSx55&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://imgur.com/TUTSx55</a>  -   <a href=&quot;http://localhost:8880/html?url=https://imgur.com/cwWuj2N&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://imgur.com/cwWuj2N</a></p>
+<br /><p>Total: 97<span class=&quot;text-more&quot;>&hellip;</span></p>
+            </div>
+            </div>
+</div>
+                                            </div>
+    </div>
+        </div>
+    </div>
+            <div id='media-footer' class='hidden-xs'>
+            
+    <div class=&quot;panel panel-main&quot;>
+                <div class=&quot;panel-body &quot; id=&quot;&quot;>
+                    <div class='media-frame'>
+            <div id='nn_content_lb1'></div>
+        </div>
+            </div>
+    </div>
+        </div>
+    
+    <script type='text/javascript'>
+    $('.notification-list > li > .body').click(function (data) {
+        if (data.target.localName !== &quot;a&quot; && $(this).attr('data-link')) {
+            window.location = $(this).attr('data-link');
+        }
+    });
+
+    $('#graph-tabs > li > a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+</script>
+    <style>
+        body.app-440 {
+            background: url(a/images/walls/440_hale.jpg) #1b161a;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+</main>
+
+<footer>
+    <div class=&quot;footer-block blurb&quot;>
+        <div class=&quot;container links-row&quot;>
+            <div class=&quot;footer-link-list&quot;>
+                <h2>Backpack.tf</h2>
+                <ul>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://forums.backpack.tf&quot;>Community forums</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/about&quot;>About backpack.tf</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/help&quot;>Help &amp; Support</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/rules&quot;>Community rules</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/issues&quot;>Issue tracker</a>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/developer&quot;>Developer center</a>
+                </ul>
+            </div>
+            <div class=&quot;footer-link-list&quot;>
+                <h2>Pricing</h2>
+                <ul>
+                                            <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/pricelist&quot;>Pricegrid</a></li>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/spreadsheet&quot;>Spreadsheet</a>
+                        </li>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/unusuals&quot;>Unusuals by Item</a></li>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/effects&quot;>Unusuals by Effect</a></li>
+                                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/market&quot;>Market Pricelist</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/calculator&quot;>Calculator</a></li>
+                </ul>
+            </div>
+                            <div class=&quot;footer-link-list&quot;>
+                    <h2>Voting</h2>
+                    <ul>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/vote&quot;>Vote on prices</a></li>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/latest&quot;>Latest changes</a></li>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/contributors&quot;>Top contributors</a>
+                        </li>
+                        <li><a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/top/accurate&quot;>Most accurate</a></li>
+                    </ul>
+                </div>
+                        <div class=&quot;footer-link-list&quot;>
+                <h2>Community</h2>
+                <ul>
+                    <li>
+                        <a href=&quot;http://localhost:8880/html?url=http://www.steamrep.com&quot; target=&quot;_blank&quot;><i
+                                    class=&quot;stm stm-steamrep fa-fw&quot;></i>
+                            SteamRep</a></li>
+                    <li>
+                        <a href=&quot;http://localhost:8880/html?url=http://www.kritzkast.com/&quot; target=&quot;_blank&quot;><i
+                                    class=&quot;stm stm-kritzkast fa-fw&quot;></i>
+                            KritzKast</a>
+                    </li>
+                    <li>
+                        <a href=&quot;http://localhost:8880/html?url=http://scrap.tf&quot; target=&quot;_blank&quot;><i
+                                    class=&quot;stm stm-scrap-tf fa-fw&quot;></i>
+                            Scrap.TF</a>
+                    </li>
+                    <li>
+                        <a href=&quot;http://localhost:8880/html?url=https://rep.tf&quot; target=&quot;_blank&quot;><i
+                                    class=&quot;fa fa-check-square fa-fw&quot;></i>
+                            Rep.tf</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://bazaar.tf' target='_blank'><i
+                                    class='stm stm-bazaar-tf fa-fw'></i>
+                            Bazaar.tf</a>
+                    </li>
+                    <li><a href=&quot;http://localhost:8880/html?url=http://dispenser.tf' target='_blank'><i
+                                    class='stm stm-dispenser-tf fa-fw'></i>
+                            Dispenser.tf</a></li>
+                    <li><a href=&quot;http://localhost:8880/html?url=https://marketplace.tf/?r=76561198045802942'
+                           target='_blank'><i
+                                    class='stm stm-scrap-tf fa-fw'></i>
+                            Marketplace.tf</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class=&quot;footer-block social&quot;>
+        <div class=&quot;container&quot;>
+            <ul>
+                <li>
+                    <a href=&quot;http://localhost:8880/html?url=http://forums.backpack.tf&quot; class=&quot;btn btn-footer&quot;
+                       target=&quot;_blank&quot;>
+                        <i class=&quot;social-icon fa fa-comments-o&quot;></i>
+
+                        <p>Forums</p>
+                    </a>
+                </li>
+                <li>
+                    <a href=&quot;http://localhost:8880/html?url=https://discord.gg/f5VS7cr&quot; class=&quot;btn btn-footer&quot;
+                       target=&quot;_blank&quot;>
+                        <i class=&quot;social-icon fa fa-commenting-o&quot;></i>
+                        <p>Discord</p>
+                    </a>
+                </li>
+                <li>
+                    <a href=&quot;http://localhost:8880/html?url=http://steamcommunity.com/groups/meetthestats&quot;
+                       class=&quot;btn btn-footer&quot; target=&quot;_blank&quot;>
+                        <i class=&quot;social-icon stm stm-steam&quot;></i>
+                        <p>Steam</p>
+                    </a>
+                </li>
+                <li>
+                    <a href=&quot;http://localhost:8880/html?url=https://twitter.com/backpacktf&quot;
+                       class=&quot;btn btn-footer&quot; target=&quot;_blank&quot;>
+                        <i class=&quot;social-icon fa fa-twitter&quot;></i>
+                        <p>Twitter</p>
+                    </a>
+                </li>
+                <li>
+                    <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/servers&quot; class=&quot;btn btn-footer&quot;>
+                        <i class=&quot;social-icon fa fa-hdd-o&quot;></i>
+                        <p>Servers</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class=&quot;footer-block copyright&quot;>
+        <div class=&quot;container&quot;>
+            <p class=&quot;signature&quot;>
+                <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/&quot;><i class=&quot;stm stm-backpack-tf&quot;></i> backpack.tf</a>
+            </p>
+
+            <p class=&quot;signature-links&quot;>
+                <small>
+                    &copy; 2012-2019 &middot;
+                    ScrapTF, LLC &middot;
+                    <a href=&quot;http://localhost:8880/html?url=http://steampowered.com&quot; target=&quot;_blank&quot;>Powered by
+                        Steam</a> &middot;
+                    <a href=&quot;http://localhost:8880/html?url=http://localhost:8880/html?url=https://www.backpack.tf/help/privacy&quot;>privacy policy</a>
+                                            &middot; <a style=&quot;cursor:pointer&quot; onclick=&quot;window.__cmp('showConsentModal')&quot;>manage cookie settings</a>
+                                    </small>
+            </p>
+        </div>
+    </div>
+</footer>
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31723405-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>"></iframe></body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
+    <title>
+        G's html passer
+    </title>
+</head>
+
+<style>
+    .hidden {
+        visibility: hidden;
+    }
+
+    .hiddenpw {
+        visibility: hidden;
+    }
+
+    body {
+        padding-top: 50px;
+        padding-left: 30px;
+        /* text-align: center; */
+        background-color: rgba(50, 205, 50, 0.726);
+        color: olive;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body input:not(.submit) {
+        padding-left: 7px;
+        border: none;
+        border-bottom: 2px solid thistle;
+        background-color: transparent;
+        color: olive;
+        border-bottom-left-radius: 20px;
+    }
+
+    body input:not(.submit):focus {
+        background-color: thistle;
+        color: limegreen;
+        outline: 0;
+        /* border-radius: 50px; */
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    body input {
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+
+    body .submit {
+        margin-left: 5px;
+        text-decoration: none;
+        border: none;
+        background-color: thistle;
+        color: olive;
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 4px;
+    }
+
+    body .submit:hover {
+        border: 2px solid thistle;
+        background-color: transparent;
+        padding: 0px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    body .submit:active {
+        outline: 0;
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: none;
+    }
+
+    body #urlc:hover {
+        cursor: not-allowed;
+    }
+
+    body #urlc:active {
+        cursor: text;
+    }
+
+    body input:disabled {
+        cursor: not-allowed;
+    }
+
+    #divcontainer {
+        display: flex;
+    }
+
+    #divcontainer div {
+        flex: auto;
+    }
+
+    #iframe {
+        overflow: hidden;
+        width: 100%;
+        height: 1080px;
+    }
+
+</style>
+
+
+<script>
+        savepassword = () => {
+            for (x in document.getElementsByClassName("hiddenpw")) {
+                document.getElementsByClassName("hiddenpw")[x].value = document.getElementById("password").value
+            }
+            document.getElementById("password").value = ""
+        }
+    
+        encrypt = () => {
+            var text = document.getElementById("urlunencrypted").value
+            var key = document.getElementById("key").value.split(' ').map(Number);
+            if (!key.some(Number.isNaN) && key.length === 4) {
+                key = key.concat(key)
+                key = key.concat(key)
+                key = key.concat(key)
+    
+                // Convert text to bytes
+                var textBytes = aesjs.utils.utf8.toBytes(text);
+    
+                // The counter is optional, and if omitted will begin at 1
+                var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+                var encryptedBytes = aesCtr.encrypt(textBytes);
+    
+                // To print or store the binary data, you may convert it to hex
+                var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+    
+                document.getElementById("urlc").value = encryptedHex
+                document.getElementById("submitencrypted").disabled = false
+            } else {
+                alert("bad key")
+            }
+    
+        }
+        warning = () => {
+            var ret = confirm("skip the encryption process?")
+            if (ret) {
+                document.getElementById("urlc").onclick = 0;
+                document.getElementById("urlc").addEventListener('mouseenter', e => {
+                    document.getElementById("urlc").style.cursor = "text"
+                });
+    
+                document.getElementById("urlc").addEventListener('mouseleave', e => {
+                    document.getElementById("urlc").style.cursor = "text"
+                });
+                document.getElementById("submitencrypted").disabled = false
+            }
+        }
+    </script>
+
+<body>
+    <section id="divcontainer">
+        <div>
+            password: <input type="password" id="password" name="password">
+            <input class="submit" type="submit" value="save" onclick=savepassword()>
+        </div>
+        <div>
+            <form action="/html" method="post" autocomplete="off">
+                url: <input type="text" id="urlunencrypted" name="urlunencrypted" required>
+                <input class="submit" type="submit" value="submit unencrypted">
+                <input type="text" class="hidden" value="unencrypted" name="type">
+                <input type="text" class="hiddenpw" id="hiddenpw" name="hiddenpw">
+            </form>
+
+            key: <input type="text" id="key">
+            <input class="submit" type="submit" value="encrypt" onclick=encrypt()>
+
+            <form action="/html" method="post" autocomplete="off">
+                encrypted url:
+                <input type="text" id="urlc" name="urlc" required onclick=warning()>
+                <input class="submit" type="submit" value="submit encrypted" id="submitencrypted" disabled><br>
+                <input type="text" class="hidden" value="encrypted" name="type" class="encrypted">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <br>step 1 - enter your url into the url box<br>
+        (click submit unencrypted if you do not wish to encrypt the url)<br>
+        <br>step 2 - enter your key into the key box<br>
+        <br>step 3 - click encrypt<br>
+        (your url will be ciphered based on the key provided)<br>
+        <br>step 4 - click submit encrypted<br>
+    </section>
+    <br><br>
+    <iframe id="iframe" srcdoc="

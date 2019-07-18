@@ -1,0 +1,45 @@
+head nav {
+}
+
+body nav {
+    padding-bottom: 50px;
+    font-size: 30px;
+    color: rgb(42, 173, 42);
+}
+
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: rgba(124, 104, 238, 0.788);
+    background: DARKCYAN;
+}
+
+
+
+body #stats {
+    padding-top: 100px;
+    color: rgba(0, 100, 0, 0.61);
+    display: flex;
+}
+
+body #stats .column {
+    flex: 33%;
+}
+
+body #stats .stats {
+    color: rgba(0, 128, 0, 0.541);
+}
+
+body #login {
+    padding-top: 500px;
+    height: 290px;
+    fill: black;
+    color: green;
+    opacity: 0;
+}
+
+body #login:hover {
+    color: black;
+    opacity: 255;
+}

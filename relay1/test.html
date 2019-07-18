@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <!-- These two libraries are highly recommended for encoding password/salt -->
+    <!-- <script src="libs/buffer.js" type="text/javascript"></script> -->
+    <script src="https://raw.githubusercontent.com/ricmoo/scrypt-js/master/thirdparty/buffer.js" type="text/javascript"></script>
+    <!-- <script src="libs/unorm.js" type="text/javascript"></script> -->
+    <script src="https://raw.githubusercontent.com/ricmoo/scrypt-js/master/thirdparty/unorm.js" type="text/javascript"></script>
+    
+
+    <!-- This shim library greatly improves performance of the scrypt algorithm -->
+    <script src="https://raw.githubusercontent.com/ricmoo/scrypt-js/master/thirdparty/setImmediate.js" type="text/javascript"></script>
+    <!-- <script src="libs/setImmediate.js" type="text/javascript"></script> -->
+
+    <script src="https://raw.githubusercontent.com/ricmoo/scrypt-js/master/scrypt.js" type="text/javascript"></script>
+    <!-- <script src="index.js" type="text/javascript"></script> -->
+    <script type="text/javascript">
+
+      // See the section below: "Encoding Notes"
+      var password = new buffer.SlowBuffer("anyPassword".normalize('NFKC'));
+      var salt = new buffer.SlowBuffer("someSalt".normalize('NFKC'));
+
+      var N = 1024, r = 8, p = 1;
+      var dkLen = 32;
+
+      scrypt(password, salt, N, r, p, dkLen, function(error, progress, key) {
+        if (error) {
+          console.log("Error: " + error);
+
+        } else if (key) {
+          console.log("Found: " + key);
+
+        } else {
+          // update UI with progress complete
+          updateInterface(progress);
+        }
+      });
+    </script>
+  </body>
+</html>
